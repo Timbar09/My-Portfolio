@@ -129,3 +129,19 @@ p {
 .intro__social a:hover svg path {
   fill: var(--lime);
 }
+
+.intro__down-btn {
+  display: inline-block;
+  margin-top: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  color: inherit;
+  border: solid 1px var(--darkBlue);
+  border-radius: 50%;
+  transition: 150ms fill ease-in-out;
+}
+
+.intro__down-btn:hover {
+  background-color: var(--veryLightGreen);
+}
