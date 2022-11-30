@@ -18,16 +18,17 @@ html {
   --lime: #36b37f;
   --green: #008552;
   --darkBlue: #344563;
-  --darherBlue: #172b4d;
+  --darkerBlue: #172b4d;
 }
 
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.4;
+  line-height: 1.5rem;
   font-family: var(--ff-inter);
+  font-size: 1rem;
   font-weight: 400;
-  color: var(--white);
+  color: var(--darkBlue);
   background-color: var(--white);
 }
 
@@ -35,7 +36,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--darherBlue);
+  color: var(--darkerBlue);
   margin-top: 0;
 }
 
@@ -43,8 +44,29 @@ a,
 a::before,
 a::after {
   text-decoration: none;
+  color: inherit;
 }
 
 p {
   margin-top: 0;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.header__logo {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--darkerBlue);
+}
+
+.header__hamburger-btn {
+  border: 0;
+  background-color: inherit;
+  cursor: pointer;
 }
