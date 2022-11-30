@@ -106,3 +106,10 @@ p {
   color: var(--lime);
   display: block;
 }
+
+.intro__description {
+  margin-top: 3.625rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: center;
+}
