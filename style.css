@@ -37,7 +37,7 @@ h2,
 h3,
 h4 {
   color: var(--darkerBlue);
-  margin-top: 0;
+  margin: 0;
 }
 
 a,
@@ -51,11 +51,28 @@ p {
   margin-top: 0;
 }
 
+.container {
+  max-width: 90rem;
+}
+
+.container-pall {
+  padding: 1.5rem;
+}
+
+.container-px {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-py {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
 }
 
 .header__logo {
@@ -69,4 +86,23 @@ p {
   border: 0;
   background-color: inherit;
   cursor: pointer;
+}
+
+.intro {
+  background-image: url('images/header-illsutration-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro__title {
+  padding-top: 4rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  text-align: center;
+}
+
+.intro__title span {
+  color: var(--lime);
+  display: block;
 }
