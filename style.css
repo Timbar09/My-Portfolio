@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --ff-inter: 'Inter', sans-serif;
+
+  --white: #ffffff;
+  --grey: #ebf0ee;
+  --veryLightGreen: #c5e9da;
+  --lime: #36b37f;
+  --green: #008552;
+  --darkBlue: #344563;
+  --darherBlue: #172b4d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-family: var(--ff-inter);
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--darherBlue);
+  margin-top: 0;
+}
+
+a,
+a::before,
+a::after {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
