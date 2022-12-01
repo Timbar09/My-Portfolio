@@ -263,3 +263,23 @@ p {
 .project__card-btn {
   margin: 1.8125rem 0 0.75rem;
 }
+
+.about {
+  margin-top: 1.125rem;
+  text-align: center;
+}
+
+.about .container {
+  background: url('images/illustration-about-me-mobile.svg') left bottom
+      no-repeat,
+    url('images/illustration1-about-me-mobile.svg') right top no-repeat;
+}
+
+.about__title {
+  padding-top: 3.125rem;
+}
+
+.about__description {
+  max-width: 37.5rem;
+  margin: 1.5rem auto;
+}
