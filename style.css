@@ -76,6 +76,28 @@ p {
   align-items: center;
 }
 
+.button {
+  --pressed: #008552;
+  text-align: center;
+}
+
+.button a {
+  padding: 0.75rem;
+  display: inline-block;
+  color: var(--white);
+  background-color: var(--lime);
+  border-radius: 0.25rem;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.button a:hover {
+  box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.button a:active {
+  background-color: var(--pressed);
+}
+
 .page__sub-title {
   text-align: center;
   font-weight: 700;
@@ -179,8 +201,57 @@ p {
 }
 
 .project__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 29.625rem;
   border-radius: 0.5rem;
   background-color: var(--lightGrey);
   border: solid 2px var(--grey);
+}
+
+.project__card-text {
+  padding: 0.6875rem;
+  background-color: var(--white);
+  border-radius: inherit;
+}
+
+.project__card-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.project__card-languages {
+  margin: 1rem 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project__card-languages a {
+  padding: 0.5rem 0.75rem;
+  background-color: var(--lightGrey);
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.03em;
+  border-radius: 0.25rem;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.project__card-languages a:hover {
+  background-color: var(--grey);
+  box-shadow: 0px 8px 16px rgba(208, 217, 212, 0.5);
+}
+
+.project__card-languages a:active {
+  background-color: var(--lightGreen);
+}
+
+.project__card-btn {
+  margin: 1.8125rem 0 0.75rem;
 }
