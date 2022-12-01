@@ -275,8 +275,12 @@ p {
     url('images/illustration1-about-me-mobile.svg') right top no-repeat;
 }
 
+.about__text {
+  padding: 0.5625rem 0;
+}
+
 .about__title {
-  padding-top: 3.125rem;
+  padding-top: 2.5625rem;
 }
 
 .about__description {
