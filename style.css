@@ -88,11 +88,16 @@ p {
   cursor: pointer;
 }
 
-.intro {
+.intro .container {
   background-image: url('images/header-illsutration-mobile.svg');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .intro__title {
@@ -108,13 +113,15 @@ p {
 }
 
 .intro__description {
-  margin-top: 3.625rem;
+  margin: 1rem auto;
+  max-width: 37.5rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
 .intro__social {
   list-style: none;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,11 +138,8 @@ p {
 
 .intro__down-btn {
   display: inline-block;
-  margin-top: 4rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  color: inherit;
+  padding: 0.5rem;
+  line-height: 0;
   border: solid 1px var(--darkBlue);
   border-radius: 50%;
   transition: 150ms fill ease-in-out;
