@@ -12,8 +12,9 @@ html {
 :root {
   --ff-inter: 'Inter', sans-serif;
   --white: #fff;
-  --grey: #ebf0ee;
-  --veryLightGreen: #c5e9da;
+  --lightGrey: #ebf0ee;
+  --grey: #d0d9d4;
+  --lightGreen: #c5e9da;
   --lime: #36b37f;
   --green: #008552;
   --darkBlue: #344563;
@@ -75,6 +76,13 @@ p {
   align-items: center;
 }
 
+.page__sub-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+}
+
 .header__logo {
   font-size: 20px;
   font-weight: 600;
@@ -91,7 +99,7 @@ p {
 .intro .container {
   background-image: url('images/header-illsutration-mobile.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   text-align: center;
   height: 100vh;
   display: flex;
@@ -146,5 +154,33 @@ p {
 }
 
 .intro__down-btn:hover {
-  background-color: var(--veryLightGreen);
+  background-color: var(--lightGreen);
+}
+
+.project {
+  margin-top: 1.375rem;
+}
+
+.project__title {
+  position: relative;
+  margin-bottom: 5.625rem;
+}
+
+.project__title::before {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  translate: -50%;
+  height: 0.25rem;
+  width: 3rem;
+  background-color: var(--lime);
+  border-radius: 3rem;
+}
+
+.project__card {
+  height: 29.625rem;
+  border-radius: 0.5rem;
+  background-color: var(--lightGrey);
+  border: solid 2px var(--grey);
 }
