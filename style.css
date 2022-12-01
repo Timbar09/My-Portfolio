@@ -142,7 +142,7 @@ p {
   line-height: 0;
   border: solid 1px var(--darkBlue);
   border-radius: 50%;
-  transition: 150ms fill ease-in-out;
+  transition: 150ms background-color ease-in-out;
 }
 
 .intro__down-btn:hover {
