@@ -114,12 +114,11 @@ p {
 }
 
 .intro__social {
-  margin-top: 3.75rem;
-  height: 10vh;
-}
-
-.intro__social a:not(:last-child) {
-  margin-right: 1.25rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .intro__social a svg path {
