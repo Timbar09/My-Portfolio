@@ -51,29 +51,59 @@ p {
   margin-top: 0;
 }
 
+.section {
+  text-align: center;
+}
+.section__title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+}
+
+.section__card {
+  padding: 0.75rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 20.625rem;
+  border-radius: 0.5rem;
+  background-color: var(--lightGrey);
+  border: solid 2px var(--grey);
+}
+.section__card-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.section__card-btns {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section__card-btns a {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.03em;
+  border-radius: 0.25rem;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
 .container {
   max-width: 90rem;
   margin: auto;
 }
-
 .container-pall {
   padding: 1.5rem;
 }
-
 .container-px {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.container-py {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.header__nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .button {
@@ -89,20 +119,17 @@ p {
   border-radius: 0.25rem;
   transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
-
 .button a:hover {
   box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
 }
-
 .button a:active {
   background-color: var(--pressed);
 }
 
-.page__sub-title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
@@ -122,7 +149,6 @@ p {
   background-image: url('images/header-illsutration-mobile.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  text-align: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -132,9 +158,6 @@ p {
 
 .intro__title {
   padding-top: 4rem;
-  font-weight: 700;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
 }
 
 .intro__title span {
@@ -207,15 +230,11 @@ p {
 }
 
 .project__card {
-  max-width: 20.625rem;
-  margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 29.625rem;
-  border-radius: 0.5rem;
-  background-color: var(--lightGrey);
-  border: solid 2px var(--grey);
 }
 
 .project__card-text {
@@ -224,31 +243,12 @@ p {
   border-radius: inherit;
 }
 
-.project__card-title {
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  text-align: center;
-}
-
 .project__card-languages {
   margin: 1rem 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .project__card-languages a {
-  padding: 0.5rem 0.75rem;
   background-color: var(--lightGrey);
-  font-weight: 600;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: 0.03em;
-  border-radius: 0.25rem;
-  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
 .project__card-languages a:hover {
@@ -266,17 +266,13 @@ p {
 
 .about {
   margin-top: 1.125rem;
-  text-align: center;
-}
-
-.about .container {
-  background: url('images/illustration-about-me-mobile.svg') left bottom
-      no-repeat,
-    url('images/illustration1-about-me-mobile.svg') right top no-repeat;
 }
 
 .about__text {
   padding: 0.5625rem 0;
+  background: url('images/illustration-about-me-mobile.svg') left bottom
+      no-repeat,
+    url('images/illustration1-about-me-mobile.svg') right top no-repeat;
 }
 
 .about__title {
@@ -286,4 +282,41 @@ p {
 .about__description {
   max-width: 37.5rem;
   margin: 1.5rem auto;
+}
+
+.about__grid {
+  padding-top: 2.5rem;
+}
+
+.about__card {
+  border-radius: 0.5rem;
+  background-color: var(--lightGrey);
+  border: solid 2px var(--grey);
+}
+
+.about__card img {
+  margin: 1.75rem 0;
+}
+
+.about__card-title {
+  margin-bottom: 1.5rem;
+}
+
+.about__card-btns {
+  margin: 0;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.about__card-btns a {
+  background-color: var(--white);
+}
+
+.about__card-btns a:hover {
+  background-color: var(--lightGreen);
+  box-shadow: 0px 8px 16px rgba(208, 217, 212, 0.5);
+}
+
+.about__card-btns a:active {
+  background-color: var(--lime);
 }
