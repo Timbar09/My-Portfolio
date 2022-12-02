@@ -12,8 +12,9 @@ html {
 :root {
   --ff-inter: 'Inter', sans-serif;
   --white: #fff;
-  --grey: #ebf0ee;
-  --veryLightGreen: #c5e9da;
+  --lightGrey: #ebf0ee;
+  --grey: #d0d9d4;
+  --lightGreen: #c5e9da;
   --lime: #36b37f;
   --green: #008552;
   --darkBlue: #344563;
@@ -50,6 +51,59 @@ p {
   margin-top: 0;
 }
 
+.section {
+  text-align: center;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+}
+
+.section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1.5rem;
+}
+
+.section__card {
+  padding: 0.75rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 20.625rem;
+  border-radius: 0.5rem;
+  background-color: var(--lightGrey);
+  border: solid 2px var(--grey);
+}
+
+.section__card-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.section__card-btns {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section__card-btns .btn {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.03em;
+  border-radius: 0.25rem;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
 .container {
   max-width: 90rem;
   margin: auto;
@@ -60,11 +114,6 @@ p {
 }
 
 .container-px {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.container-py {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -91,8 +140,7 @@ p {
 .intro .container {
   background-image: url('images/header-illsutration-mobile.svg');
   background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
+  background-size: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -102,9 +150,6 @@ p {
 
 .intro__title {
   padding-top: 4rem;
-  font-weight: 700;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
 }
 
 .intro__title span {
@@ -146,5 +191,134 @@ p {
 }
 
 .intro__down-btn:hover {
-  background-color: var(--veryLightGreen);
+  background-color: var(--lightGreen);
+}
+
+.project {
+  margin-top: 1.375rem;
+}
+
+.project__title {
+  position: relative;
+  margin-bottom: 5.625rem;
+}
+
+.project__title::before {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  translate: -50%;
+  height: 0.25rem;
+  width: 3rem;
+  background-color: var(--lime);
+  border-radius: 3rem;
+}
+
+.project__card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 29.625rem;
+}
+
+.project__card-text {
+  padding: 0.6875rem;
+  background-color: var(--white);
+  border-radius: inherit;
+}
+
+.project__card-languages {
+  margin: 1rem 0;
+}
+
+.project__card-languages .btn {
+  background-color: var(--lightGrey);
+}
+
+.project__card-btn .button {
+  --pressed: #008552;
+
+  margin: 1.8125rem 0 0.75rem;
+  padding: 0.5rem 0.75rem;
+  display: inline-block;
+  color: var(--white);
+  background-color: var(--lime);
+  border-radius: 0.25rem;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.project__card-btn .button:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.project__card-btn .button:active {
+  background-color: var(--pressed);
+}
+
+.about {
+  margin-top: 1.125rem;
+}
+
+.about__text {
+  padding: 0.5625rem 0;
+  background: url('images/illustration-about-me-mobile.svg'), url('images/illustration1-about-me-mobile.svg');
+  background-position: left bottom, right top;
+  background-repeat: no-repeat;
+}
+
+.about__title {
+  padding-top: 2.5625rem;
+}
+
+.about__description {
+  max-width: 37.5rem;
+  margin: 1.5rem auto;
+}
+
+.about__grid {
+  padding-top: 2.5rem;
+}
+
+.about__card {
+  border-radius: 0.5rem;
+  background-color: var(--lightGrey);
+  border: solid 2px var(--grey);
+}
+
+.about__card img {
+  margin: 1.75rem 0;
+}
+
+.about__card-title {
+  margin-bottom: 1.5rem;
+}
+
+.about__card-btns {
+  margin: 0;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.about__card-btns .btn {
+  background-color: var(--white);
+}
+
+.project__card-languages .btn:hover {
+  background-color: var(--grey);
+  box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
+}
+
+.about__card-btns .btn:hover {
+  background-color: var(--lightGreen);
+  box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
+}
+
+.project__card-languages .btn:active {
+  background-color: var(--lightGreen);
+}
+
+.about__card-btns .btn:active {
+  background-color: var(--lime);
 }
