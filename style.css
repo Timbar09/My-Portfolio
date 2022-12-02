@@ -121,16 +121,20 @@ p {
 .button {
   --pressed: #008552;
 
-  text-align: center;
-}
-
-.button a {
   padding: 0.75rem;
   display: inline-block;
   color: var(--white);
   background-color: var(--lime);
   border-radius: 0.25rem;
   transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.button:active {
+  background-color: var(--pressed);
 }
 
 .header__nav {
@@ -263,14 +267,6 @@ p {
 
 .project__card-btn {
   margin: 1.8125rem 0 0.75rem;
-}
-
-.project__card-btn a:hover {
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
-}
-
-.project__card-btn a:active {
-  background-color: var(--pressed);
 }
 
 .about {
