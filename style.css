@@ -237,15 +237,6 @@ p {
   background-color: var(--lightGrey);
 }
 
-.project__card-languages .btn:hover {
-  background-color: var(--grey);
-  box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
-}
-
-.project__card-languages .btn:active {
-  background-color: var(--lightGreen);
-}
-
 .project__card-btn .button {
   --pressed: #008552;
 
@@ -272,8 +263,7 @@ p {
 
 .about__text {
   padding: 0.5625rem 0;
-  background: url('images/illustration-about-me-mobile.svg'),
-    url('images/illustration1-about-me-mobile.svg');
+  background: url('images/illustration-about-me-mobile.svg'), url('images/illustration1-about-me-mobile.svg');
   background-position: left bottom, right top;
   background-repeat: no-repeat;
 }
@@ -315,9 +305,18 @@ p {
   background-color: var(--white);
 }
 
+.project__card-languages .btn:hover {
+  background-color: var(--grey);
+  box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
+}
+
 .about__card-btns .btn:hover {
   background-color: var(--lightGreen);
   box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
+}
+
+.project__card-languages .btn:active {
+  background-color: var(--lightGreen);
 }
 
 .about__card-btns .btn:active {
