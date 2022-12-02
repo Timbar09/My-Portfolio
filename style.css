@@ -93,7 +93,7 @@ p {
   flex-wrap: wrap;
 }
 
-.section__card-btns a {
+.section__card-btns .btn {
   display: inline-block;
   padding: 0.5rem 0.75rem;
   font-weight: 600;
@@ -252,16 +252,16 @@ p {
   margin: 1rem 0;
 }
 
-.project__card-languages li a {
+.project__card-languages .btn {
   background-color: var(--lightGrey);
 }
 
-.project__card-languages li a:hover {
+.project__card-languages .btn:hover {
   background-color: var(--grey);
   box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
 }
 
-.project__card-languages li a:active {
+.project__card-languages .btn:active {
   background-color: var(--lightGreen);
 }
 
@@ -275,8 +275,7 @@ p {
 
 .about__text {
   padding: 0.5625rem 0;
-  background: url('images/illustration-about-me-mobile.svg'),
-    url('images/illustration1-about-me-mobile.svg');
+  background: url('images/illustration-about-me-mobile.svg'), url('images/illustration1-about-me-mobile.svg');
   background-position: left bottom, right top;
   background-repeat: no-repeat;
 }
@@ -314,15 +313,15 @@ p {
   gap: 0.5rem;
 }
 
-.about__card-btns li a {
+.about__card-btns .btn {
   background-color: var(--white);
 }
 
-.about__card-btns li a:hover {
+.about__card-btns .btn:hover {
   background-color: var(--lightGreen);
   box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
 }
 
-.about__card-btns li a:active {
+.about__card-btns .btn:active {
   background-color: var(--lime);
 }
