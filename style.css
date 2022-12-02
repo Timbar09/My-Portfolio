@@ -54,11 +54,13 @@ p {
 .section {
   text-align: center;
 }
+
 .section__title {
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3.25rem;
 }
+
 .section__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -75,6 +77,7 @@ p {
   background-color: var(--lightGrey);
   border: solid 2px var(--grey);
 }
+
 .section__card-title {
   font-weight: 600;
   font-size: 1.5rem;
@@ -89,6 +92,7 @@ p {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .section__card-btns a {
   display: inline-block;
   padding: 0.5rem 0.75rem;
@@ -104,32 +108,14 @@ p {
   max-width: 90rem;
   margin: auto;
 }
+
 .container-pall {
   padding: 1.5rem;
 }
+
 .container-px {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.button {
-  --pressed: #008552;
-  text-align: center;
-}
-
-.button a {
-  padding: 0.75rem;
-  display: inline-block;
-  color: var(--white);
-  background-color: var(--lime);
-  border-radius: 0.25rem;
-  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
-}
-.button a:hover {
-  box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
-}
-.button a:active {
-  background-color: var(--pressed);
 }
 
 .header__nav {
@@ -253,7 +239,7 @@ p {
 
 .project__card-languages a:hover {
   background-color: var(--grey);
-  box-shadow: 0px 8px 16px rgba(208, 217, 212, 0.5);
+  box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
 }
 
 .project__card-languages a:active {
@@ -314,9 +300,32 @@ p {
 
 .about__card-btns a:hover {
   background-color: var(--lightGreen);
-  box-shadow: 0px 8px 16px rgba(208, 217, 212, 0.5);
+  box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
 }
 
 .about__card-btns a:active {
   background-color: var(--lime);
+}
+
+.button {
+  --pressed: #008552;
+
+  text-align: center;
+}
+
+.button a {
+  padding: 0.75rem;
+  display: inline-block;
+  color: var(--white);
+  background-color: var(--lime);
+  border-radius: 0.25rem;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.button a:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.button a:active {
+  background-color: var(--pressed);
 }
