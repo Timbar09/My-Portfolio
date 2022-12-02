@@ -104,15 +104,6 @@ p {
   transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
-.section__card-btns .btn:hover {
-  background-color: var(--lightGrey);
-  box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
-}
-
-.section__card-btns .btn:active {
-  background-color: var(--grey);
-}
-
 .container {
   max-width: 90rem;
   margin: auto;
@@ -125,25 +116,6 @@ p {
 .container-px {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.button {
-  --pressed: #008552;
-
-  padding: 0.75rem;
-  display: inline-block;
-  color: var(--white);
-  background-color: var(--lime);
-  border-radius: 0.25rem;
-  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
-}
-
-.button:hover {
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
-}
-
-.button:active {
-  background-color: var(--pressed);
 }
 
 .header__nav {
@@ -265,8 +237,33 @@ p {
   background-color: var(--lightGrey);
 }
 
-.project__card-btn {
+.project__card-languages .btn:hover {
+  background-color: var(--grey);
+  box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
+}
+
+.project__card-languages .btn:active {
+  background-color: var(--lightGreen);
+}
+
+.project__card-btn .button {
+  --pressed: #008552;
+
   margin: 1.8125rem 0 0.75rem;
+  padding: 0.5rem 0.75rem;
+  display: inline-block;
+  color: var(--white);
+  background-color: var(--lime);
+  border-radius: 0.25rem;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.project__card-btn .button:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.project__card-btn .button:active {
+  background-color: var(--pressed);
 }
 
 .about {
@@ -315,12 +312,14 @@ p {
 }
 
 .about__card-btns .btn {
-  --lightGrey: var(--lightGreen);
-  --grey: var(--lime);
-
   background-color: var(--white);
 }
 
 .about__card-btns .btn:hover {
+  background-color: var(--lightGreen);
   box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
+}
+
+.about__card-btns .btn:active {
+  background-color: var(--lime);
 }
