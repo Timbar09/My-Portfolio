@@ -124,21 +124,13 @@ p {
   text-align: center;
 }
 
-.button > a {
+.button a {
   padding: 0.75rem;
   display: inline-block;
   color: var(--white);
   background-color: var(--lime);
   border-radius: 0.25rem;
   transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
-}
-
-.button > a:hover {
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
-}
-
-.button > a:active {
-  background-color: var(--pressed);
 }
 
 .header__nav {
@@ -256,21 +248,29 @@ p {
   margin: 1rem 0;
 }
 
-.project__card-languages > li a {
+.project__card-languages li a {
   background-color: var(--lightGrey);
 }
 
-.project__card-languages > li a:hover {
+.project__card-languages li a:hover {
   background-color: var(--grey);
   box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
 }
 
-.project__card-languages > li a:active {
+.project__card-languages li a:active {
   background-color: var(--lightGreen);
 }
 
 .project__card-btn {
   margin: 1.8125rem 0 0.75rem;
+}
+
+.project__card-btn a:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.project__card-btn a:active {
+  background-color: var(--pressed);
 }
 
 .about {
@@ -318,15 +318,15 @@ p {
   gap: 0.5rem;
 }
 
-.about__card-btns > li a {
+.about__card-btns li a {
   background-color: var(--white);
 }
 
-.about__card-btns > li a:hover {
+.about__card-btns li a:hover {
   background-color: var(--lightGreen);
   box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
 }
 
-.about__card-btns > li a:active {
+.about__card-btns li a:active {
   background-color: var(--lime);
 }
