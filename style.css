@@ -87,14 +87,11 @@ p {
 .section__card-btns {
   padding: 0;
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .section__card-btns .btn {
-  display: inline-block;
+  float: left;
+  display: block;
   padding: 0.5rem 0.75rem;
   font-weight: 600;
   font-size: 0.75rem;
