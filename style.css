@@ -91,6 +91,7 @@ p {
 
 .section__card-btns .btn {
   float: left;
+  margin-right: .25rem;
   display: block;
   padding: 0.5rem 0.75rem;
   font-weight: 600;
