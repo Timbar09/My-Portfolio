@@ -371,3 +371,19 @@ p {
   border: 0px;
   margin-top: 1.5rem;
 }
+
+.footer__social {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2.875rem;
+}
+
+.footer__email {
+  font-family: inherit;
+  height: 12.5rem;
+  margin-bottom: 8.75rem;
+}
