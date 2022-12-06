@@ -322,3 +322,48 @@ p {
 .about__card-btns .btn:active {
   background-color: var(--lime);
 }
+
+.footer {
+  margin-top: 3.75rem;
+  text-align: center;
+}
+
+.footer__title {
+  margin-bottom: 3.75rem;
+}
+
+.footer__form {
+  max-width: 37.5rem;
+  margin: auto;
+}
+
+.footer__form-group input , .footer__form-group textarea{
+  width: 100%;
+  padding: 1rem;
+  border: solid 1px var(--grey);
+  border-radius: 0.25rem;
+  font-family: inherit;
+}
+
+.footer__form-group label {
+  display: block;
+  text-align: left;
+  opacity: 0;
+}
+
+.footer__form-group textarea{
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 7.125rem;
+  max-height: 7.125rem;
+}
+
+.footer__form-button {
+  background-color: var(--lime);
+  color: var(--white);
+  padding: 0.75rem;
+  font-family: inherit;
+  border-radius: 0.25rem;
+  border: 0px;
+  margin-top: 1.5rem;
+}
