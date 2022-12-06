@@ -322,3 +322,82 @@ p {
 .about__card-btns .btn:active {
   background-color: var(--lime);
 }
+
+.footer {
+  margin-top: 3.75rem;
+  text-align: center;
+}
+
+.footer__title {
+  margin-bottom: 3.75rem;
+}
+
+.footer__form {
+  max-width: 37.5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__form-control input,
+.footer__form-control textarea {
+  width: 100%;
+  padding: 1rem;
+  border: solid 1px var(--grey);
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.footer__form-control label {
+  display: block;
+  text-align: left;
+  opacity: 0;
+}
+
+.footer__form-control textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 7.125rem;
+  max-height: 7.125rem;
+}
+
+.footer__form-button {
+  --pressed: #008552;
+
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--lime);
+  border-radius: 0.25rem;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.footer__form-button:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.footer__form-button:active {
+  background-color: var(--pressed);
+}
+
+.footer__social {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2.875rem;
+}
+
+.footer__email {
+  font-family: inherit;
+  height: 12.5rem;
+  margin-bottom: 8.75rem;
+}
