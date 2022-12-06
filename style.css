@@ -374,6 +374,7 @@ p {
   background-color: var(--lime);
   border-radius: 0.25rem;
   border: 0px;
+  cursor: pointer;
   transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
