@@ -335,10 +335,12 @@ p {
 .footer__form {
   max-width: 37.5rem;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer__form-group input,
-.footer__form-group textarea {
+.footer__form-control input,
+.footer__form-control textarea {
   width: 100%;
   padding: 1rem;
   border: solid 1px var(--grey);
@@ -347,13 +349,13 @@ p {
   font-weight: inherit;
 }
 
-.footer__form-group label {
+.footer__form-control label {
   display: block;
   text-align: left;
   opacity: 0;
 }
 
-.footer__form-group textarea {
+.footer__form-control textarea {
   min-width: 100%;
   max-width: 100%;
   min-height: 7.125rem;
@@ -361,15 +363,26 @@ p {
 }
 
 .footer__form-button {
-  background-color: var(--lime);
-  color: var(--white);
+  --pressed: #008552;
+
+  margin-top: 1.5rem;
   padding: 0.75rem;
   font-family: inherit;
   font-size: 1.0625rem;
   font-weight: 500;
+  color: var(--white);
+  background-color: var(--lime);
   border-radius: 0.25rem;
   border: 0px;
-  margin-top: 1.5rem;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.footer__form-button:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.footer__form-button:active {
+  background-color: var(--pressed);
 }
 
 .footer__social {
