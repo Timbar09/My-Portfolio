@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Timbar09/My-Portfolio/issues"
   },
+  "devDependencies": {
+    "postcss": "^8.3.11",
+    "sass": "^1.42.1",
+    "stylelint": "^14.1.0",
+    "stylelint-config-standard-scss": "^2.0.1",
+    "stylelint-order": "^5.0.0"
+  },
   "homepage": "https://github.com/Timbar09/My-Portfolio#readme"
 }
