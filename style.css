@@ -118,6 +118,10 @@ p {
   padding-right: 1.5rem;
 }
 
+.header {
+  background-color: var(--white);
+}
+
 .header__nav {
   display: flex;
   justify-content: space-between;
@@ -162,7 +166,7 @@ p {
   background-color: var(--lime);
   border-radius: 10rem;
   opacity: 0;
-  transition: top 150ms ease-in-out, opacity 150ms ease-in-out, width 150ms 200ms ease-in-out;
+  transition: top 150ms ease-in-out, opacity 150ms ease-in-out, width 150ms 165ms ease-in-out;
 }
 
 .header__link:hover {
@@ -181,8 +185,7 @@ p {
   line-height: 11px;
   background-color: inherit;
   cursor: pointer;
-  /* border-radius: 50%; */
-  /* overflow: hidden; */
+
   transition: background-color 150ms ease-in-out;
 }
 
@@ -191,6 +194,14 @@ p {
 }
 
 @media (min-width: 40em) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
   .header__nav {
     justify-content: center;
   }
@@ -210,6 +221,7 @@ p {
 }
 
 .intro .container {
+  padding-top: 4rem;
   background-image: url('images/header-illsutration-mobile.svg');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -217,11 +229,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-}
-
-.intro__title {
-  padding-top: 4rem;
+  justify-content: space-evenly;
 }
 
 .intro__title span {
@@ -230,8 +238,8 @@ p {
 }
 
 .intro__description {
-  margin: 1rem auto;
-  max-width: 37.5rem;
+  margin: 0 auto;
+  max-width: 51.5625rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
@@ -239,6 +247,7 @@ p {
 .intro__social {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,6 +273,30 @@ p {
 
 .intro__down-btn:hover {
   background-color: var(--lightGreen);
+}
+
+@media (min-width: 40em) {
+  .intro .container {
+    padding-top: 10rem;
+    justify-content: flex-start;
+    gap: 1.75rem;
+    background-image: url('images/Header-llustration-desktop.svg');
+  }
+
+  .intro__title {
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: 0.37px;
+  }
+
+  .intro__description {
+    line-height: 2rem;
+  }
+
+  .intro__down-btn {
+    margin-top: 4.625rem;
+  }
 }
 
 .project {
