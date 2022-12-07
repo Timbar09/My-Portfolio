@@ -161,6 +161,11 @@ p {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background-color: var(--white);
 }
 
@@ -235,15 +240,7 @@ p {
   background-color: var(--lightGreen);
 }
 
-@media (min-width: 40em) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-
+@media (min-width: 64em) {
   .header__nav {
     justify-content: center;
   }
@@ -262,12 +259,16 @@ p {
   }
 }
 
+.intro {
+  margin-top: 4.75rem;
+}
+
 .intro .container {
   padding-top: 4rem;
   background-image: url('images/header-illsutration-mobile.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  height: max(500px, 100vh);
+  height: max(500px, 90vh);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,12 +319,6 @@ p {
 }
 
 @media (min-width: 40em) {
-  .intro .container {
-    justify-content: flex-start;
-    gap: 1.75rem;
-    background-image: url('images/Header-llustration-desktop.svg');
-  }
-
   .intro__title {
     font-weight: 800;
     font-size: 3rem;
@@ -338,7 +333,10 @@ p {
 
 @media (min-width: 64em) {
   .intro .container {
+    justify-content: flex-start;
+    gap: 1.75rem;
     padding-top: 10rem;
+    background-image: url('images/Header-llustration-desktop.svg');
   }
 
   .intro__down-btn {
@@ -590,7 +588,7 @@ p {
     padding-left: 10vw;
     padding-right: 10vw;
     align-items: center;
-    background: url('images/illustration-1-contact-form-desktop.svg'),
+    background: url('images/illustration-1-contact-form-desktopsvg'),
       url('images/illustration-2-contact-form-desktop.svg'), url('images/contact-form-illustratoin-3-desktop.svg');
     background-position: left bottom, 20% 80%, right bottom;
     background-repeat: no-repeat;
