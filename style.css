@@ -588,8 +588,7 @@ p {
     padding-left: 10vw;
     padding-right: 10vw;
     align-items: center;
-    background: url('images/illustration-1-contact-form-desktopsvg'),
-      url('images/illustration-2-contact-form-desktop.svg'), url('images/contact-form-illustratoin-3-desktop.svg');
+    background: url('images/cf-1-desktop.svg'), url('images/cf-bg-2-desktop.svg'), url('images/cf-bg-3-desktop.svg');
     background-position: left bottom, 20% 80%, right bottom;
     background-repeat: no-repeat;
     display: flex;
