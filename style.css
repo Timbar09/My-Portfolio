@@ -232,7 +232,6 @@ p {
   line-height: 11px;
   background-color: inherit;
   cursor: pointer;
-
   transition: background-color 150ms ease-in-out;
 }
 
@@ -297,11 +296,11 @@ p {
   gap: 1.25rem;
 }
 
-.intro__social a svg path {
+.intro__social-icon {
   transition: 150ms fill ease-in-out;
 }
 
-.intro__social a:hover svg path {
+.intro__social-link:hover .intro__social-icon {
   fill: var(--lime);
 }
 
@@ -378,6 +377,7 @@ p {
   background-color: var(--white);
   border-radius: inherit;
 }
+
 .project__card-title {
   margin-bottom: 1rem;
 }
@@ -558,11 +558,11 @@ p {
   margin-top: 2.875rem;
 }
 
-.footer__social-link svg path {
+.footer__social-icon {
   transition: fill 150ms ease-in-out;
 }
 
-.footer__social-link:hover svg path {
+.footer__social-link:hover .footer__social-icon {
   fill: var(--lime);
 }
 
