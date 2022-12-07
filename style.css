@@ -267,7 +267,7 @@ p {
   background-image: url('images/header-illsutration-mobile.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 100vh;
+  height: max(500px, 100vh);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -319,7 +319,6 @@ p {
 
 @media (min-width: 40em) {
   .intro .container {
-    padding-top: 10rem;
     justify-content: flex-start;
     gap: 1.75rem;
     background-image: url('images/Header-llustration-desktop.svg');
@@ -334,6 +333,12 @@ p {
 
   .intro__description {
     line-height: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .intro .container {
+    padding-top: 10rem;
   }
 
   .intro__down-btn {
@@ -485,6 +490,19 @@ p {
   flex-direction: column;
 }
 
+.footer__form-control label {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+  margin: 0.25rem 0;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.footer__form-control:focus-within label {
+  opacity: 1;
+}
+
 .footer__form-input {
   width: 100%;
   padding: 1rem;
@@ -499,12 +517,6 @@ p {
   border: solid 2px var(--lime);
   outline-offset: 2px;
   outline: solid 2px var(--grey);
-}
-
-.footer__form-control label {
-  display: block;
-  text-align: left;
-  opacity: 0;
 }
 
 .footer__form-control textarea {
