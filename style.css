@@ -449,6 +449,23 @@ p {
   --btn-pressed: var(--lime);
 }
 
+@media (min-width: 40em) {
+  .about {
+    margin-top: 5.5rem;
+  }
+
+  .about__text {
+    padding: 0.5625rem 0;
+    background: url('images/illustration-about-me-2-desktop.svg'), url('images/illustration-about-me-1-desktop.svg');
+    background-position: left bottom, right top;
+    background-repeat: no-repeat;
+  }
+
+  .about__title {
+    padding-top: 6.5rem;
+  }
+}
+
 .footer {
   padding-top: 3.75rem;
   text-align: center;
@@ -468,14 +485,20 @@ p {
   flex-direction: column;
 }
 
-.footer__form-control input,
-.footer__form-control textarea {
+.footer__form-input {
   width: 100%;
   padding: 1rem;
-  border: solid 1px var(--grey);
+  border: solid 2px var(--grey);
   border-radius: 0.25rem;
   font-family: inherit;
   font-weight: inherit;
+  transition: border 150ms ease-in-out, outline 150ms ease-in-out, outline-offset 150ms ease-in-out;
+}
+
+.footer__form-input:focus {
+  border: solid 2px var(--lime);
+  outline-offset: 2px;
+  outline: solid 2px var(--grey);
 }
 
 .footer__form-control label {
@@ -525,8 +548,64 @@ p {
   margin-top: 2.875rem;
 }
 
+.footer__social-link svg path {
+  transition: fill 150ms ease-in-out;
+}
+
+.footer__social-link:hover svg path {
+  fill: var(--lime);
+}
+
 .footer__email {
   font-family: inherit;
   height: 12.5rem;
   margin-bottom: 8.75rem;
+}
+
+@media (min-width: 40em) {
+  .footer {
+    padding-top: 6.75rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer {
+    text-align: left;
+  }
+
+  .footer__flexbox {
+    padding-bottom: 14.0625rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    align-items: center;
+    background: url('images/illustration-1-contact-form-desktop.svg'),
+      url('images/illustration-2-contact-form-desktop.svg'), url('images/contact-form-illustratoin-3-desktop.svg');
+    background-position: left bottom, 20% 80%, right bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    gap: 2rem;
+    border-bottom: solid 1px var(--grey);
+  }
+
+  .footer__title {
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+    max-width: none;
+    height: max-content;
+    flex: 1;
+  }
+
+  .footer__form {
+    max-width: none;
+    margin: 0;
+    flex: 1 11%;
+  }
+
+  .footer__email {
+    display: none;
+  }
+
+  .footer__social {
+    margin: 1.5625rem 0;
+  }
 }
