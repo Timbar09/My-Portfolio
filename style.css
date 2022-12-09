@@ -34,15 +34,18 @@ body {
 
 @keyframes appear {
   from {
+    translate: 0 1rem;
     opacity: 0;
   }
 
   60% {
     opacity: 0;
+    translate: 0 1rem;
   }
 
   to {
     opacity: 1;
+    translate: 0 0;
   }
 }
 
@@ -465,9 +468,38 @@ p {
 }
 
 .about__card {
+  position: relative;
   border-radius: 0.5rem;
   background-color: var(--lightGrey);
   border: solid 2px var(--grey);
+  background-color: rgba(235, 240, 238, 0.5);
+}
+
+.about__card:hover::before {
+  background-size: 110%;
+}
+
+.about__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  z-index: -1;
+  transition: background-size 200ms ease-in-out;
+}
+
+.about__card:first-child::before {
+  background-image: url('images/languages-bg.jpg');
+}
+
+.about__card:nth-child(2)::before {
+  background-image: url('images/framework-bg.jpg');
+}
+
+.about__card:last-child::before {
+  background-image: url('images/skills-bg.jpg');
 }
 
 .about__card img {
