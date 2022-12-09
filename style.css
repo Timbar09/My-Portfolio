@@ -109,7 +109,6 @@ p {
   width: 100%;
   max-width: 23.0625rem;
   border-radius: 0.5rem;
-  background-color: var(--lightGrey);
   border: solid 2px var(--grey);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -404,6 +403,7 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   height: 29.625rem;
+  background-color: var(--lightGrey);
   background-image: url('images/pexels-pixabay-276452.jpg');
 }
 
@@ -475,10 +475,6 @@ p {
   background-color: rgba(235, 240, 238, 0.5);
 }
 
-.about__card:hover::before {
-  background-size: 110%;
-}
-
 .about__card::before {
   content: '';
   position: absolute;
@@ -500,6 +496,10 @@ p {
 
 .about__card:last-child::before {
   background-image: url('images/skills-bg.jpg');
+}
+
+.about__card:hover::before {
+  background-size: 110%;
 }
 
 .about__card img {
