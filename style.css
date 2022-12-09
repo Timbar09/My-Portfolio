@@ -110,6 +110,7 @@ p {
   max-width: 23.0625rem;
   border-radius: 0.5rem;
   border: solid 2px var(--grey);
+  background-color: var(--lightGrey);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
@@ -403,7 +404,6 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   height: 29.625rem;
-  background-color: var(--lightGrey);
   background-image: url('images/pexels-pixabay-276452.jpg');
 }
 
@@ -470,7 +470,6 @@ p {
 .about__card {
   position: relative;
   border-radius: 0.5rem;
-  background-color: var(--lightGrey);
   border: solid 2px var(--grey);
   background-color: rgba(235, 240, 238, 0.5);
 }
