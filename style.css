@@ -32,6 +32,23 @@ body {
   background-color: var(--white);
 }
 
+@keyframes appear {
+  from {
+    translate: 0 1rem;
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+    translate: 0 1rem;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -92,8 +109,18 @@ p {
   width: 100%;
   max-width: 23.0625rem;
   border-radius: 0.5rem;
-  background-color: var(--lightGrey);
   border: solid 2px var(--grey);
+  background-color: var(--lightGrey);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  overflow: hidden;
+  transition: 200ms box-shadow ease-in-out, 200ms background-size ease-in-out;
+}
+
+.section__card:hover {
+  background-size: 110%;
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .section__card-title {
@@ -274,6 +301,10 @@ p {
   justify-content: space-evenly;
 }
 
+.intro__title {
+  animation: appear 2000ms ease-in-out 1 forwards;
+}
+
 .intro__title span {
   color: var(--lime);
   display: block;
@@ -284,6 +315,7 @@ p {
   max-width: 51.5625rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  animation: appear 3000ms ease-in-out 1 forwards;
 }
 
 .intro__social {
@@ -294,6 +326,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
+  animation: appear 4000ms ease-in-out 1 forwards;
 }
 
 .intro__social-icon {
@@ -311,6 +344,7 @@ p {
   border: solid 1px var(--darkBlue);
   border-radius: 50%;
   transition: 150ms background-color ease-in-out;
+  animation: appear 5000ms ease-in-out 1 forwards;
 }
 
 .intro__down-btn:hover {
@@ -370,12 +404,13 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   height: 29.625rem;
+  background-image: url('images/pexels-pixabay-276452.jpg');
 }
 
 .project__card-text {
   padding: 0.6875rem;
   background-color: var(--white);
-  border-radius: inherit;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .project__card-title {
@@ -433,9 +468,37 @@ p {
 }
 
 .about__card {
+  position: relative;
   border-radius: 0.5rem;
-  background-color: var(--lightGrey);
   border: solid 2px var(--grey);
+  background-color: rgba(235, 240, 238, 0.5);
+}
+
+.about__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  z-index: -1;
+  transition: background-size 200ms ease-in-out;
+}
+
+.about__card:first-child::before {
+  background-image: url('images/languages-bg.jpg');
+}
+
+.about__card:nth-child(2)::before {
+  background-image: url('images/framework-bg.jpg');
+}
+
+.about__card:last-child::before {
+  background-image: url('images/skills-bg.jpg');
+}
+
+.about__card:hover::before {
+  background-size: 110%;
 }
 
 .about__card img {
