@@ -108,12 +108,16 @@ p {
   border-radius: 0.5rem;
   background-color: var(--lightGrey);
   border: solid 2px var(--grey);
-  transition: 150ms box-shadow ease-in-out, 150ms scale ease-in-out;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  overflow: hidden;
+  transition: 200ms box-shadow ease-in-out, 200ms background-size ease-in-out;
 }
 
 .section__card:hover {
-  scale: 1.015;
-  box-shadow: 6px 6px 16px rgba(208, 217, 212, 0.25);
+  background-size: 110%;
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .section__card-title {
@@ -397,12 +401,13 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   height: 29.625rem;
+  background-image: url('images/pexels-pixabay-276452.jpg');
 }
 
 .project__card-text {
   padding: 0.6875rem;
   background-color: var(--white);
-  border-radius: inherit;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .project__card-title {
