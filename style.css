@@ -108,6 +108,12 @@ p {
   border-radius: 0.5rem;
   background-color: var(--lightGrey);
   border: solid 2px var(--grey);
+  transition: 150ms box-shadow ease-in-out, 150ms scale ease-in-out;
+}
+
+.section__card:hover {
+  scale: 1.015;
+  box-shadow: 6px 6px 16px rgba(208, 217, 212, 0.25);
 }
 
 .section__card-title {
@@ -313,6 +319,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
+  animation: appear 4000ms ease-in-out 1 forwards;
 }
 
 .intro__social-icon {
@@ -330,6 +337,7 @@ p {
   border: solid 1px var(--darkBlue);
   border-radius: 50%;
   transition: 150ms background-color ease-in-out;
+  animation: appear 5000ms ease-in-out 1 forwards;
 }
 
 .intro__down-btn:hover {
