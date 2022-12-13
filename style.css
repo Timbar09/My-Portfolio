@@ -160,6 +160,11 @@ p {
   box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
 }
 
+.section__card:focus-within {
+  background-size: 110%;
+  box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+}
+
 .section__card-title {
   font-weight: 600;
   font-size: 1.5rem;
