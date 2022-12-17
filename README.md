@@ -28,7 +28,9 @@
 
 # 📖 My Portfolio <a name="about-project"></a>
 
-**My Portfolio** is a webpage which showcases some of my work and also demonstrate my skills and capabilities as fullstack developer.
+**My Portfolio** is a port folio webpage which showcases some of my work and also demonstrate my skills and capabilities as fullstack developer.
+
+Whatch this [project presentation video](https://www.loom.com/share/d3922c70b2b744d59e6b68b58ea0d1dd) to learn more about the project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
