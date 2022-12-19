@@ -1,4 +1,3 @@
-const header = document.querySelector('.header');
 const menu = document.querySelector('.header__menu');
 const openMenuBtn = document.querySelector('.header__hamburger');
 const closeMenuBtn = document.querySelector('.header__menu-btn');
