@@ -86,6 +86,42 @@ body {
   }
 }
 
+/* Header menu keyframes */
+
+@keyframes menu-open {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes menu-close {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -244,6 +280,16 @@ p {
   align-items: center;
 }
 
+/* When the menu button is clicked */
+.header__nav .open {
+  animation: menu-open 250ms ease-in-out 0ms 1 forwards;
+}
+
+/* When the cancel-menu button is clicked */
+.header__nav .close {
+  animation: menu-close 250ms ease-in-out 0ms 1 forwards;
+}
+
 .header__logo {
   font-size: 20px;
   font-weight: 600;
@@ -308,6 +354,52 @@ p {
   background-color: var(--lightGreen);
 }
 
+.header__menu {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1005;
+  text-align: end;
+  background-color: var(--white);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.header__menu-btn {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+
+.header__menu-btn:hover {
+  background-color: var(--lightGreen);
+}
+
+.header__menu-content {
+  padding: 0.875rem 0 0;
+  list-style: none;
+  text-align: left;
+  height: 70vh;
+}
+
+.header__menu-link {
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  color: var(--darkerBlue);
+  width: 100%;
+  padding: 1.25rem;
+  font-weight: 600;
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+.header__menu-link:hover {
+  color: var(--white);
+  background-color: var(--lime);
+}
+
 @media (min-width: 64em) {
   .header__nav {
     justify-content: center;
@@ -336,7 +428,7 @@ p {
   background-image: url('images/header-illsutration-mobile.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  height: max(500px, 90vh);
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
