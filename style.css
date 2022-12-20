@@ -583,7 +583,7 @@ p {
 
 .project__details {
   position: absolute;
-  padding: 1.5rem;
+  padding: 1rem;
   top: 1.25rem;
   right: 1rem;
   left: 1rem;
@@ -598,11 +598,20 @@ p {
 
 .project__details-cancel-icon {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 7.5vw;
+  right: 7.25vw;
   padding: 0.25rem;
-  border-radius: 0.5rem;
+  border-radius: 0.35rem;
   cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+
+.project__details-cancel-icon:hover {
+  background-color: var(--lightGrey);
+}
+
+.project__details-featured-image {
+  width: 100%;
 }
 
 @media (min-width: 40em) {
@@ -620,6 +629,7 @@ p {
   }
 
   .project__details {
+    padding: 1.5rem;
     top: 7.625rem;
     right: 15vw;
     left: 15vw;
