@@ -10,7 +10,7 @@ html {
 }
 
 :root {
-  --ff-inter: 'Inter', sans-serif;
+  --ff-inter: "Inter", sans-serif;
   --white: #fff;
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
@@ -318,7 +318,7 @@ p {
 }
 
 .header__link::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 1rem;
   left: 50%;
@@ -328,7 +328,8 @@ p {
   background-color: var(--lime);
   border-radius: 10rem;
   opacity: 0;
-  transition: top 150ms ease-in-out, opacity 150ms ease-in-out, width 150ms 165ms ease-in-out;
+  transition: top 150ms ease-in-out, opacity 150ms ease-in-out,
+    width 150ms 165ms ease-in-out;
 }
 
 .header__link:hover {
@@ -433,7 +434,7 @@ p {
 
 .intro .container {
   padding-top: 4rem;
-  background-image: url('images/header-illsutration-mobile.svg');
+  background-image: url("images/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 90vh;
@@ -522,7 +523,7 @@ p {
     justify-content: flex-start;
     gap: 1.75rem;
     padding-top: 10rem;
-    background-image: url('images/Header-llustration-desktop.svg');
+    background-image: url("images/Header-llustration-desktop.svg");
   }
 
   .intro__down-btn {
@@ -540,7 +541,7 @@ p {
 }
 
 .project__title::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1.5rem;
   left: 50%;
@@ -557,7 +558,7 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   height: 29.625rem;
-  background-image: url('images/pexels-pixabay-276452.jpg');
+  background-image: url("images/pexels-pixabay-276452.jpg");
 }
 
 .project__card-text {
@@ -675,6 +676,34 @@ p {
     top: 0;
     right: 0;
   }
+  .project__details-text {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 1.25rem;
+    padding-top: 1.5rem;
+  }
+  .project__feature-title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .project__details-ctas {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .project__details-languages {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .project__details-description {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  .project__details-languages {
+    justify-content: start;
+  }
+  .project__details-description {
+    padding-top: 0.75rem;
+  }
 }
 
 .about {
@@ -683,7 +712,8 @@ p {
 
 .about__text {
   padding: 0.5625rem 0;
-  background: url('images/illustration-about-me-mobile.svg'), url('images/illustration1-about-me-mobile.svg');
+  background: url("images/illustration-about-me-mobile.svg"),
+    url("images/illustration1-about-me-mobile.svg");
   background-position: left bottom, right top;
   background-repeat: no-repeat;
 }
@@ -709,7 +739,7 @@ p {
 }
 
 .about__card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-repeat: no-repeat;
@@ -720,15 +750,15 @@ p {
 }
 
 .about__card:first-child::before {
-  background-image: url('images/languages-bg.jpg');
+  background-image: url("images/languages-bg.jpg");
 }
 
 .about__card:nth-child(2)::before {
-  background-image: url('images/framework-bg.jpg');
+  background-image: url("images/framework-bg.jpg");
 }
 
 .about__card:last-child::before {
-  background-image: url('images/skills-bg.jpg');
+  background-image: url("images/skills-bg.jpg");
 }
 
 .about__card:hover::before {
@@ -756,7 +786,8 @@ p {
 
   .about__text {
     padding: 0.5625rem 0;
-    background: url('images/illustration-about-me-2-desktop.svg'), url('images/illustration-about-me-1-desktop.svg');
+    background: url("images/illustration-about-me-2-desktop.svg"),
+      url("images/illustration-about-me-1-desktop.svg");
     background-position: left bottom, right top;
     background-repeat: no-repeat;
   }
@@ -805,7 +836,8 @@ p {
   border-radius: 0.25rem;
   font-family: inherit;
   font-weight: inherit;
-  transition: border 150ms ease-in-out, outline 150ms ease-in-out, outline-offset 150ms ease-in-out;
+  transition: border 150ms ease-in-out, outline 150ms ease-in-out,
+    outline-offset 150ms ease-in-out;
 }
 
 .footer__form-input:focus {
@@ -885,7 +917,8 @@ p {
     padding-left: 10vw;
     padding-right: 10vw;
     align-items: center;
-    background: url('images/cf-1-desktop.svg'), url('images/cf-bg-2-desktop.svg'), url('images/cf-bg-3-desktop.svg');
+    background: url("images/cf-1-desktop.svg"),
+      url("images/cf-bg-2-desktop.svg"), url("images/cf-bg-3-desktop.svg");
     background-position: left bottom, 20% 80%, right bottom;
     background-repeat: no-repeat;
     display: flex;
