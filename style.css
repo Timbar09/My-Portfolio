@@ -587,6 +587,7 @@ p {
   top: 1.25rem;
   right: 1rem;
   left: 1rem;
+  text-align: left;
   background-color: var(--white);
   outline: 1px solid red;
   z-index: 1010;
