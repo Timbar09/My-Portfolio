@@ -24,6 +24,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  position: relative;
   line-height: 1.5rem;
   font-family: var(--ff-inter);
   font-size: 1rem;
@@ -285,12 +286,12 @@ p {
 }
 
 /* When the menu button is clicked */
-.header__nav .open {
+.open {
   animation: menu-open 150ms ease-in-out 0ms 1 forwards;
 }
 
 /* When the cancel-menu button is clicked */
-.header__nav .close {
+.close {
   animation: menu-close 150ms ease-in-out 0ms 1 forwards;
 }
 
@@ -364,7 +365,7 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1005;
+  z-index: 1;
   text-align: end;
   background-color: var(--white);
   border-radius: 0 0 1rem 1rem;
@@ -428,8 +429,9 @@ p {
   visibility: hidden;
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 0, 0, 0.386);
-  z-index: 1009;
+  background-color: rgba(83, 83, 83, 0.85);
+  backdrop-filter: blur(5px);
+  z-index: 999;
 }
 
 .intro {
