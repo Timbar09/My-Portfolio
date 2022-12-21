@@ -128,8 +128,8 @@ projectButtons.forEach((button) => {
         popupDescrption.textContent = project.description;
         project.technologies.forEach((tech) => {
           // Create an 'li' element containg an 'a' element with classes and name of technology.
-          let techList = document.createElement('li');
-          let techListLink = document.createElement('a');
+          const techList = document.createElement('li');
+          const techListLink = document.createElement('a');
 
           // Add classes and text(technology name) to 'a' element
           techListLink.className = 'project__details-language section__card-btn';
