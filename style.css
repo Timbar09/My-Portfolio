@@ -594,7 +594,7 @@ p {
   background-image: url('images/project3-mobile.svg');
 }
 
-.section__card:hover {
+.project__card:hover {
   background-size: 125%;
   box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
 }
@@ -749,9 +749,6 @@ p {
   .project__details-description {
     grid-column: 1/3;
     grid-row: 3/4;
-  }
-
-  .project__details-description {
     padding-top: 0.75rem;
   }
 }

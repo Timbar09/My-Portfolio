@@ -38,7 +38,6 @@ menuOptions.forEach((option) => {
 // Project details popup window
 
 const projectButtons = document.querySelectorAll('.project__cta');
-const header = document.querySelector('.header');
 const popupCancelBtn = document.querySelector('.project__details-cancel-icon');
 const popup = document.querySelector('.project__details');
 const popupfeatureImg = document.querySelector('.project__details-featured-image');
@@ -47,46 +46,52 @@ const popupDescrption = document.querySelector('.project__details-description');
 const popupTechList = document.querySelector('.project__details-languages');
 const desktopView = window.matchMedia('(min-width: 64em');
 
-let projectsArr = [
+const projectsArr = [
   {
-    ctaId: 1,
+    ctaId: '1',
     name: 'Keeping track of hundreds of components',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea.`,
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea.",
     image: ['images/project1-mobile.svg', 'images/project1-desktop.svg'],
     technologies: ['Codekit', 'Github', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
   },
   {
-    ctaId: 2,
+    ctaId: '2',
     name: 'Project 2 title',
-    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste consequatur vitae corporis velit. Officia, quo quam. Sit laudantium, nisi enim natus explicabo, odio architecto doloribus dolorem suscipit veritatis, asperiores numquam quia amet perferendis? Architecto obcaecati illum dolorum laudantium facilis totam sequi voluptas nulla quia. Quo, culpa! Soluta quam rem inventore.`,
+    description:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste consequatur vitae corporis velit. Officia, quo quam. Sit laudantium, nisi enim natus explicabo, odio architecto doloribus dolorem suscipit veritatis, asperiores numquam quia amet perferendis? Architecto obcaecati illum dolorum laudantium facilis totam sequi voluptas nulla quia. Quo, culpa! Soluta quam rem inventore.',
     image: ['images/project2-mobile.svg', 'images/project2-desktop.svg'],
     technologies: ['Codekit', 'JavaScript', 'Codepen'],
   },
   {
-    ctaId: 3,
+    ctaId: '3',
     name: 'Project 3 title',
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam libero accusantium quibusdam quis, voluptatem rem deserunt, quod iste labore tenetur dolores officia natus eaque neque consequuntur necessitatibus nemo nostrum eos nulla quo dolore cumque dolor!`,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam libero accusantium quibusdam quis, voluptatem rem deserunt, quod iste labore tenetur dolores officia natus eaque neque consequuntur necessitatibus nemo nostrum eos nulla quo dolore cumque dolor!',
     image: ['images/project3-mobile.svg', 'images/project3-desktop.svg'],
     technologies: ['Github', 'Bootstrap', 'Terminal'],
   },
   {
-    ctaId: 4,
+    ctaId: '4',
     name: 'Project 4 title',
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque reprehenderit possimus hic dolore unde fugit suscipit, voluptas dolorum nobis debitis.`,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque reprehenderit possimus hic dolore unde fugit suscipit, voluptas dolorum nobis debitis.',
     image: ['images/project1-mobile.svg', 'images/project1-desktop.svg'],
     technologies: ['Github', 'JavaScript', 'Bootstrap', 'Terminal'],
   },
   {
-    ctaId: 5,
+    ctaId: '5',
     name: 'Project 5 title',
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas ut, maxime eos quos incidunt commodi aut libero explicabo enim laboriosam, similique quidem id ipsa. Harum reprehenderit iste ad officia beatae aperiam vel nisi nobis, dolorem nulla.`,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas ut, maxime eos quos incidunt commodi aut libero explicabo enim laboriosam, similique quidem id ipsa. Harum reprehenderit iste ad officia beatae aperiam vel nisi nobis, dolorem nulla.',
     image: ['images/project2-mobile.svg', 'images/project2-desktop.svg'],
     technologies: ['Codekit', 'JavaScript', 'Terminal', 'Codepen'],
   },
   {
-    ctaId: 6,
+    ctaId: '6',
     name: 'Project 6 title',
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, voluptatem aliquid. Omnis similique animi doloribus ipsam, incidunt excepturi explicabo esse voluptatum sit error, adipisci dolore ipsa praesentium beatae, fugit velit accusamus.`,
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, voluptatem aliquid. Omnis similique animi doloribus ipsam, incidunt excepturi explicabo esse voluptatum sit error, adipisci dolore ipsa praesentium beatae, fugit velit accusamus.',
     image: ['images/project3-mobile.svg', 'images/project3-desktop.svg'],
     technologies: ['Codekit', 'Github', 'JavaScript', 'Bootstrap', 'Terminal'],
   },
@@ -118,7 +123,7 @@ projectButtons.forEach((button) => {
 
     // fill in text inside popup
     projectsArr.forEach((project) => {
-      if (project.ctaId == button.id) {
+      if (project.ctaId === button.id) {
         popupTitle.textContent = project.name;
         popupDescrption.textContent = project.description;
         project.technologies.forEach((tech) => {
@@ -134,10 +139,13 @@ projectButtons.forEach((button) => {
           techList.appendChild(techListLink);
           popupTechList.appendChild(techList);
         });
+
+        const [mobile, desktop] = project.image;
+
         if (desktopView.matches) {
-          popupfeatureImg.src = project.image[1];
+          popupfeatureImg.src = desktop;
         } else {
-          popupfeatureImg.src = project.image[0];
+          popupfeatureImg.src = mobile;
         }
       }
     });
