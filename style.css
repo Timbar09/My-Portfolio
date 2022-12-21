@@ -428,7 +428,10 @@ p {
 .overlay {
   visibility: hidden;
   position: absolute;
-  inset: 0;
+  top: -80px;
+  right: 0;
+  bottom: -140px;
+  left: 0;
   background-color: rgba(83, 83, 83, 0.85);
   backdrop-filter: blur(5px);
   z-index: 999;
@@ -538,7 +541,7 @@ p {
 }
 
 .project {
-  padding-top: 1.375rem;
+  padding-top: 4rem;
 }
 
 .project__title {
@@ -597,7 +600,8 @@ p {
   left: 1rem;
   text-align: left;
   background-color: var(--white);
-  outline: 1px solid red;
+  border: 2px solid var(--grey);
+  border-radius: 0.5rem;
   z-index: 1010;
 }
 
@@ -724,7 +728,7 @@ p {
 }
 
 .about {
-  margin-top: 1.125rem;
+  padding-top: 1.125rem;
 }
 
 .about__text {
@@ -797,7 +801,7 @@ p {
 
 @media (min-width: 40em) {
   .about {
-    margin-top: 5.5rem;
+    padding-top: 5.5rem;
   }
 
   .about__text {
@@ -808,12 +812,12 @@ p {
   }
 
   .about__title {
-    padding-top: 6.5rem;
+    padding-top: 4.5rem;
   }
 }
 
 .footer {
-  padding-top: 3.75rem;
+  padding-top: 4.25rem;
   text-align: center;
 }
 
