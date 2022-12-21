@@ -91,3 +91,59 @@ let projectsArr = [
     technologies: ['Codekit', 'Github', 'JavaScript', 'Bootstrap', 'Terminal'],
   },
 ];
+
+// Open popup
+const activatePopup = () => {
+  popup.classList.remove('close');
+  popup.classList.add('open');
+  overlay.classList.add('open');
+  overlay.classList.remove('close');
+  overlay.style.zIndex = 1001;
+};
+
+// Close popup
+const deactivatePopup = () => {
+  popup.classList.remove('open');
+  popup.classList.add('close');
+  overlay.classList.remove('open');
+  overlay.classList.add('close');
+  overlay.style.zIndex = 999;
+  popupTechList.innerHTML = '';
+  popupfeatureImg.src = '';
+};
+
+projectButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    activatePopup();
+
+    // fill in text inside popup
+    projectsArr.forEach((project) => {
+      if (project.ctaId == button.id) {
+        popupTitle.textContent = project.name;
+        popupDescrption.textContent = project.description;
+        project.technologies.forEach((tech) => {
+          // Create an 'li' element containg an 'a' element with classes and name of technology.
+          let techList = document.createElement('li');
+          let techListLink = document.createElement('a');
+
+          // Add classes and text(technology name) to 'a' element
+          techListLink.className = 'project__details-language section__card-btn';
+          techListLink.textContent = tech;
+
+          // Add the 'li' into the 'ul' element
+          techList.appendChild(techListLink);
+          popupTechList.appendChild(techList);
+        });
+        if (desktopView.matches) {
+          popupfeatureImg.src = project.image[1];
+        } else {
+          popupfeatureImg.src = project.image[0];
+        }
+      }
+    });
+  });
+});
+
+popupCancelBtn.addEventListener('click', () => {
+  deactivatePopup();
+});
