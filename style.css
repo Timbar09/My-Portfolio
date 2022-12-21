@@ -567,7 +567,36 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   height: 29.625rem;
-  background-image: url('images/pexels-pixabay-276452.jpg');
+  background-size: 115%;
+}
+
+.project__card:first-child {
+  background-image: url('images/project-1-img.svg');
+}
+
+.project__card:nth-child(2) {
+  background-image: url('images/project2-mobile.svg');
+}
+
+.project__card:nth-child(3) {
+  background-image: url('images/project3-mobile.svg');
+}
+
+.project__card:nth-child(4) {
+  background-image: url('images/project-1-img.svg');
+}
+
+.project__card:nth-child(5) {
+  background-image: url('images/project2-mobile.svg');
+}
+
+.project__card:nth-child(6) {
+  background-image: url('images/project3-mobile.svg');
+}
+
+.section__card:hover {
+  background-size: 125%;
+  box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
 }
 
 .project__card-text {
