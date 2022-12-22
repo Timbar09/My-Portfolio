@@ -162,7 +162,7 @@ const contactForm = document.querySelector('.footer__form');
 const userEmail = document.querySelector('#email');
 
 // Check if the email value is in lowercase
-const isLowerCase = () => (/[A-Z]/g.test(userEmail.value) ? false : true);
+const isLowerCase = () => !/[A-Z]/g.test(userEmail.value);
 
 const showCaseError = () => {
   const formField = userEmail.parentElement;
