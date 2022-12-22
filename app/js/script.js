@@ -183,3 +183,12 @@ const showCaseSuccess = () => {
   const caseError = formField.querySelector('.footer__form-error-msg');
   caseError.textContent = '';
 };
+
+contactForm.addEventListener('submit', (e) => {
+  if (isLowerCase()) {
+    showCaseSuccess();
+  } else {
+    showCaseError();
+    e.preventDefault();
+  }
+});
