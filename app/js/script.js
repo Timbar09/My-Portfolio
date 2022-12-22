@@ -155,3 +155,31 @@ projectButtons.forEach((button) => {
 popupCancelBtn.addEventListener('click', () => {
   deactivatePopup();
 });
+
+// Contact form validation
+
+const contactForm = document.querySelector('.footer__form');
+const userEmail = document.querySelector('#email');
+
+// Check if the email value is in lowercase
+const isLowerCase = () => (/[A-Z]/g.test(userEmail.value) ? false : true);
+
+const showCaseError = () => {
+  const formField = userEmail.parentElement;
+
+  formField.classList.remove('valid');
+  formField.classList.add('invalid');
+
+  const caseError = formField.querySelector('.footer__form-error-msg');
+  caseError.textContent = 'All letters must be lowercase';
+};
+
+const showCaseSuccess = () => {
+  const formField = userEmail.parentElement;
+
+  formField.classList.remove('invalid');
+  formField.classList.add('valid');
+
+  const caseError = formField.querySelector('.footer__form-error-msg');
+  caseError.textContent = '';
+};
