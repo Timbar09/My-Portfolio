@@ -359,12 +359,14 @@
         </div>
       </section>
     </main>
+
     <footer id="contact" class="footer">
       <div class="container container-px">
         <div class="footer__flexbox">
           <h2 class="footer__title section__title">
             I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
           </h2>
+
           <form action="https://formspree.io/f/xgeqpgnr" method="POST" class="footer__form">
             <div class="footer__form-control">
               <label for="name">Full name</label>
@@ -382,17 +384,25 @@
 
             <div class="footer__form-control">
               <label for="email">Email</label>
-              <input class="footer__form-input" required placeholder="Email address" type="email" />
+              <input
+                id="email"
+                class="footer__form-input"
+                name="user_email"
+                required
+                placeholder="Email address"
+                type="email"
+              />
+              <small class="footer__form-error-msg"></small>
             </div>
 
             <div class="footer__form-control">
-              <label for="">Message</label>
+              <label for="message">Message</label>
               <textarea
+                id="message"
                 class="footer__form-input"
                 name="user_message"
-                id="message"
-                minlength="1"
                 placeholder="Enter text here"
+                minlength="1"
                 maxlength="500"
                 required
                 cols="30"
