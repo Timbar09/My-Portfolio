@@ -855,6 +855,10 @@ p {
 }
 
 .footer__form {
+  --focus: var(--darkBlue);
+  --valid: var(--lime);
+  --invalid: #f71a1a;
+
   max-width: 37.5rem;
   margin: auto;
   display: flex;
@@ -885,7 +889,7 @@ p {
 }
 
 .footer__form-input:focus {
-  border: solid 2px var(--lime);
+  border: solid 2px var(--focus);
   outline-offset: 2px;
   outline: solid 2px var(--grey);
 }
@@ -895,6 +899,20 @@ p {
   max-width: 100%;
   min-height: 7.125rem;
   max-height: 7.125rem;
+}
+
+.footer__form-control.valid input {
+  border: 2px solid var(--valid);
+}
+
+.footer__form-control.invalid input {
+  border: 2px solid var(--invalid);
+}
+
+.footer__form-error-msg {
+  color: var(--invalid);
+  font-size: 0.85rem;
+  height: 1.5rem;
 }
 
 .footer__form-button {

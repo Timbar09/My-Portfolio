@@ -1,11 +1,13 @@
 const body = document.querySelector('.body');
-const overlay = document.querySelector('.overlay');
+
 const menu = document.querySelector('.header__menu');
 const menuOptions = document.querySelectorAll('.header__menu-link');
 const openMenuBtn = document.querySelector('.header__hamburger');
 const closeMenuBtn = document.querySelector('.header__menu-btn');
 
 const openMenu = () => {
+  const overlay = document.querySelector('.overlay');
+
   menu.classList.remove('close');
   overlay.classList.remove('close');
   menu.classList.add('open');
@@ -14,6 +16,8 @@ const openMenu = () => {
 };
 
 const closeMenu = () => {
+  const overlay = document.querySelector('.overlay');
+
   menu.classList.remove('open');
   overlay.classList.remove('open');
   body.classList.remove('noscroll');
@@ -39,11 +43,10 @@ menuOptions.forEach((option) => {
 
 const projectButtons = document.querySelectorAll('.project__cta');
 const popupCancelBtn = document.querySelector('.project__details-cancel-icon');
-const popup = document.querySelector('.project__details');
-const popupfeatureImg = document.querySelector('.project__details-featured-image');
+
 const popupTitle = document.querySelector('.project__feature-title');
 const popupDescrption = document.querySelector('.project__details-description');
-const popupTechList = document.querySelector('.project__details-languages');
+
 const desktopView = window.matchMedia('(min-width: 64em');
 
 const projectsArr = [
@@ -53,7 +56,14 @@ const projectsArr = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea.",
     image: ['images/project1-mobile.svg', 'images/project1-desktop.svg'],
-    technologies: ['Codekit', 'Github', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
+    technologies: [
+      'Codekit',
+      'Github',
+      'JavaScript',
+      'Bootstrap',
+      'Terminal',
+      'Codepen',
+    ],
   },
   {
     ctaId: '2',
@@ -99,6 +109,9 @@ const projectsArr = [
 
 // Open popup
 const activatePopup = () => {
+  const popup = document.querySelector('.project__details');
+  const overlay = document.querySelector('.overlay');
+
   popup.classList.remove('close');
   popup.classList.add('open');
   overlay.classList.add('open');
@@ -108,6 +121,13 @@ const activatePopup = () => {
 
 // Close popup
 const deactivatePopup = () => {
+  const popup = document.querySelector('.project__details');
+  const popupTechList = document.querySelector('.project__details-languages');
+  const popupfeatureImg = document.querySelector(
+    '.project__details-featured-image',
+  );
+  const overlay = document.querySelector('.overlay');
+
   popup.classList.remove('open');
   popup.classList.add('close');
   overlay.classList.remove('open');
@@ -123,6 +143,13 @@ projectButtons.forEach((button) => {
 
     // fill in text inside popup
     projectsArr.forEach((project) => {
+      const popupfeatureImg = document.querySelector(
+        '.project__details-featured-image',
+      );
+      const popupTechList = document.querySelector(
+        '.project__details-languages',
+      );
+
       if (project.ctaId === button.id) {
         popupTitle.textContent = project.name;
         popupDescrption.textContent = project.description;
@@ -154,4 +181,41 @@ projectButtons.forEach((button) => {
 
 popupCancelBtn.addEventListener('click', () => {
   deactivatePopup();
+});
+
+// Contact form validation
+
+const contactForm = document.querySelector('.footer__form');
+const userEmail = document.querySelector('#email');
+
+// Check if the email value is in lowercase
+const isLowerCase = () => !/[A-Z]/g.test(userEmail.value);
+
+const showCaseError = () => {
+  const formField = userEmail.parentElement;
+
+  formField.classList.remove('valid');
+  formField.classList.add('invalid');
+
+  const caseError = formField.querySelector('.footer__form-error-msg');
+  caseError.textContent = 'All letters must be lowercase';
+};
+
+const showCaseSuccess = () => {
+  const formField = userEmail.parentElement;
+
+  formField.classList.remove('invalid');
+  formField.classList.add('valid');
+
+  const caseError = formField.querySelector('.footer__form-error-msg');
+  caseError.textContent = '';
+};
+
+contactForm.addEventListener('submit', (e) => {
+  if (isLowerCase()) {
+    showCaseSuccess();
+  } else {
+    showCaseError();
+    e.preventDefault();
+  }
 });
