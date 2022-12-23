@@ -124,7 +124,7 @@ const deactivatePopup = () => {
   const popup = document.querySelector('.project__details');
   const popupTechList = document.querySelector('.project__details-languages');
   const popupfeatureImg = document.querySelector(
-    '.project__details-featured-image'
+    '.project__details-featured-image',
   );
   const overlay = document.querySelector('.overlay');
 
@@ -144,10 +144,10 @@ projectButtons.forEach((button) => {
     // fill in text inside popup
     projectsArr.forEach((project) => {
       const popupfeatureImg = document.querySelector(
-        '.project__details-featured-image'
+        '.project__details-featured-image',
       );
       const popupTechList = document.querySelector(
-        '.project__details-languages'
+        '.project__details-languages',
       );
 
       if (project.ctaId === button.id) {
@@ -159,8 +159,7 @@ projectButtons.forEach((button) => {
           const techListLink = document.createElement('a');
 
           // Add classes and text(technology name) to 'a' element
-          techListLink.className =
-            'project__details-language section__card-btn';
+          techListLink.className = 'project__details-language section__card-btn';
           techListLink.textContent = tech;
 
           // Add the 'li' into the 'ul' element
