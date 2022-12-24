@@ -56,14 +56,7 @@ const projectsArr = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea.",
     image: ['images/project1-mobile.svg', 'images/project1-desktop.svg'],
-    technologies: [
-      'Codekit',
-      'Github',
-      'JavaScript',
-      'Bootstrap',
-      'Terminal',
-      'Codepen',
-    ],
+    technologies: ['Codekit', 'Github', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
   },
   {
     ctaId: '2',
@@ -123,9 +116,7 @@ const activatePopup = () => {
 const deactivatePopup = () => {
   const popup = document.querySelector('.project__details');
   const popupTechList = document.querySelector('.project__details-languages');
-  const popupfeatureImg = document.querySelector(
-    '.project__details-featured-image',
-  );
+  const popupfeatureImg = document.querySelector('.project__details-featured-image');
   const overlay = document.querySelector('.overlay');
 
   popup.classList.remove('open');
@@ -143,12 +134,8 @@ projectButtons.forEach((button) => {
 
     // fill in text inside popup
     projectsArr.forEach((project) => {
-      const popupfeatureImg = document.querySelector(
-        '.project__details-featured-image',
-      );
-      const popupTechList = document.querySelector(
-        '.project__details-languages',
-      );
+      const popupfeatureImg = document.querySelector('.project__details-featured-image');
+      const popupTechList = document.querySelector('.project__details-languages');
 
       if (project.ctaId === button.id) {
         popupTitle.textContent = project.name;
@@ -211,9 +198,40 @@ const showCaseSuccess = () => {
   caseError.textContent = '';
 };
 
+// Store and retrieve user information
+
+// Store user info
+const storeUserInfo = () => {
+  const theUser = {};
+  const userName = document.querySelector('#name').value;
+  const userEmail = document.querySelector('#email').value;
+  const userMessage = document.querySelector('#message').value;
+
+  theUser.name = userName;
+  theUser.email = userEmail;
+  theUser.message = userMessage;
+
+  // Saving to local storage
+  localStorage.setItem('theUser', JSON.stringify(theUser));
+};
+
+// Get user info
+const userInfo = JSON.parse(localStorage.getItem('theUser'));
+
+const retrieveUserInfo = () => {
+  if (userInfo !== 'null') {
+    document.querySelector('#name').value = userInfo.name;
+    document.querySelector('#email').value = userInfo.email;
+    document.querySelector('#message').value = userInfo.message;
+  }
+};
+
+retrieveUserInfo();
+
 contactForm.addEventListener('submit', (e) => {
   if (isLowerCase()) {
     showCaseSuccess();
+    storeUserInfo();
   } else {
     showCaseError();
     e.preventDefault();
