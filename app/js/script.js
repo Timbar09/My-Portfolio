@@ -219,7 +219,7 @@ const storeUserInfo = () => {
 const userInfo = JSON.parse(localStorage.getItem('theUser'));
 
 const retrieveUserInfo = () => {
-  if (userInfo !== 'null') {
+  if (userInfo) {
     document.querySelector('#name').value = userInfo.name;
     document.querySelector('#email').value = userInfo.email;
     document.querySelector('#message').value = userInfo.message;
@@ -228,10 +228,11 @@ const retrieveUserInfo = () => {
 
 retrieveUserInfo();
 
+contactForm.addEventListener('change', storeUserInfo);
+
 contactForm.addEventListener('submit', (e) => {
   if (isLowerCase()) {
     showCaseSuccess();
-    storeUserInfo();
   } else {
     showCaseError();
     e.preventDefault();
