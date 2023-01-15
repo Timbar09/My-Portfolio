@@ -575,11 +575,11 @@ p {
 }
 
 .project__card:nth-child(2) {
-  background-image: url('images/project2-mobile.svg');
+  background-image: url('images/project-1-img.svg');
 }
 
 .project__card:nth-child(3) {
-  background-image: url('images/project3-mobile.svg');
+  background-image: url('images/project-1-img.svg');
 }
 
 .project__card:nth-child(4) {
@@ -587,11 +587,11 @@ p {
 }
 
 .project__card:nth-child(5) {
-  background-image: url('images/project2-mobile.svg');
+  background-image: url('images/project-1-img.svg');
 }
 
 .project__card:nth-child(6) {
-  background-image: url('images/project3-mobile.svg');
+  background-image: url('images/project-1-img.svg');
 }
 
 .project__card:hover {
@@ -620,21 +620,24 @@ p {
   margin-bottom: 0.8125rem;
 }
 
-.project__details {
+.popup {
   visibility: hidden;
   position: absolute;
-  padding: 1rem;
-  top: -3.75rem;
+  padding-top: 2rem;
   text-align: left;
   width: 85%;
   left: 50%;
   translate: -50%;
-  height: 80vh;
+  z-index: 1010;
+}
+
+.project__details {
+  padding: 1rem;
+  height: 85vh;
   overflow-y: scroll;
   background-color: var(--white);
   border: 2px solid var(--grey);
   border-radius: 0.5rem;
-  z-index: 1010;
 }
 
 .project__details-cancel {
@@ -642,9 +645,6 @@ p {
 }
 
 .project__details-cancel-icon {
-  position: absolute;
-  top: 7.5vw;
-  right: 7.25vw;
   padding: 0.25rem;
   border-radius: 0.35rem;
   cursor: pointer;
@@ -719,15 +719,13 @@ p {
     display: none;
   }
 
-  .project__details {
-    padding: 1.5rem;
-    top: 0;
+  .popup {
+    padding-top: 4rem;
   }
 
-  .project__details-cancel-icon {
-    position: relative;
-    top: 0;
-    right: 0;
+  .project__details {
+    padding: 1.5rem;
+    height: 80vh;
   }
 }
 
