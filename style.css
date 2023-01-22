@@ -807,7 +807,7 @@ p {
 
 .about__card:hover,
 .about__card:focus-within {
-  background-color: rgba(235, 240, 238, 0.7);
+  background-color: rgba(40, 45, 43, 0.6);
   background-size: 110%;
   box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
 }
@@ -822,6 +822,11 @@ p {
 
 .about__card-title {
   margin-bottom: 1.5rem;
+  transition: color 200ms ease-in-out;
+}
+
+.about__card:hover .about__card-title {
+  color: var(--white);
 }
 
 .about__card-btns {

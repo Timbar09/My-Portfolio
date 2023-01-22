@@ -47,8 +47,6 @@ const popupCancelBtn = document.querySelector('.project__details-cancel-icon');
 const popupTitle = document.querySelector('.project__feature-title');
 const popupDescrption = document.querySelector('.project__details-description');
 
-const desktopView = window.matchMedia('(min-width: 64em');
-
 const projectsArr = [
   {
     ctaId: '1',
@@ -167,8 +165,8 @@ projectButtons.forEach((button) => {
 
           // Add classes and text(technology name) to 'a' element
           techListLink.className = 'project__details-language section__card-btn';
-          techListLink.href = project.source
-          techListLink.target = '_blank'
+          techListLink.href = project.source;
+          techListLink.target = '_blank';
           techListLink.textContent = tech;
 
           // Add the 'li' into the 'ul' element
