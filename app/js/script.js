@@ -64,7 +64,7 @@ const projectsArr = [
     ctaId: '2',
     name: "Africa's Leading Tech Confrence 2023",
     description:
-      "This project is a dynamic tech conference page which brings together some of the world's most renowned tech professionals, with the African professionals at the core. On the speakers section, speaker data is stored in browswer's local storage and the data is lretrieved when the page loads.",
+      "This project is a dynamic conference web page.The project was built with JavaScript, CSS and HTML. On the speakers section, speaker data is stored in browswer's local storage and the data is lretrieved when the page loads.",
     image: 'images/ALT-Conference-popup.svg',
     technologies: ['JavaScript', 'GitHub', 'css', 'Terminal', 'html'],
     source: 'https://github.com/Timbar09/Africas-Leading-Tech-Conference',
@@ -159,7 +159,6 @@ projectButtons.forEach((button) => {
         popupTitle.textContent = project.name;
         popupDescrption.textContent = project.description;
         popupSource.href = project.source;
-        console.log(project.source);
         popupLive.href = project.live;
         project.technologies.forEach((tech) => {
           // Create an 'li' element containg an 'a' element with classes and name of technology.
@@ -168,6 +167,8 @@ projectButtons.forEach((button) => {
 
           // Add classes and text(technology name) to 'a' element
           techListLink.className = 'project__details-language section__card-btn';
+          techListLink.href = project.source
+          techListLink.target = '_blank'
           techListLink.textContent = tech;
 
           // Add the 'li' into the 'ul' element
