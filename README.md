@@ -2,7 +2,9 @@
 
 <div align="center">
 
-  <h3><b>Miles Mosweu's Portfolio</b></h3><br/><br/>
+  <h1><b>My-Portfolio</b></h1>
+
+  <img src="images/portfolio-img.png" /><br/><br/>
 
 </div>
 
@@ -23,26 +25,27 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
+<!-- - [❓ FAQ](#faq) -->
 - [📝 License](#license)
+
+<br/>
 
 # 📖 My Portfolio <a name="about-project"></a>
 
 **My Portfolio** is a port folio webpage which showcases some of my work and also demonstrate my skills and capabilities as fullstack developer.
 
-Whatch this [project presentation video](https://www.loom.com/share/d3922c70b2b744d59e6b68b58ea0d1dd) to learn more about the project.
+Whatch [this video](https://www.loom.com/share/d3922c70b2b744d59e6b68b58ea0d1dd) to learn more.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://html.com/html5/">HTML5</a></li>
-    <li><a href="https://www.w3schools.com/css/">CSS3</a></li>
-  </ul>
-</details>
+<summary>Client</summary>
+<ul>
+  <li><a href="https://www.javascript.com/">JavaScript</a></li>
+  <li><a href="https://www.w3schools.com/css/">CSS3</a></li>
+  <li><a href="https://html.com/html5/">HTML5</a></li>
+</ul>
 
 <!-- <details>
   <summary>Server</summary>
@@ -60,16 +63,12 @@ Whatch this [project presentation video](https://www.loom.com/share/d3922c70b2b7
 
 ### Key Features <a name="key-features"></a>
 
-- **The Header**
-  - It has important information which will be first to be displayed and most likely noticed by the user.
-  - It contains the navigation bar which facillitates easy navigation of the website and allows users to access content more readily and easily.
-- **The Introduction Section**
-  - Contains some introductory information which describe what I do and what is to be expected on the page.
-  - It also contains some social media icons.
-- **The Projects Section**
-  - It displays some of my best work. On this section, potential clients can view and disect the projects that I worked on.
-- **The Footer**
-  - The footer of the page contains a contact-form, which is a means to communicate with me about aquiring my services and discussing possible collaborations.
+- **User Experience**
+  - JavaScript adds a lot of functionality as well as providing some great user experiece to the user by making the page interactive.
+- **Form validation**
+  - The form on the page was validated using the built-in HTML5 form validation as well as personalised JavaScript form validation.
+- **Page layout**
+  - The page layout was implemented with both CSS gird and flexbox.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,8 +86,9 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- A browser (e.g. Firefox)
+- [NodeJS and npm](https://nodejs.org/en/)
 - An IDE (e.g. [Vususal Studio Code](https://code.visualstudio.com/download))
+- A browser (e.g. Firefox)
 
 <!--
 Example command:
@@ -138,24 +138,20 @@ You can deploy this project by:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
+<br />
 
-👤 **Miles Mosweu**
-
-- GitHub: [@Timbar09](https://github.com/Timbar09)
-- Twitter: [@Milez09](https://twitter.com/Milez09)
-- LinkedIn: [@miles-mosweu09](https://www.linkedin.com/in/miles-mosweu09)
-
-👤 **Dhiraj Singha**
-
-- GitHub: [@dhirajsingha143](https://github.com/dhirajsingha143)
-- Twitter: [@DhirajS89134](https://twitter.com/DhirajS89134)
-- LinkedIn: [@dhiraj-singha-b6871717a](https://www.linkedin.com/in/dhiraj-singha-b6871717a/)
+| 👤 Author | GitHub| Twitter | LinkedIn |
+|:-------|:-------|:-------|:-------|
+| Miles Mosweu | [@Timbar09](https://github.com/Timbar09) | [@Milez09](https://twitter.com/Milez09) | [@miles09](https://www.linkedin.com/in/miles09) |
+| Dhiraj Singha | [@dhirajsingha143](https://github.com/dhirajsingha143) | [@DhirajS89134](https://twitter.com/DhirajS89134) | [@dhiraj-singha-b6871717a](https://www.linkedin.com/in/dhiraj-singha-b6871717a/) |
+| Yared Tekle | [@yaredtekle022](https://github.com/yaredtekle022) | - | - |
+| Kazaneza | [@kazaneza](https://github.com/kazaneza) | - | - |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add JavaScript to provide greater UX**
+- **Populate the portfolio project with more of my projects**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,17 +165,21 @@ Feel free to check the [issues page](https://github.com/Timbar09/My-Portfolio/is
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, let me know what you like in particular. Feel free to also mention what you dont like. I welcome constructive criticism, it allows me to keep learning and to grow.
+If you like this project, ⭐️ the project and let me know what you like in particular. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank all conributers([Dhiraj Singha](https://github.com/dhirajsingha143)), all my Microverse teams and the whole Microverse community for their help and contributions towards this project.
+I would like to thank [everyone](#readme-top) who collaborated with me on this project.
+
+I would like to thank all my Microverse teams and the whole Microverse community for their help and contributions towards this project.
+
+I would also like [Figma]() for the template and [Freepik]() for the project cards background images and mock-ups.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## ❓ FAQ <a name="faq"></a>
+<!-- ## ❓ FAQ <a name="faq"></a>
 
 - **How long did it to finish this project?**
 
@@ -189,7 +189,7 @@ I would like to thank all conributers([Dhiraj Singha](https://github.com/dhirajs
 
   - Knock yourself out.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 ## 📝 License <a name="license"></a>
 
