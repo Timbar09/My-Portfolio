@@ -264,6 +264,7 @@ p {
   right: 0;
   z-index: 1000;
   background-color: var(--white);
+  box-shadow: 0 8px 16px rgba(22, 69, 49, 0.1);
 }
 
 .header__nav {
