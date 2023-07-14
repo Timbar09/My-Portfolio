@@ -4,7 +4,9 @@
   "description": "\"My potfolio portfolio website\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx stylelint \"**/*.{css,scss}\" && npx eslint .",
+    "fix": "npx stylelint \"**/*.{css,scss}\" --fix && npx eslint . --fix"
   },
   "repository": {
     "type": "git",

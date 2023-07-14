@@ -1,0 +1,125 @@
+h1,
+h2,
+h3,
+h4 {
+  color: var(--darkerBlue);
+  margin: 0;
+}
+
+a,
+a::before,
+a::after {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin-top: 0;
+}
+
+.section {
+  text-align: center;
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+
+    @media (min-width: 40em) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 64em) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__cta {
+    --pressed: #008552;
+
+    padding: 0.5rem 0.75rem;
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--lime);
+    border-radius: 0.25rem;
+    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+    }
+
+    &:active {
+      background-color: var(--pressed);
+    }
+  }
+
+  &__card {
+    position: relative;
+    padding: 0.75rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 23.0625rem;
+    border-radius: 0.5rem;
+    border: solid 2px var(--grey);
+    background-color: var(--lightGrey);
+    overflow: hidden;
+
+    &-title {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    &-btns {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    &-btn {
+      display: inline-block;
+      padding: 0.5rem 0.75rem;
+      font-weight: 600;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 0.03em;
+      background-color: var(--btn-bg);
+      border-radius: 0.25rem;
+      transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+      &:hover {
+        background-color: var(--btn-hover);
+        box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
+      }
+
+      &:active {
+        background-color: var(--btn-pressed);
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 90rem;
+  margin: auto;
+
+  &-pall {
+    padding: 1.5rem;
+  }
+
+  &-px {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

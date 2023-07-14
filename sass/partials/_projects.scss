@@ -1,0 +1,221 @@
+.project {
+  padding-top: 4rem;
+
+  @media (min-width: 40em) {
+    padding-top: 8.5rem;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 5.625rem;
+
+    @media (min-width: 40em) {
+      position: relative;
+      margin-bottom: 3.25rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -1.5rem;
+      left: 50%;
+      translate: -50%;
+      height: 0.25rem;
+      width: 3rem;
+      background-color: var(--lime);
+      border-radius: 3rem;
+
+      @media (min-width: 40em) {
+        display: none;
+      }
+    }
+  }
+
+  &__card {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 29.625rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    top: 0;
+    transition: 200ms box-shadow ease-in-out, 200ms top ease-in-out;
+
+    &:first-child {
+      background-image: url('/images/Awesome-book-card.svg');
+    }
+
+    &:nth-child(2) {
+      background-image: url('/images/ALT-conference-card.svg');
+    }
+
+    &:nth-child(3) {
+      background-image: url('/images/project-1-img.svg');
+    }
+
+    &:nth-child(4) {
+      background-image: url('/images/project-1-img.svg');
+    }
+
+    &:nth-child(5) {
+      background-image: url('/images/project-1-img.svg');
+    }
+
+    &:nth-child(6) {
+      background-image: url('/images/project-1-img.svg');
+    }
+
+    &:hover,
+    &:focus-within {
+      top: -1rem;
+      box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    &-text {
+      padding: 0.6875rem;
+      background-color: var(--white);
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    &-title {
+      margin-bottom: 1rem;
+    }
+
+    &-btns {
+      --btn-bg: var(--lightGrey);
+      --btn-hover: var(--grey);
+      --btn-pressed: var(--lightGreen);
+    }
+  }
+
+  &__cta {
+    margin-top: 1.875rem;
+    margin-bottom: 0.8125rem;
+  }
+
+  .popup {
+    visibility: hidden;
+    position: absolute;
+    padding-top: 2rem;
+    text-align: left;
+    width: 85%;
+    left: 50%;
+    translate: -50%;
+    z-index: 1010;
+
+    @media (min-width: 40em) {
+      padding-top: 4rem;
+    }
+  }
+
+  &__details {
+    padding: 1rem;
+    height: 85vh;
+    overflow-y: scroll;
+    background-color: var(--white);
+    border: 2px solid var(--grey);
+    border-radius: 0.5rem;
+
+    @media (min-width: 40em) {
+      padding: 1.5rem;
+      height: 80vh;
+    }
+
+    &-cancel {
+      text-align: right;
+
+      &-icon {
+        padding: 0.25rem;
+        border-radius: 0.35rem;
+        cursor: pointer;
+        background-color: var(--white);
+        transition: background-color 150ms ease-in-out;
+
+        &:hover {
+          background-color: rgb(247, 57, 57);
+        }
+      }
+    }
+
+    &-featured {
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background-color: var(--lightGrey);
+
+      &-image {
+        width: 100%;
+        border-radius: 0.3rem;
+      }
+    }
+
+    &-text {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 0.75rem;
+
+      @media (min-width: 64em) {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 1.25rem;
+        padding-top: 1.5rem;
+      }
+    }
+
+    &-languages {
+      justify-content: start;
+
+      @media (min-width: 64em) {
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+    }
+
+    &-language {
+      --btn-bg: var(--lightGrey);
+      --btn-hover: var(--grey);
+      --btn-pressed: var(--lightGreen);
+    }
+
+    &-description {
+      margin: 0;
+
+      @media (min-width: 64em) {
+        max-width: 70%;
+        grid-column: 1/3;
+        grid-row: 3/4;
+        padding-top: 0.75rem;
+      }
+    }
+
+    &-ctas {
+      display: flex;
+      gap: 0.75rem;
+
+      @media (min-width: 64em) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+    }
+
+    &-cta {
+      width: max-content;
+      height: max-content;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  }
+
+  &__feature-title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+
+    @media (min-width: 64em) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+}

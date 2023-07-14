@@ -1,0 +1,145 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  box-shadow: 0 8px 16px rgba(22, 69, 49, 0.1);
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--darkerBlue);
+    transition: color 150ms ease-in-out;
+
+    &:hover {
+      color: var(--lime);
+    }
+  }
+
+  &__links {
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    line-height: 1.25rem;
+    transition: color 150ms ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      translate: -50%;
+      width: 0.25rem;
+      height: 0.25rem;
+      background-color: var(--lime);
+      border-radius: 10rem;
+      opacity: 0;
+      transition: top 150ms ease-in-out, opacity 150ms ease-in-out, width 150ms 165ms ease-in-out;
+    }
+
+    &:hover {
+      color: var(--lime);
+
+      &::before {
+        top: 2.625rem;
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.header__hamburger {
+  border: 0;
+  padding: 0;
+  line-height: 11px;
+  background-color: inherit;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+
+.header__hamburger:hover {
+  background-color: var(--lightGreen);
+}
+
+.header__menu {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-align: end;
+  background-color: var(--white);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.header__menu-btn {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+
+.header__menu-btn:hover {
+  background-color: var(--lightGreen);
+}
+
+.header__menu-content {
+  padding: 0.875rem 0 0;
+  list-style: none;
+  text-align: left;
+  height: 70vh;
+}
+
+.header__menu-link {
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  color: var(--darkerBlue);
+  width: 100%;
+  left: 0;
+  padding: 1.25rem;
+  font-weight: 600;
+  transition: color 150ms ease-in-out, left 150ms ease-in-out;
+}
+
+.header__menu-link:hover {
+  color: var(--lime);
+  left: 2rem;
+}
+
+@media (min-width: 64em) {
+  .header__nav {
+    justify-content: center;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .header__hamburger-btn {
+    display: none;
+  }
+}

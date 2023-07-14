@@ -1,0 +1,96 @@
+.about {
+  padding-top: 1.125rem;
+
+  @media (min-width: 40em) {
+    padding-top: 5.5rem;
+  }
+
+  &__text {
+    padding: 0.5625rem 0;
+    background: url('/images/illustration-about-me-mobile.svg'), url('/images/illustration1-about-me-mobile.svg');
+    background-position: left bottom, right top;
+    background-repeat: no-repeat;
+
+    @media (min-width: 40em) {
+      padding: 0.5625rem 0;
+      background: url('/images/illustration-about-me-2-desktop.svg'), url('/images/illustration-about-me-1-desktop.svg');
+      background-position: left bottom, right top;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    padding-top: 2.5625rem;
+
+    @media (min-width: 40em) {
+      padding-top: 4.5rem;
+    }
+  }
+
+  &__description {
+    max-width: 37.5rem;
+    margin: 1.5rem auto;
+  }
+
+  &__grid {
+    padding-top: 2.5rem;
+  }
+
+  &__card {
+    background-color: rgba(235, 240, 238, 0.5);
+    transition: 200ms box-shadow ease-in-out, 200ms background-color ease-in-out, 200ms background-size ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      z-index: -1;
+      transition: background-size 200ms ease-in-out;
+    }
+
+    &:first-child::before {
+      background-image: url('/images/languages-bg.jpg');
+    }
+
+    &:nth-child(2)::before {
+      background-image: url('/images/framework-bg.jpg');
+    }
+
+    &:last-child::before {
+      background-image: url('/images/skills-bg.jpg');
+    }
+
+    &:hover,
+    &:focus-within {
+      background-color: rgba(40, 45, 43, 0.6);
+      background-size: 110%;
+      box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    &:hover::before {
+      background-size: 110%;
+    }
+
+    & img {
+      margin: 1.75rem 0;
+    }
+
+    &-title {
+      margin-bottom: 1.5rem;
+      transition: color 200ms ease-in-out;
+    }
+
+    &:hover .about__card-title {
+      color: var(--white);
+    }
+
+    &-btns {
+      --btn-bg: var(--white);
+      --btn-hover: var(--lightGreen);
+      --btn-pressed: var(--lime);
+    }
+  }
+}
