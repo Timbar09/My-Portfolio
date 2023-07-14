@@ -90,12 +90,12 @@ const showCaseSuccess = () => {
 const fillInPopupText = (projectsArr, button) => {
   projectsArr.forEach((project) => {
     const popup = document.querySelector('.popup');
-    const popupTitle = document.querySelector('.project__feature-title');
-    const popupDescrption = document.querySelector('.project__details-description');
-    const popupfeatureImg = document.querySelector('.project__details-featured-image');
-    const popupTechList = document.querySelector('.project__details-languages');
-    const popupSource = document.querySelector('.project__details-source');
-    const popupLive = document.querySelector('.project__details-live');
+    const popupTitle = document.querySelector('.popup__title');
+    const popupDescrption = document.querySelector('.popup__description');
+    const popupImage = document.querySelector('.popup__image img');
+    const popupTechList = document.querySelector('.popup__languages');
+    const popupSource = document.querySelector('.popup__cta-source');
+    const popupLive = document.querySelector('.popup__cta-live');
 
     if (project.ctaId === button.id) {
       popup.style.top = `${window.scrollY}px`;
@@ -110,7 +110,7 @@ const fillInPopupText = (projectsArr, button) => {
         const techListLink = document.createElement('a');
 
         // Add classes and text(technology name) to 'a' element
-        techListLink.className = 'project__details-language section__card-btn';
+        techListLink.className = 'popup__language section__card-btn';
         techListLink.href = project.source;
         techListLink.target = '_blank';
         techListLink.textContent = tech;
@@ -120,7 +120,7 @@ const fillInPopupText = (projectsArr, button) => {
         popupTechList.appendChild(techList);
       });
 
-      popupfeatureImg.src = project.image;
+      popupImage.src = project.image;
     }
   });
 };

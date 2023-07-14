@@ -108,25 +108,11 @@
     @media (min-width: 40em) {
       padding-top: 4rem;
     }
-  }
 
-  &__details {
-    padding: 1rem;
-    height: 85vh;
-    overflow-y: scroll;
-    background-color: var(--white);
-    border: 2px solid var(--grey);
-    border-radius: 0.5rem;
-
-    @media (min-width: 40em) {
-      padding: 1.5rem;
-      height: 80vh;
-    }
-
-    &-cancel {
+    &__cancel-btn {
       text-align: right;
 
-      &-icon {
+      &_icon {
         padding: 0.25rem;
         border-radius: 0.35rem;
         cursor: pointer;
@@ -139,31 +125,56 @@
       }
     }
 
-    &-featured {
+    &__content {
+      padding: 1rem;
+      height: 85vh;
+      overflow-y: scroll;
+      background-color: var(--white);
+      border: 2px solid var(--grey);
+      border-radius: 0.5rem;
+
+      @media (min-width: 40em) {
+        padding: 1.5rem;
+        height: 80vh;
+      }
+
+      &-text {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0.75rem;
+
+        @media (min-width: 64em) {
+          grid-template-columns: 3fr 1fr;
+          grid-template-rows: repeat(3, auto);
+          grid-gap: 1.25rem;
+          padding-top: 1.5rem;
+        }
+      }
+    }
+
+    &__image {
       padding: 1rem;
       border-radius: 0.4rem;
       background-color: var(--lightGrey);
 
-      &-image {
+      img {
         width: 100%;
         border-radius: 0.3rem;
       }
     }
 
-    &-text {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 0.75rem;
+    &__title {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 2.75rem;
 
       @media (min-width: 64em) {
-        grid-template-columns: 3fr 1fr;
-        grid-template-rows: repeat(3, auto);
-        grid-gap: 1.25rem;
-        padding-top: 1.5rem;
+        grid-column: 1/2;
+        grid-row: 1/2;
       }
     }
 
-    &-languages {
+    &__languages {
       justify-content: start;
 
       @media (min-width: 64em) {
@@ -172,13 +183,13 @@
       }
     }
 
-    &-language {
+    &__language {
       --btn-bg: var(--lightGrey);
       --btn-hover: var(--grey);
       --btn-pressed: var(--lightGreen);
     }
 
-    &-description {
+    &__description {
       margin: 0;
 
       @media (min-width: 64em) {
@@ -189,7 +200,7 @@
       }
     }
 
-    &-ctas {
+    &__ctas {
       display: flex;
       gap: 0.75rem;
 
@@ -199,23 +210,12 @@
       }
     }
 
-    &-cta {
+    &__cta {
       width: max-content;
       height: max-content;
       display: flex;
       align-items: center;
       gap: 0.75rem;
-    }
-  }
-
-  &__feature-title {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 2.75rem;
-
-    @media (min-width: 64em) {
-      grid-column: 1/2;
-      grid-row: 1/2;
     }
   }
 }

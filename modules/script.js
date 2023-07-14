@@ -35,7 +35,7 @@ menuOptions.forEach((option) => {
 // Project details popup window
 
 const projectButtons = document.querySelectorAll('.project__cta');
-const popupCancelBtn = document.querySelector('.project__details-cancel-icon');
+const popupCancelBtn = document.querySelector('.popup__cancel-btn_icon');
 
 projectButtons.forEach((button) => {
   button.addEventListener('click', () => {
