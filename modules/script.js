@@ -10,6 +10,7 @@ import {
   fillInPopupText,
   storeUserInfo,
   retrieveUserInfo,
+  clearPopupText,
 } from './functions.js';
 
 // Mobile menu functionality
@@ -45,6 +46,7 @@ projectButtons.forEach((button) => {
 });
 
 popupCancelBtn.addEventListener('click', () => {
+  clearPopupText();
   deactivatePopup();
 });
 

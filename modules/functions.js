@@ -131,6 +131,15 @@ const fillInPopupText = (projectsArr, button) => {
   });
 };
 
+const clearPopupText = () => {
+  document.querySelector('.popup__title').textContent = '';
+  document.querySelector('.popup__description').textContent = '';
+  document.querySelector('.popup__image img').src = '';
+  document.querySelector('.popup__languages').innerHTML = '';
+  document.querySelector('.popup__cta-source').href = '';
+  document.querySelector('.popup__cta-live').href = '';
+};
+
 // Storage functions
 
 const storeUserInfo = () => {
@@ -167,6 +176,7 @@ export {
   showCaseError,
   showCaseSuccess,
   fillInPopupText,
+  clearPopupText,
   storeUserInfo,
   retrieveUserInfo,
 };
