@@ -101,7 +101,13 @@ const fillInPopupText = (projectsArr, button) => {
       popup.style.top = `${window.scrollY}px`;
 
       popupTitle.textContent = project.name;
-      popupDescrption.textContent = project.description;
+
+      project.description.forEach((paragraph) => {
+        const popupDescriptionParagraph = document.createElement('p');
+        popupDescriptionParagraph.innerHTML = paragraph;
+        popupDescrption.appendChild(popupDescriptionParagraph);
+      });
+      // popupDescrption.textContent = project.description;
       popupSource.href = project.source;
       popupLive.href = project.live;
       project.technologies.forEach((tech) => {
