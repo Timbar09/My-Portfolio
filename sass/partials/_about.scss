@@ -7,13 +7,15 @@
 
   &__text {
     padding: 0.5625rem 0;
-    background: url('/images/illustration-about-me-mobile.svg'), url('/images/illustration1-about-me-mobile.svg');
+    background: url('../../images/illustration-about-me-mobile.svg'),
+      url('../../images/illustration1-about-me-mobile.svg');
     background-position: left bottom, right top;
     background-repeat: no-repeat;
 
     @media (min-width: 40em) {
       padding: 0.5625rem 0;
-      background: url('/images/illustration-about-me-2-desktop.svg'), url('/images/illustration-about-me-1-desktop.svg');
+      background: url('../../images/illustration-about-me-2-desktop.svg'),
+        url('../../images/illustration-about-me-1-desktop.svg');
       background-position: left bottom, right top;
       background-repeat: no-repeat;
     }
@@ -38,7 +40,8 @@
 
   &__card {
     background-color: rgba(235, 240, 238, 0.5);
-    transition: 200ms box-shadow ease-in-out, 200ms background-color ease-in-out, 200ms background-size ease-in-out;
+    transition: 200ms box-shadow ease-in-out, 200ms background-color ease-in-out,
+      200ms background-size ease-in-out;
 
     &::before {
       content: '';
@@ -52,15 +55,15 @@
     }
 
     &:first-child::before {
-      background-image: url('/images/languages-bg.jpg');
+      background-image: url('../../images/languages-bg.jpg');
     }
 
     &:nth-child(2)::before {
-      background-image: url('/images/framework-bg.jpg');
+      background-image: url('../../images/framework-bg.jpg');
     }
 
     &:last-child::before {
-      background-image: url('/images/skills-bg.jpg');
+      background-image: url('../../images/skills-bg.jpg');
     }
 
     &:hover,

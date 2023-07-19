@@ -386,7 +386,7 @@ p {
 }
 .intro .container {
   padding-top: 4rem;
-  background-image: url("/images/header-illsutration-mobile.svg");
+  background-image: url("../../images/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 90vh;
@@ -400,7 +400,7 @@ p {
     justify-content: flex-start;
     gap: 1.75rem;
     padding-top: 10rem;
-    background-image: url("/images/Header-llustration-desktop.svg");
+    background-image: url("../../images/Header-llustration-desktop.svg");
   }
 }
 .intro__title {
@@ -519,22 +519,22 @@ p {
   transition: 200ms box-shadow ease-in-out, 200ms top ease-in-out;
 }
 .project__card:first-child {
-  background-image: url("/images/Awesome-book-card.svg");
+  background-image: url("../../images/Awesome-book-card.svg");
 }
 .project__card:nth-child(2) {
-  background-image: url("/images/ALT-conference-card.svg");
+  background-image: url("../../images/ALT-conference-card.svg");
 }
 .project__card:nth-child(3) {
-  background-image: url("/images/todo_app_card.svg");
+  background-image: url("../../images/todo_app_card.svg");
 }
 .project__card:nth-child(4) {
-  background-image: url("/images/project-1-img.svg");
+  background-image: url("../../images/project-1-img.svg");
 }
 .project__card:nth-child(5) {
-  background-image: url("/images/project-1-img.svg");
+  background-image: url("../../images/project-1-img.svg");
 }
 .project__card:nth-child(6) {
-  background-image: url("/images/project-1-img.svg");
+  background-image: url("../../images/project-1-img.svg");
 }
 .project__card:hover, .project__card:focus-within {
   top: -1rem;
@@ -687,14 +687,14 @@ p {
 }
 .about__text {
   padding: 0.5625rem 0;
-  background: url("/images/illustration-about-me-mobile.svg"), url("/images/illustration1-about-me-mobile.svg");
+  background: url("../../images/illustration-about-me-mobile.svg"), url("../../images/illustration1-about-me-mobile.svg");
   background-position: left bottom, right top;
   background-repeat: no-repeat;
 }
 @media (min-width: 40em) {
   .about__text {
     padding: 0.5625rem 0;
-    background: url("/images/illustration-about-me-2-desktop.svg"), url("/images/illustration-about-me-1-desktop.svg");
+    background: url("../../images/illustration-about-me-2-desktop.svg"), url("../../images/illustration-about-me-1-desktop.svg");
     background-position: left bottom, right top;
     background-repeat: no-repeat;
   }
@@ -729,13 +729,13 @@ p {
   transition: background-size 200ms ease-in-out;
 }
 .about__card:first-child::before {
-  background-image: url("/images/languages-bg.jpg");
+  background-image: url("../../images/languages-bg.jpg");
 }
 .about__card:nth-child(2)::before {
-  background-image: url("/images/framework-bg.jpg");
+  background-image: url("../../images/framework-bg.jpg");
 }
 .about__card:last-child::before {
-  background-image: url("/images/skills-bg.jpg");
+  background-image: url("../../images/skills-bg.jpg");
 }
 .about__card:hover, .about__card:focus-within {
   background-color: rgba(40, 45, 43, 0.6);
@@ -780,12 +780,16 @@ p {
   padding-left: 10vw;
   padding-right: 10vw;
   align-items: center;
-  background: url("/images/cf-1-desktop.svg"), url("/images/cf-bg-2-desktop.svg"), url("/images/cf-bg-3-desktop.svg");
+  background: url("../../images/cf-1-desktop.svg"), url("../../images/cf-bg-2-desktop.svg"), url("../../images/cf-bg-3-desktop.svg");
   background-position: left bottom, 20% 80%, right bottom;
   background-repeat: no-repeat;
-  display: flex;
-  gap: 2rem;
   border-bottom: solid 1px var(--grey);
+}
+@media (min-width: 64em) {
+  .footer__flexbox {
+    display: flex;
+    gap: 2rem;
+  }
 }
 .footer__title {
   margin-bottom: 3.75rem;

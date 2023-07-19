@@ -44,27 +44,27 @@
     transition: 200ms box-shadow ease-in-out, 200ms top ease-in-out;
 
     &:first-child {
-      background-image: url('/images/Awesome-book-card.svg');
+      background-image: url('../../images/Awesome-book-card.svg');
     }
 
     &:nth-child(2) {
-      background-image: url('/images/ALT-conference-card.svg');
+      background-image: url('../../images/ALT-conference-card.svg');
     }
 
     &:nth-child(3) {
-      background-image: url('/images/todo_app_card.svg');
+      background-image: url('../../images/todo_app_card.svg');
     }
 
     &:nth-child(4) {
-      background-image: url('/images/project-1-img.svg');
+      background-image: url('../../images/project-1-img.svg');
     }
 
     &:nth-child(5) {
-      background-image: url('/images/project-1-img.svg');
+      background-image: url('../../images/project-1-img.svg');
     }
 
     &:nth-child(6) {
-      background-image: url('/images/project-1-img.svg');
+      background-image: url('../../images/project-1-img.svg');
     }
 
     &:hover,

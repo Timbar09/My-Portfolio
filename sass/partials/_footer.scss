@@ -15,12 +15,17 @@
     padding-left: 10vw;
     padding-right: 10vw;
     align-items: center;
-    background: url('/images/cf-1-desktop.svg'), url('/images/cf-bg-2-desktop.svg'), url('/images/cf-bg-3-desktop.svg');
+    background: url('../../images/cf-1-desktop.svg'),
+      url('../../images/cf-bg-2-desktop.svg'),
+      url('../../images/cf-bg-3-desktop.svg');
     background-position: left bottom, 20% 80%, right bottom;
     background-repeat: no-repeat;
-    display: flex;
-    gap: 2rem;
     border-bottom: solid 1px var(--grey);
+
+    @media (min-width: 64em) {
+      display: flex;
+      gap: 2rem;
+    }
   }
 
   &__title {
@@ -91,7 +96,8 @@
       border-radius: 0.25rem;
       font-family: inherit;
       font-weight: inherit;
-      transition: border 150ms ease-in-out, outline 150ms ease-in-out, outline-offset 150ms ease-in-out;
+      transition: border 150ms ease-in-out, outline 150ms ease-in-out,
+        outline-offset 150ms ease-in-out;
 
       &:focus {
         border: solid 2px var(--focus);
@@ -119,7 +125,8 @@
       border-radius: 0.25rem;
       border: 0;
       cursor: pointer;
-      transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+      transition: background-color 150ms ease-in-out,
+        box-shadow 150ms ease-in-out;
 
       &:hover {
         box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
