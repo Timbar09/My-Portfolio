@@ -1,17 +1,5 @@
 import projectsArr from './projects.js';
-import {
-  openMenu,
-  closeMenu,
-  activatePopup,
-  deactivatePopup,
-  isEmailLowerCase,
-  showCaseSuccess,
-  showCaseError,
-  fillInPopupText,
-  storeUserInfo,
-  retrieveUserInfo,
-  clearPopupText,
-} from './functions.js';
+import * as f from './functions/index.js';
 
 // Mobile menu functionality
 
@@ -20,16 +8,16 @@ const openMenuBtn = document.querySelector('.header__hamburger');
 const closeMenuBtn = document.querySelector('.header__menu-btn');
 
 openMenuBtn.addEventListener('click', () => {
-  openMenu();
+  f.openMenu();
 });
 
 closeMenuBtn.addEventListener('click', () => {
-  closeMenu();
+  f.closeMenu();
 });
 
 menuOptions.forEach((option) => {
   option.addEventListener('click', () => {
-    closeMenu();
+    f.closeMenu();
   });
 });
 
@@ -40,14 +28,14 @@ const popupCancelBtn = document.querySelector('.popup__cancel-btn_icon');
 
 projectButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    fillInPopupText(projectsArr, button);
-    activatePopup();
+    f.fillInPopupText(projectsArr, button);
+    f.activatePopup();
   });
 });
 
 popupCancelBtn.addEventListener('click', () => {
-  clearPopupText();
-  deactivatePopup();
+  f.clearPopupText();
+  f.deactivatePopup();
 });
 
 // Contact form validation
@@ -55,16 +43,16 @@ popupCancelBtn.addEventListener('click', () => {
 const contactForm = document.querySelector('.footer__form');
 
 contactForm.addEventListener('submit', (e) => {
-  if (isEmailLowerCase()) {
-    showCaseSuccess();
+  if (f.isEmailLowerCase()) {
+    f.showCaseSuccess();
   } else {
-    showCaseError();
+    f.showCaseError();
     e.preventDefault();
   }
 });
 
 // Store and retrieve user information
 
-retrieveUserInfo();
+f.retrieveUserInfo();
 
-contactForm.addEventListener('change', storeUserInfo);
+contactForm.addEventListener('change', f.storeUserInfo);

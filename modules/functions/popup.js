@@ -1,31 +1,3 @@
-// Menu functions
-
-const openMenu = () => {
-  const body = document.querySelector('.body');
-  const menu = document.querySelector('.header__menu');
-  const overlay = document.querySelector('.overlay');
-
-  menu.classList.remove('close');
-  overlay.classList.remove('close');
-  menu.classList.add('open');
-  overlay.classList.add('open');
-  body.classList.add('noscroll');
-};
-
-const closeMenu = () => {
-  const body = document.querySelector('.body');
-  const menu = document.querySelector('.header__menu');
-  const overlay = document.querySelector('.overlay');
-
-  menu.classList.remove('open');
-  overlay.classList.remove('open');
-  body.classList.remove('noscroll');
-  menu.classList.add('close');
-  overlay.classList.add('close');
-};
-
-// Project details popup window functions
-
 const activatePopup = () => {
   const body = document.querySelector('.body');
   const popup = document.querySelector('.popup');
@@ -54,38 +26,6 @@ const deactivatePopup = () => {
   overlay.style.zIndex = 999;
   popupTechList.innerHTML = '';
 };
-
-// Contact form functions
-
-const isEmailLowerCase = () => {
-  const userEmail = document.querySelector('#email');
-
-  return userEmail.value === userEmail.value.toLowerCase();
-};
-
-const showCaseError = () => {
-  const userEmail = document.querySelector('#email');
-  const formField = userEmail.parentElement;
-
-  formField.classList.remove('valid');
-  formField.classList.add('invalid');
-
-  const caseError = formField.querySelector('.footer__form-error-msg');
-  caseError.textContent = 'All letters must be lowercase';
-};
-
-const showCaseSuccess = () => {
-  const userEmail = document.querySelector('#email');
-  const formField = userEmail.parentElement;
-
-  formField.classList.remove('invalid');
-  formField.classList.add('valid');
-
-  const caseError = formField.querySelector('.footer__form-error-msg');
-  caseError.textContent = '';
-};
-
-// Popup functions
 
 const fillInPopupText = (projectsArr, button) => {
   projectsArr.forEach((project) => {
@@ -140,43 +80,5 @@ const clearPopupText = () => {
   document.querySelector('.popup__cta-live').href = '';
 };
 
-// Storage functions
-
-const storeUserInfo = () => {
-  const theUser = {};
-  const userName = document.querySelector('#name').value;
-  const userEmail = document.querySelector('#email').value;
-  const userMessage = document.querySelector('#message').value;
-
-  theUser.name = userName;
-  theUser.email = userEmail;
-  theUser.message = userMessage;
-
-  // Saving to local storage
-  localStorage.setItem('theUser', JSON.stringify(theUser));
-};
-
-const retrieveUserInfo = () => {
-  // Retrieving from local storage
-  const userInfo = JSON.parse(localStorage.getItem('theUser'));
-
-  if (userInfo) {
-    document.querySelector('#name').value = userInfo.name;
-    document.querySelector('#email').value = userInfo.email;
-    document.querySelector('#message').value = userInfo.message;
-  }
-};
-
-export {
-  openMenu,
-  closeMenu,
-  activatePopup,
-  deactivatePopup,
-  isEmailLowerCase,
-  showCaseError,
-  showCaseSuccess,
-  fillInPopupText,
-  clearPopupText,
-  storeUserInfo,
-  retrieveUserInfo,
-};
+// eslint-disable-next-line object-curly-newline
+export { activatePopup, deactivatePopup, fillInPopupText, clearPopupText };
