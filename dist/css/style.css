@@ -525,7 +525,7 @@ p {
   background-image: url("/images/ALT-conference-card.svg");
 }
 .project__card:nth-child(3) {
-  background-image: url("/images/project-1-img.svg");
+  background-image: url("/images/todo_app_card.svg");
 }
 .project__card:nth-child(4) {
   background-image: url("/images/project-1-img.svg");
