@@ -516,7 +516,7 @@ p {
   background-size: cover;
   background-position: center center;
   top: 0;
-  transition: 200ms box-shadow ease-in-out, 200ms top ease-in-out;
+  transition: 200ms box-shadow ease-in-out;
 }
 .project__card:first-child {
   background-image: url("../../images/Awesome-book-card.svg");
@@ -537,7 +537,6 @@ p {
   background-image: url("../../images/project-1-img.svg");
 }
 .project__card:hover, .project__card:focus-within {
-  top: -1rem;
   box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
 }
 .project__card-text {
