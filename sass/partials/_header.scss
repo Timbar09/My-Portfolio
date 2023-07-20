@@ -50,7 +50,8 @@
       background-color: var(--lime);
       border-radius: 10rem;
       opacity: 0;
-      transition: top 150ms ease-in-out, opacity 150ms ease-in-out, width 150ms 165ms ease-in-out;
+      transition: top 150ms 250ms ease-in-out, opacity 150ms 250ms ease-in-out,
+        width 150ms 415ms ease-in-out;
     }
 
     &:hover {
