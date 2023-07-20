@@ -32,6 +32,8 @@
   &__description {
     max-width: 37.5rem;
     margin: 1.5rem auto;
+    text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+      -1px 1px 0 var(--white), 1px 1px 0 var(--white);
   }
 
   &__grid {
