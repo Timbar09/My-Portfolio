@@ -725,7 +725,7 @@ p {
   background-size: 100%;
   background-position: center;
   z-index: -1;
-  transition: background-size 200ms ease-in-out;
+  transition: background-size 800ms 100ms ease-in-out;
 }
 .about__card:first-child::before {
   background-image: url("../../images/languages-bg.jpg");
