@@ -15,7 +15,7 @@ const activatePopup = () => {
 const deactivatePopup = () => {
   const body = document.querySelector('.body');
   const popup = document.querySelector('.popup');
-  const popupTechList = document.querySelector('.project__details-languages');
+  const popupTechList = document.querySelector('.popup__languages');
   const overlay = document.querySelector('.overlay');
 
   popup.classList.remove('open');
