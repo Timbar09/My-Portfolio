@@ -10,7 +10,7 @@ const projectsArr = [
       'Whether users are avid readers, book enthusiasts, or simply looking for an organized way to keep track of their favorite titles, Awesome Books caters to their needs. With its user-centric design and efficient implementation, the application aims to enhance the book management experience, making it more enjoyable and convenient.',
       'Overall, Awesome Books represents a powerful yet user-friendly solution for book lovers, providing an efficient way to manage and organize a personalized book collection. With its dynamic features, seamless integration with local storage, and intuitive user interface, it sets out to redefine the way users interact with their books online.',
     ],
-    image: 'images/awesome-books-popup.svg',
+    image: 'images/projects/Awesome-books-popup.svg',
     technologies: ['Github', 'JavaScript', 'Terminal', 'css', 'html', 'Luxon'],
     source: 'https://github.com/Timbar09/Awesome-books-vol-2',
     live: 'https://timbar09.github.io/Awesome-books-vol-2/',
@@ -27,7 +27,7 @@ const projectsArr = [
       'The responsive design of the website ensures that it adapts to different screen sizes and devices. Whether accessed on a mobile device with a narrow viewport or a desktop computer, the website layout and content are optimized for the respective screen size, providing users with a visually appealing and user-friendly experience.',
       "In summary, this project encompasses a responsive website with multiple pages, including a home page and an about page. It features a mobile menu for smaller screen sizes, dynamic content generation for the 'Featured speakers' section, and a cohesive navigation system that allows users to seamlessly explore the website on both mobile and desktop devices.",
     ],
-    image: 'images/ALT-Conference-popup.svg',
+    image: 'images/projects/ALT-Conference-popup.svg',
     technologies: ['JavaScript', 'GitHub', 'css', 'Terminal', 'html'],
     source: 'https://github.com/Timbar09/Africas-Leading-Tech-Conference',
     live: 'https://timbar09.github.io/Africas-Leading-Tech-Conference/',
@@ -42,7 +42,7 @@ const projectsArr = [
       '',
       'Overall, this project showcases the utilization of essential web development technologies and techniques to create a functional and user-friendly to-do list web app.',
     ],
-    image: 'images/todo_app_detail.svg',
+    image: 'images/projects/todo_app_detail.svg',
     technologies: [
       'Github',
       'HTML5',
@@ -60,7 +60,7 @@ const projectsArr = [
     description: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque reprehenderit possimus hic dolore unde fugit suscipit, voluptas dolorum nobis debitis.',
     ],
-    image: 'images/project1-desktop.svg',
+    image: 'images/projects/project1-desktop.svg',
     technologies: ['Github', 'JavaScript', 'Bootstrap', 'Terminal'],
     source: '',
     live: '',
@@ -71,7 +71,7 @@ const projectsArr = [
     description: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas ut, maxime eos quos incidunt commodi aut libero explicabo enim laboriosam, similique quidem id ipsa. Harum reprehenderit iste ad officia beatae aperiam vel nisi nobis, dolorem nulla.',
     ],
-    image: 'images/project2-desktop.svg',
+    image: 'images/projects/project2-desktop.svg',
     technologies: ['Codekit', 'JavaScript', 'Terminal', 'Codepen'],
     source: '',
     live: '',
@@ -82,7 +82,7 @@ const projectsArr = [
     description: [
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, voluptatem aliquid. Omnis similique animi doloribus ipsam, incidunt excepturi explicabo esse voluptatum sit error, adipisci dolore ipsa praesentium beatae, fugit velit accusamus.',
     ],
-    image: 'images/project3-desktop.svg',
+    image: 'images/projects/project3-desktop.svg',
     technologies: ['Codekit', 'Github', 'JavaScript', 'Bootstrap', 'Terminal'],
     source: '',
     live: '',

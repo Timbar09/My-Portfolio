@@ -96,16 +96,7 @@ p {
       letter-spacing: 0.03em;
       background-color: var(--btn-bg);
       border-radius: 0.25rem;
-      transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
-
-      &:hover {
-        background-color: var(--btn-hover);
-        box-shadow: 0 8px 16px rgba(208, 217, 212, 0.5);
-      }
-
-      &:active {
-        background-color: var(--btn-pressed);
-      }
+      pointer-events: none;
     }
   }
 }
