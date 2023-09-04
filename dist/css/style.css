@@ -21,6 +21,9 @@ html {
   --green: #008552;
   --darkBlue: #344563;
   --darkerBlue: #172b4d;
+  --shadow1: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+  --shadowLime1: 0 8px 16px rgba(54, 179, 127, 0.25);
+  --shadowLime2: 0 16px 32px rgba(54, 179, 127, 0.3);
 }
 
 body {
@@ -64,8 +67,13 @@ body {
 
 .darkmode {
   --white: #060c17;
+  --lightGrey: #0e1b31;
+  --grey: #172b4d;
   --darkBlue: #d0d9d4;
   --darkerBlue: #ebf0ee;
+}
+.darkmode .project__card:hover, .darkmode .project__card:focus-within {
+  box-shadow: var(--shadowLime2);
 }
 
 @keyframes grow {
@@ -190,10 +198,12 @@ p {
   color: var(--white);
   background-color: var(--lime);
   border-radius: 0.25rem;
-  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+  box-shadow: var(--shadowLime1);
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, translate 150ms ease-in-out;
 }
 .section__cta:hover {
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  box-shadow: var(--shadowLime2);
+  translate: 0 -2px;
 }
 .section__cta:active {
   background-color: var(--pressed);
@@ -509,7 +519,7 @@ p {
   background-size: cover;
   background-position: center center;
   top: 0;
-  transition: 200ms box-shadow ease-in-out;
+  transition: 200ms box-shadow ease-in-out, translate 200ms ease-in-out;
 }
 .project__card:first-child {
   background-image: url("../../images/projects/Awesome-book-card.svg");
@@ -530,7 +540,8 @@ p {
   background-image: url("../../images/projects/blog_card.svg");
 }
 .project__card:hover, .project__card:focus-within {
-  box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow1);
+  translate: 0 -2px;
 }
 .project__card-text {
   padding: 0.6875rem;

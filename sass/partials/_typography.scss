@@ -48,10 +48,13 @@ p {
     color: var(--white);
     background-color: var(--lime);
     border-radius: 0.25rem;
-    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+    box-shadow: var(--shadowLime1);
+    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out,
+      translate 150ms ease-in-out;
 
     &:hover {
-      box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+      box-shadow: var(--shadowLime2);
+      translate: 0 -2px;
     }
 
     &:active {
