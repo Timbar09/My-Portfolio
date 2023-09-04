@@ -12,6 +12,29 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+
+  &::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--white);
+    border-radius: 5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    border-radius: 5rem;
+    border: 3px solid var(--white);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--darkBlue);
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background-color: var(--darkerBlue);
+  }
 }
 
 :root {
@@ -32,29 +55,6 @@ html {
   --shadow1: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
   --shadowLime1: 0 8px 16px rgba(54, 179, 127, 0.25);
   --shadowLime2: 0 16px 32px rgba(54, 179, 127, 0.3);
-}
-
-::-webkit-scrollbar {
-  width: 0.75rem;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--white);
-  border-radius: 5rem;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--grey);
-  border-radius: 5rem;
-  border: 3px solid var(--white);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--darkBlue);
-}
-
-::-webkit-scrollbar-thumb:active {
-  background-color: var(--darkerBlue);
 }
 
 body {

@@ -7,14 +7,16 @@
 
   &__text {
     padding: 0.5625rem 0;
-    background: url('../../images/illustration-about-me-mobile.svg'),
+    background:
+      url('../../images/illustration-about-me-mobile.svg'),
       url('../../images/illustration1-about-me-mobile.svg');
     background-position: left bottom, right top;
     background-repeat: no-repeat;
 
     @media (min-width: 40em) {
       padding: 0.5625rem 0;
-      background: url('../../images/illustration-about-me-2-desktop.svg'),
+      background:
+        url('../../images/illustration-about-me-2-desktop.svg'),
         url('../../images/illustration-about-me-1-desktop.svg');
       background-position: left bottom, right top;
       background-repeat: no-repeat;
@@ -32,8 +34,11 @@
   &__description {
     max-width: 37.5rem;
     margin: 1.5rem auto;
-    text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
-      -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+    text-shadow:
+      -1px -1px 0 var(--white),
+      1px -1px 0 var(--white),
+      -1px 1px 0 var(--white),
+      1px 1px 0 var(--white);
   }
 
   &__grid {
@@ -45,7 +50,9 @@
     --bg-hover: rgba(40, 45, 43, 0.6);
 
     background-color: var(--bg);
-    transition: 200ms box-shadow ease-in-out, 200ms background-color ease-in-out,
+    transition:
+      200ms box-shadow ease-in-out,
+      200ms background-color ease-in-out,
       200ms background-size ease-in-out;
 
     &::before {
