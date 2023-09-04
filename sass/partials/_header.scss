@@ -78,15 +78,37 @@
   }
 
   &__hamburger {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
     border: 0;
-    padding: 0;
-    line-height: 11px;
-    background-color: inherit;
+    border-radius: 0.15rem;
+    background-color: transparent;
     cursor: pointer;
-    transition: background-color 150ms ease-in-out;
 
-    &:hover {
-      background-color: var(--lightGreen);
+    @media (min-width: 64em) {
+      display: none;
+    }
+
+    span {
+      display: inline-block;
+      width: 1.5rem;
+      height: 0.15rem;
+      background-color: var(--darkerBlue);
+      border-radius: 5rem;
+      transition: background-color 150ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    &:hover span {
+      background-color: var(--lime);
+    }
+
+    &:active {
+      background-color: var(--opaqueGreen);
     }
 
     @media (min-width: 64em) {
@@ -106,13 +128,45 @@
     border-radius: 0 0 1rem 1rem;
 
     &-btn {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
       border: 0;
+      border-radius: 0.15rem;
       background-color: transparent;
       cursor: pointer;
-      transition: background-color 150ms ease-in-out;
 
-      &:hover {
-        background-color: var(--lightGreen);
+      span {
+        display: inline-block;
+        position: relative;
+        width: 1.5rem;
+        height: 0.15rem;
+        background-color: var(--darkerBlue);
+        border-radius: 5rem;
+        transition: background-color 150ms ease-in-out;
+
+        &:not(:last-child) {
+          margin-bottom: 0.75rem;
+        }
+
+        &:first-child {
+          rotate: 45deg;
+          top: 0.45rem;
+        }
+
+        &:last-child {
+          rotate: -45deg;
+          bottom: 0.45rem;
+        }
+      }
+
+      &:hover span {
+        background-color: var(--lime);
+      }
+
+      &:active {
+        background-color: var(--opaqueGreen);
       }
     }
 
@@ -148,5 +202,13 @@
     border-radius: 50%;
     color: inherit;
     background-color: transparent;
+    cursor: pointer;
+    transition: border-color 150ms ease-in-out,
+      background-color 150ms ease-in-out;
+
+    &:hover {
+      border-color: var(--lime);
+      background-color: var(--opaqueGreen);
+    }
   }
 }

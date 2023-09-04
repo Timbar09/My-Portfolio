@@ -339,15 +339,35 @@ p {
   width: 100%;
 }
 .header__hamburger {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
   border: 0;
-  padding: 0;
-  line-height: 11px;
-  background-color: inherit;
+  border-radius: 0.15rem;
+  background-color: transparent;
   cursor: pointer;
+}
+@media (min-width: 64em) {
+  .header__hamburger {
+    display: none;
+  }
+}
+.header__hamburger span {
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.15rem;
+  background-color: var(--darkerBlue);
+  border-radius: 5rem;
   transition: background-color 150ms ease-in-out;
 }
-.header__hamburger:hover {
-  background-color: var(--lightGreen);
+.header__hamburger span:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+.header__hamburger:hover span {
+  background-color: var(--lime);
+}
+.header__hamburger:active {
+  background-color: var(--opaqueGreen);
 }
 @media (min-width: 64em) {
   .header__hamburger {
@@ -366,13 +386,40 @@ p {
   border-radius: 0 0 1rem 1rem;
 }
 .header__menu-btn {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
   border: 0;
+  border-radius: 0.15rem;
   background-color: transparent;
   cursor: pointer;
+}
+.header__menu-btn span {
+  display: inline-block;
+  position: relative;
+  width: 1.5rem;
+  height: 0.15rem;
+  background-color: var(--darkerBlue);
+  border-radius: 5rem;
   transition: background-color 150ms ease-in-out;
 }
-.header__menu-btn:hover {
-  background-color: var(--lightGreen);
+.header__menu-btn span:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.header__menu-btn span:first-child {
+  rotate: 45deg;
+  top: 0.45rem;
+}
+.header__menu-btn span:last-child {
+  rotate: -45deg;
+  bottom: 0.45rem;
+}
+.header__menu-btn:hover span {
+  background-color: var(--lime);
+}
+.header__menu-btn:active {
+  background-color: var(--opaqueGreen);
 }
 .header__menu-content {
   padding: 0.875rem 0 0;
@@ -402,6 +449,12 @@ p {
   border-radius: 50%;
   color: inherit;
   background-color: transparent;
+  cursor: pointer;
+  transition: border-color 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+.header__toggle:hover {
+  border-color: var(--lime);
+  background-color: var(--opaqueGreen);
 }
 
 .intro {
