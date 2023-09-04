@@ -18,6 +18,12 @@
     &:hover {
       color: var(--lime);
     }
+
+    @media (max-width: 40em) {
+      span {
+        display: none;
+      }
+    }
   }
 
   &__nav {
@@ -133,5 +139,14 @@
         left: 2rem;
       }
     }
+  }
+
+  &__toggle {
+    width: 2rem;
+    height: 2rem;
+    border: solid 2px var(--lightGrey);
+    border-radius: 50%;
+    color: inherit;
+    background-color: transparent;
   }
 }

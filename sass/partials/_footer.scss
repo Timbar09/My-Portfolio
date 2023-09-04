@@ -15,8 +15,7 @@
     padding-left: 10vw;
     padding-right: 10vw;
     align-items: center;
-    background:
-      url('../../images/cf-1-desktop.svg'),
+    background: url('../../images/cf-1-desktop.svg'),
       url('../../images/cf-bg-2-desktop.svg'),
       url('../../images/cf-bg-3-desktop.svg');
     background-position: left bottom, 20% 80%, right bottom;
@@ -75,10 +74,7 @@
       }
 
       textarea {
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 7.125rem;
-        max-height: 7.125rem;
+        resize: none;
       }
 
       &.valid input {
@@ -97,9 +93,9 @@
       border-radius: 0.25rem;
       font-family: inherit;
       font-weight: inherit;
-      transition:
-        border 150ms ease-in-out,
-        outline 150ms ease-in-out,
+      color: inherit;
+      background-color: transparent;
+      transition: border 150ms ease-in-out, outline 150ms ease-in-out,
         outline-offset 150ms ease-in-out;
 
       &:focus {
@@ -128,8 +124,7 @@
       border-radius: 0.25rem;
       border: 0;
       cursor: pointer;
-      transition:
-        background-color 150ms ease-in-out,
+      transition: background-color 150ms ease-in-out,
         box-shadow 150ms ease-in-out;
 
       &:hover {

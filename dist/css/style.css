@@ -224,7 +224,7 @@ p {
   width: 100%;
   max-width: 23.0625rem;
   border-radius: 0.5rem;
-  border: solid 2px var(--grey);
+  border: solid 2px var(--lightGrey);
   background-color: var(--lightGrey);
   overflow: hidden;
 }
@@ -287,6 +287,11 @@ p {
 }
 .header__logo:hover {
   color: var(--lime);
+}
+@media (max-width: 40em) {
+  .header__logo span {
+    display: none;
+  }
 }
 .header__nav {
   display: flex;
@@ -389,6 +394,14 @@ p {
 .header__menu-link:hover {
   color: var(--lime);
   left: 2rem;
+}
+.header__toggle {
+  width: 2rem;
+  height: 2rem;
+  border: solid 2px var(--lightGrey);
+  border-radius: 50%;
+  color: inherit;
+  background-color: transparent;
 }
 
 .intro {
@@ -864,10 +877,7 @@ p {
   opacity: 1;
 }
 .footer__form-control textarea {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 7.125rem;
-  max-height: 7.125rem;
+  resize: none;
 }
 .footer__form-control.valid input {
   border: 2px solid var(--valid);
@@ -882,6 +892,8 @@ p {
   border-radius: 0.25rem;
   font-family: inherit;
   font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
   transition: border 150ms ease-in-out, outline 150ms ease-in-out, outline-offset 150ms ease-in-out;
 }
 .footer__form-input:focus {

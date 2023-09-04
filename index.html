@@ -26,7 +26,8 @@
   <body class="body">
     <header class="header">
       <nav class="header__nav container container-pall">
-        <a href="/" class="header__logo">Miles Mosweu.</a>
+        <a href="/" class="header__logo">Miles<span> Mosweu</span>.</a>
+
         <ul class="header__links">
           <li>
             <a href="#home" class="header__link">Home</a>
@@ -44,6 +45,17 @@
             <a href="#contact" class="header__link">Contact</a>
           </li>
         </ul>
+
+        <button
+          class="header__toggle"
+          aria-label="Toggle theme"
+          title="Switch to dark mode"
+        >
+          <span class="header__toggle-icon">
+            <i class="fa-regular fa-sun"></i>
+          </span>
+        </button>
+
         <button class="header__hamburger">
           <img
             class="header__hamburger-btn"
@@ -63,16 +75,6 @@
             <li><a class="header__menu-link" href="#contact">Contact</a></li>
           </ul>
         </div>
-
-        <button
-          class="header__toggle"
-          aria-label="Toggle theme"
-          title="Switch to dark mode"
-        >
-          <span class="header__toggle-icon">
-            <i class="fa-regular fa-sun"></i>
-          </span>
-        </button>
       </nav>
     </header>
 
@@ -82,7 +84,7 @@
       <section id="home" class="intro section">
         <div class="container container-px">
           <h1 class="intro__title section__title">
-            Hey there. I'm Miles <span>I'm a software developer</span>
+            Hey there 👋, I'm Miles <span>I'm a software developer</span>
           </h1>
 
           <p class="intro__description">
