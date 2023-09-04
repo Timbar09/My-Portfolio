@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -15,6 +16,7 @@ html {
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
   --lightGreen: #c5e9da;
+  --opaqueGreen: #00855247;
   --lime: #36b37f;
   --green: #008552;
   --darkBlue: #344563;
@@ -58,6 +60,12 @@ body {
 /* When the cancel-menu button is clicked */
 .close {
   animation: menu-close 150ms ease-in-out 0ms 1 forwards;
+}
+
+.darkmode {
+  --white: #060c17;
+  --darkBlue: #d0d9d4;
+  --darkerBlue: #ebf0ee;
 }
 
 @keyframes grow {
@@ -229,6 +237,7 @@ p {
 }
 
 .container {
+  min-width: 20rem;
   max-width: 90rem;
   margin: auto;
 }
@@ -250,6 +259,7 @@ p {
   box-shadow: 0 8px 16px rgba(22, 69, 49, 0.1);
 }
 .header__logo {
+  font-family: "Pacifico", cursive;
   font-size: 20px;
   font-weight: 600;
   line-height: 28px;
@@ -314,6 +324,11 @@ p {
 }
 .header__hamburger:hover {
   background-color: var(--lightGreen);
+}
+@media (min-width: 64em) {
+  .header__hamburger {
+    display: none;
+  }
 }
 .header__menu {
   visibility: hidden;
@@ -426,15 +441,16 @@ p {
 }
 .intro__social-icon {
   transition: 150ms fill ease-in-out;
+  fill: var(--darkBlue);
 }
 .intro__social-link:hover .intro__social-icon {
   fill: var(--lime);
 }
 .intro__down-btn {
   display: inline-block;
-  padding: 0.5rem;
+  padding: 0.75rem;
   line-height: 0;
-  border: solid 1px var(--darkBlue);
+  border: solid 2px var(--lightGreen);
   border-radius: 50%;
   transition: 150ms background-color ease-in-out;
   animation: grow 5000ms ease-in-out 1 forwards;
@@ -445,7 +461,8 @@ p {
   }
 }
 .intro__down-btn:hover {
-  background-color: var(--lightGreen);
+  border: solid 2px var(--lime);
+  background-color: var(--opaqueGreen);
 }
 
 .project {

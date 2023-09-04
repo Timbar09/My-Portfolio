@@ -8,6 +8,7 @@
   box-shadow: 0 8px 16px rgba(22, 69, 49, 0.1);
 
   &__logo {
+    font-family: 'Pacifico', cursive;
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
@@ -80,6 +81,10 @@
 
     &:hover {
       background-color: var(--lightGreen);
+    }
+
+    @media (min-width: 64em) {
+      display: none;
     }
   }
 
