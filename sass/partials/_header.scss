@@ -9,7 +9,7 @@
 
   &__logo {
     font-family: 'Pacifico', cursive;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 28px;
     color: var(--darkerBlue);
@@ -19,7 +19,7 @@
       color: var(--lime);
     }
 
-    @media (max-width: 40em) {
+    @media (max-width: 64em) {
       span {
         display: none;
       }
@@ -170,6 +170,32 @@
       }
     }
 
+    &-social {
+      list-style: none;
+      padding: 1rem;
+      border-radius: 5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+
+      &-link {
+        display: grid;
+
+        &:hover {
+          color: var(--lime);
+        }
+
+        &:active {
+          color: var(--pressed);
+        }
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
     &-content {
       padding: 0.875rem 0 0;
       list-style: none;
@@ -205,6 +231,35 @@
     cursor: pointer;
     transition: border-color 150ms ease-in-out,
       background-color 150ms ease-in-out;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    &-social {
+      list-style: none;
+      padding: 0.35rem;
+      border: solid 2px var(--lightGrey);
+      border-radius: 5rem;
+      margin: 0;
+      display: none;
+      align-items: center;
+      gap: 0.75rem;
+
+      &-link {
+        display: grid;
+
+        &:hover {
+          color: var(--lime);
+        }
+      }
+
+      @media (min-width: 64em) {
+        display: flex;
+      }
+    }
 
     &:hover {
       border-color: var(--lime);

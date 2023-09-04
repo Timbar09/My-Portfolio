@@ -46,15 +46,47 @@
           </li>
         </ul>
 
-        <button
-          class="header__toggle"
-          aria-label="Toggle theme"
-          title="Switch to dark mode"
-        >
-          <span class="header__toggle-icon">
-            <i class="fa-regular fa-sun"></i>
-          </span>
-        </button>
+        <div class="header__toggle-container">
+          <ul class="header__toggle-social">
+            <li>
+              <a
+                class="header__toggle-social-link"
+                href="https://twitter.com/Milez09"
+                target="_blank"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="header__toggle-social-link"
+                href="https://www.linkedin.com/in/miles-mosweu09"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="header__toggle-social-link"
+                href="https://github.com/Timbar09"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+          </ul>
+
+          <button
+            class="header__toggle"
+            aria-label="Toggle theme"
+            title="Switch to dark mode"
+          >
+            <span class="header__toggle-icon">
+              <i class="fa-regular fa-sun"></i>
+            </span>
+          </button>
+        </div>
 
         <button class="header__hamburger menu-button">
           <span></span><span></span><span></span>
@@ -64,6 +96,35 @@
           <button class="header__menu-btn"><span></span><span></span></button>
 
           <ul class="header__menu-content">
+            <li class="header__menu-social">
+              <a
+                class="header__menu-social-link"
+                href="https://twitter.com/Milez09"
+                aria-label="Twitter"
+                target="_blank"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+
+              <a
+                class="header__menu-social-link"
+                href="https://www.linkedin.com/in/miles-mosweu09"
+                aria-label="Linkedin"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+              <a
+                class="header__menu-social-link"
+                href="https://github.com/Timbar09"
+                aria-label="Github"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li><a class="header__menu-link" href="#home">Home</a></li>
             <li><a class="header__menu-link" href="#project">Portfolio</a></li>
             <li><a class="header__menu-link" href="#about-me">About</a></li>
             <li><a class="header__menu-link" href="#contact">Contact</a></li>
@@ -77,6 +138,8 @@
     <main class="main">
       <section id="home" class="intro section">
         <div class="container container-px">
+          <div class="intro__overlay"></div>
+
           <h1 class="intro__title section__title">
             Hey there 👋, I'm Miles <span>I'm a software developer</span>
           </h1>
