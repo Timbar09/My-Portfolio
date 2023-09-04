@@ -59,6 +59,8 @@ p {
 
     &:active {
       background-color: var(--pressed);
+      box-shadow: var(--shadowLime1);
+      translate: 0 0;
     }
   }
 

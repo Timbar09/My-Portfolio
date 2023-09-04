@@ -16,4 +16,15 @@
       }
     }
   }
+
+  .about {
+    &__card {
+      --bg: rgba(40, 45, 43, 0.5);
+      --bg-hover: rgba(40, 45, 43, 0.7);
+
+      &:hover .about__card-title {
+        color: var(--darkBlue);
+      }
+    }
+  }
 }

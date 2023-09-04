@@ -75,6 +75,13 @@ body {
 .darkmode .project__card:hover, .darkmode .project__card:focus-within {
   box-shadow: var(--shadowLime2);
 }
+.darkmode .about__card {
+  --bg: rgba(40, 45, 43, 0.5);
+  --bg-hover: rgba(40, 45, 43, 0.7);
+}
+.darkmode .about__card:hover .about__card-title {
+  color: var(--darkBlue);
+}
 
 @keyframes grow {
   from {
@@ -207,6 +214,8 @@ p {
 }
 .section__cta:active {
   background-color: var(--pressed);
+  box-shadow: var(--shadowLime1);
+  translate: 0 0;
 }
 .section__card {
   position: relative;
@@ -614,6 +623,24 @@ p {
     padding-top: 1.5rem;
   }
 }
+.popup__content::-webkit-scrollbar {
+  width: 0.75rem;
+}
+.popup__content::-webkit-scrollbar-track {
+  background-color: var(--white);
+  border-radius: 5rem;
+}
+.popup__content::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+  border-radius: 5rem;
+  border: 3px solid var(--white);
+}
+.popup__content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--darkBlue);
+}
+.popup__content::-webkit-scrollbar-thumb:active {
+  background-color: var(--darkerBlue);
+}
 .popup__image {
   padding: 1rem;
   border-radius: 0.4rem;
@@ -717,7 +744,9 @@ p {
   padding-top: 2.5rem;
 }
 .about__card {
-  background-color: rgba(235, 240, 238, 0.5);
+  --bg: rgba(235, 240, 238, 0.5);
+  --bg-hover: rgba(40, 45, 43, 0.6);
+  background-color: var(--bg);
   transition: 200ms box-shadow ease-in-out, 200ms background-color ease-in-out, 200ms background-size ease-in-out;
 }
 .about__card::before {
@@ -740,9 +769,9 @@ p {
   background-image: url("../../images/skills-bg.jpg");
 }
 .about__card:hover, .about__card:focus-within {
-  background-color: rgba(40, 45, 43, 0.6);
+  background-color: var(--bg-hover);
   background-size: 110%;
-  box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow1);
 }
 .about__card:hover::before {
   background-size: 110%;
