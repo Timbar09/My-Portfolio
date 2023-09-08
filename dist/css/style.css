@@ -12,34 +12,6 @@ html {
 *::after {
   box-sizing: inherit;
 }
-*::-webkit-scrollbar,
-*::before::-webkit-scrollbar,
-*::after::-webkit-scrollbar {
-  width: 0.75rem;
-}
-*::-webkit-scrollbar-track,
-*::before::-webkit-scrollbar-track,
-*::after::-webkit-scrollbar-track {
-  background-color: var(--white);
-  border-radius: 5rem;
-}
-*::-webkit-scrollbar-thumb,
-*::before::-webkit-scrollbar-thumb,
-*::after::-webkit-scrollbar-thumb {
-  background-color: var(--grey);
-  border-radius: 5rem;
-  border: 3px solid var(--white);
-}
-*::-webkit-scrollbar-thumb:hover,
-*::before::-webkit-scrollbar-thumb:hover,
-*::after::-webkit-scrollbar-thumb:hover {
-  background-color: var(--darkBlue);
-}
-*::-webkit-scrollbar-thumb:active,
-*::before::-webkit-scrollbar-thumb:active,
-*::after::-webkit-scrollbar-thumb:active {
-  background-color: var(--darkerBlue);
-}
 
 :root {
   --ff-inter: "Inter", sans-serif;
@@ -68,6 +40,29 @@ body {
   font-weight: 400;
   color: var(--darkBlue);
   background-color: var(--white);
+}
+body::-webkit-scrollbar,
+body ::-webkit-scrollbar {
+  width: 0.75rem;
+}
+body::-webkit-scrollbar-track,
+body ::-webkit-scrollbar-track {
+  background-color: var(--white);
+  border-radius: 5rem;
+}
+body::-webkit-scrollbar-thumb,
+body ::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+  border-radius: 5rem;
+  border: 3px solid var(--white);
+}
+body::-webkit-scrollbar-thumb:hover,
+body ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--darkBlue);
+}
+body::-webkit-scrollbar-thumb:active,
+body ::-webkit-scrollbar-thumb:active {
+  background-color: var(--darkerBlue);
 }
 
 .noscroll {
@@ -537,6 +532,7 @@ p {
 
 .intro {
   margin-top: 4.75rem;
+  position: relative;
 }
 .intro .container {
   padding-top: 4rem;
@@ -547,7 +543,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: min(5vh, 2rem);
 }
 @media (min-width: 64em) {
   .intro .container {
@@ -557,31 +554,48 @@ p {
     background-image: url("../../images/Header-llustration-desktop.svg");
   }
 }
+.intro__overlay {
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
 .intro__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
   animation: fade-slide-up 2000ms ease-in-out 1 forwards;
 }
 @media (min-width: 40em) {
   .intro__title {
-    font-weight: 800;
+    font-size: 2.5rem;
     font-size: 3rem;
-    line-height: 3.75rem;
     letter-spacing: 0.37px;
   }
 }
 .intro__title span {
-  color: var(--lime);
   display: block;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--lime);
+  text-shadow: -1px -1px 0 var(--green), 1px -1px 0 var(--green), -1px 1px 0 var(--green), 1px 1px 0 var(--green);
+}
+@media (min-width: 40em) {
+  .intro__title span {
+    font-size: 4rem;
+  }
 }
 .intro__description {
   margin: 0 auto;
   max-width: 51.5625rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
   animation: fade-slide-up 3000ms ease-in-out 1 forwards;
 }
 @media (min-width: 40em) {
   .intro__description {
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 .intro__social {
@@ -715,17 +729,11 @@ p {
 .popup {
   visibility: hidden;
   position: absolute;
-  padding-top: 2rem;
   text-align: left;
   width: 85%;
   left: 50%;
   translate: -50%;
   z-index: 1010;
-}
-@media (min-width: 40em) {
-  .popup {
-    padding-top: 4rem;
-  }
 }
 .popup__cancel-btn {
   text-align: right;
@@ -747,6 +755,7 @@ p {
   background-color: var(--white);
   border: 2px solid var(--grey);
   border-radius: 0.5rem;
+  box-shadow: var(--shadow1);
 }
 @media (min-width: 40em) {
   .popup__content {
@@ -766,24 +775,6 @@ p {
     grid-gap: 1.25rem;
     padding-top: 1.5rem;
   }
-}
-.popup__content::-webkit-scrollbar {
-  width: 0.75rem;
-}
-.popup__content::-webkit-scrollbar-track {
-  background-color: var(--white);
-  border-radius: 5rem;
-}
-.popup__content::-webkit-scrollbar-thumb {
-  background-color: var(--grey);
-  border-radius: 5rem;
-  border: 3px solid var(--white);
-}
-.popup__content::-webkit-scrollbar-thumb:hover {
-  background-color: var(--darkBlue);
-}
-.popup__content::-webkit-scrollbar-thumb:active {
-  background-color: var(--darkerBlue);
 }
 .popup__image {
   padding: 1rem;

@@ -1,5 +1,6 @@
 .intro {
   margin-top: 4.75rem;
+  position: relative;
 
   .container {
     padding-top: 4rem;
@@ -10,7 +11,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: min(5vh, 2rem);
 
     @media (min-width: 64em) {
       justify-content: flex-start;
@@ -20,31 +22,48 @@
     }
   }
 
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(5px);
+  }
+
   &__title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
     animation: fade-slide-up 2000ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
-      font-weight: 800;
+      font-size: 2.5rem;
       font-size: 3rem;
-      line-height: 3.75rem;
       letter-spacing: 0.37px;
     }
 
     span {
-      color: var(--lime);
       display: block;
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: var(--lime);
+      text-shadow: -1px -1px 0 var(--green), 1px -1px 0 var(--green),
+        -1px 1px 0 var(--green), 1px 1px 0 var(--green);
+
+      @media (min-width: 40em) {
+        font-size: 4rem;
+      }
     }
   }
 
   &__description {
     margin: 0 auto;
     max-width: 51.5625rem;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
     animation: fade-slide-up 3000ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
-      line-height: 2rem;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
     }
   }
 
