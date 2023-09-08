@@ -73,6 +73,7 @@
 
     &-icon {
       transition: 150ms fill ease-in-out;
+      fill: var(--darkBlue);
     }
 
     &-link {
@@ -86,9 +87,9 @@
 
   &__down-btn {
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0.75rem;
     line-height: 0;
-    border: solid 1px var(--darkBlue);
+    border: solid 2px var(--lightGreen);
     border-radius: 50%;
     transition: 150ms background-color ease-in-out;
     animation: grow 5000ms ease-in-out 1 forwards;
@@ -98,7 +99,8 @@
     }
 
     &:hover {
-      background-color: var(--lightGreen);
+      border: solid 2px var(--lime);
+      background-color: var(--opaqueGreen);
     }
   }
 }

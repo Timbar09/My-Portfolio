@@ -75,10 +75,7 @@
       }
 
       textarea {
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 7.125rem;
-        max-height: 7.125rem;
+        resize: none;
       }
 
       &.valid input {
@@ -97,6 +94,8 @@
       border-radius: 0.25rem;
       font-family: inherit;
       font-weight: inherit;
+      color: inherit;
+      background-color: transparent;
       transition:
         border 150ms ease-in-out,
         outline 150ms ease-in-out,

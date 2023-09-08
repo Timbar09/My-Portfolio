@@ -1,6 +1,25 @@
 import projectsArr from './projects.js';
 import * as f from './functions/index.js';
 
+// Dark mode functionality
+
+const dakModeToggle = document.querySelector('.header__toggle');
+let darkMode = localStorage.getItem('darkMode');
+
+if (darkMode === 'enabled') {
+  f.enableDarkMode();
+}
+
+dakModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode');
+
+  if (darkMode !== 'enabled') {
+    f.enableDarkMode();
+  } else {
+    f.disableDarkMode();
+  }
+});
+
 // Mobile menu functionality
 
 const menuOptions = document.querySelectorAll('.header__menu-link');

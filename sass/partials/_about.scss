@@ -46,7 +46,10 @@
   }
 
   &__card {
-    background-color: rgba(235, 240, 238, 0.5);
+    --bg: rgba(235, 240, 238, 0.5);
+    --bg-hover: rgba(40, 45, 43, 0.6);
+
+    background-color: var(--bg);
     transition:
       200ms box-shadow ease-in-out,
       200ms background-color ease-in-out,
@@ -77,9 +80,9 @@
 
     &:hover,
     &:focus-within {
-      background-color: rgba(40, 45, 43, 0.6);
+      background-color: var(--bg-hover);
       background-size: 110%;
-      box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+      box-shadow: var(--shadow1);
     }
 
     &:hover::before {

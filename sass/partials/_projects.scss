@@ -41,7 +41,7 @@
     background-size: cover;
     background-position: center center;
     top: 0;
-    transition: 200ms box-shadow ease-in-out;
+    transition: 200ms box-shadow ease-in-out, translate 200ms ease-in-out;
 
     &:first-child {
       background-image: url('../../images/projects/Awesome-book-card.svg');
@@ -69,7 +69,8 @@
 
     &:hover,
     &:focus-within {
-      box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+      box-shadow: var(--shadow1);
+      translate: 0 -2px;
     }
 
     &-text {

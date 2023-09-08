@@ -26,7 +26,8 @@
   <body class="body">
     <header class="header">
       <nav class="header__nav container container-pall">
-        <a href="/" class="header__logo">Miles Mosweu</a>
+        <a href="/" class="header__logo"> Miles<span> Mosweu</span>.</a>
+
         <ul class="header__links">
           <li>
             <a href="#home" class="header__link">Home</a>
@@ -44,20 +45,103 @@
             <a href="#contact" class="header__link">Contact</a>
           </li>
         </ul>
-        <button class="header__hamburger">
-          <img
-            class="header__hamburger-btn"
-            src="images/icons/Icon-Menu.png"
-            alt="humburger button"
-          />
+
+        <div class="header__toggle-container">
+          <ul class="header__toggle-social">
+            <li>
+              <a
+                class="header__toggle-social-link"
+                href="https://twitter.com/Milez09"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="header__toggle-social-link"
+                href="https://www.linkedin.com/in/miles-mosweu09"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="header__toggle-social-link"
+                href="https://github.com/Timbar09"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+          </ul>
+
+          <button
+            class="header__toggle"
+            aria-label="Toggle theme"
+            title="Switch to dark mode"
+            type="button"
+          >
+            <span class="header__toggle-icon">
+              <i class="fa-regular fa-sun"></i>
+            </span>
+          </button>
+        </div>
+
+        <button
+          class="header__hamburger menu-button"
+          type="button"
+          aria-label="Menu button"
+        >
+          <span></span><span></span><span></span>
         </button>
 
         <div class="header__menu container-pall">
-          <button class="header__menu-btn">
-            <img src="images/icons/Icon-Cancel.svg" alt="Menu cancel button" />
+          <button
+            class="header__menu-btn"
+            type="button"
+            aria-label="Close menu"
+          >
+            <span class="stroke"></span><span class="stroke"></span>
           </button>
 
           <ul class="header__menu-content">
+            <li class="header__menu-social">
+              <a
+                class="header__menu-social-link"
+                href="https://twitter.com/Milez09"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+
+              <a
+                class="header__menu-social-link"
+                href="https://www.linkedin.com/in/miles-mosweu09"
+                aria-label="Linkedin"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+              <a
+                class="header__menu-social-link"
+                href="https://github.com/Timbar09"
+                aria-label="Github"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li><a class="header__menu-link" href="#home">Home</a></li>
             <li><a class="header__menu-link" href="#project">Portfolio</a></li>
             <li><a class="header__menu-link" href="#about-me">About</a></li>
             <li><a class="header__menu-link" href="#contact">Contact</a></li>
@@ -71,8 +155,10 @@
     <main class="main">
       <section id="home" class="intro section">
         <div class="container container-px">
+          <div class="intro__overlay"></div>
+
           <h1 class="intro__title section__title">
-            Hey there. I'm Miles <span>I'm a software developer</span>
+            Hey there 👋, I'm Miles <span>I'm a software developer</span>
           </h1>
 
           <p class="intro__description">
@@ -87,6 +173,7 @@
                 class="intro__social-link"
                 href="https://twitter.com/Milez09"
                 target="_blank"
+                rel="noopener"
               >
                 <svg
                   width="21"
@@ -108,6 +195,7 @@
                 class="intro__social-link"
                 href="https://www.linkedin.com/in/miles-mosweu09"
                 target="_blank"
+                rel="noopener"
               >
                 <svg
                   width="21"
@@ -139,6 +227,7 @@
                 class="intro__social-link"
                 href="https://github.com/Timbar09"
                 target="_blank"
+                rel="noopener"
               >
                 <svg
                   width="19"
@@ -158,10 +247,7 @@
           </ul>
 
           <a href="#project" class="intro__down-btn">
-            <img
-              src="images/icons/Icon-Chevron-Down-Larger.png"
-              alt="down button icon"
-            />
+            <i class="fa-solid fa-chevron-down"></i>
           </a>
         </div>
       </section>
@@ -443,6 +529,7 @@
                     <a
                       href="#"
                       target="_blank"
+                      rel="noopener"
                       class="popup__cta-live popup__cta section__cta"
                     >
                       <span>See live </span
@@ -455,6 +542,7 @@
                     <a
                       href="https://github.com/Timbar09"
                       target="_blank"
+                      rel="noopener"
                       class="popup__cta-source popup__cta section__cta"
                     >
                       <span>See source </span
@@ -485,6 +573,7 @@
                 class="section__cta"
                 href="https://docs.google.com/document/d/1rOU5wqF-9cZJrHmSSsP3YFXvpCAB7M-cY_R3njqn6Vs/edit?usp=sharing"
                 target="_blank"
+                rel="noopener"
                 >Get My Resume</a
               >
             </div>
@@ -666,6 +755,7 @@
               class="footer__social-link"
               href="https://twitter.com/Milez09"
               target="_blank"
+              rel="noopener"
             >
               <svg
                 width="21"
@@ -687,6 +777,7 @@
               class="footer__social-link"
               href="https://www.linkedin.com/in/miles-mosweu09"
               target="_blank"
+              rel="noopener"
             >
               <svg
                 width="21"
@@ -718,6 +809,7 @@
               class="footer__social-link"
               href="https://github.com/Timbar09"
               target="_blank"
+              rel="noopener"
             >
               <svg
                 width="19"

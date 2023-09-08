@@ -1,4 +1,5 @@
 import { openMenu, closeMenu } from './menu.js';
+import { enableDarkMode, disableDarkMode } from './darkmode.js';
 import { storeUserInfo, retrieveUserInfo } from './storage.js';
 import { isEmailLowerCase, showCaseError, showCaseSuccess } from './form.js';
 import {
@@ -20,4 +21,6 @@ export {
   clearPopupText,
   storeUserInfo,
   retrieveUserInfo,
+  enableDarkMode,
+  disableDarkMode,
 };

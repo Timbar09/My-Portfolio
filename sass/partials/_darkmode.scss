@@ -1,0 +1,30 @@
+.darkmode {
+  --white: #060c17; // extraDarkBlue
+  --lightGrey: #0e1b31; // veryDarkBlue
+  --grey: #172b4d; // darkBlue
+  // --extraDark: #060c17;
+  // --veryDark: #0e1b31;
+  // --dark: #172b4d;
+  --darkBlue: #d0d9d4; // grey
+  --darkerBlue: #ebf0ee; // lightGrey
+
+  .project {
+    &__card {
+      &:hover,
+      &:focus-within {
+        box-shadow: var(--shadowLime2);
+      }
+    }
+  }
+
+  .about {
+    &__card {
+      --bg: rgba(40, 45, 43, 0.5);
+      --bg-hover: rgba(40, 45, 43, 0.7);
+
+      &:hover .about__card-title {
+        color: var(--darkBlue);
+      }
+    }
+  }
+}
