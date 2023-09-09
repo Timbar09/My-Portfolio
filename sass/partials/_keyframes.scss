@@ -54,11 +54,10 @@
 
 /* Header menu keyframes */
 
-@keyframes menu-open {
+@keyframes appear {
   from {
     visibility: hidden;
     opacity: 0;
-    top: -80px;
   }
 
   1% {
@@ -69,11 +68,10 @@
   to {
     visibility: visible;
     opacity: 1;
-    top: 0;
   }
 }
 
-@keyframes menu-close {
+@keyframes disappear {
   from {
     visibility: visible;
     opacity: 1;

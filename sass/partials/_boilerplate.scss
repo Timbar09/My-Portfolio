@@ -85,17 +85,17 @@ body {
   right: 0;
   bottom: -140px;
   left: 0;
-  background-color: #008552bd;
+  background-color: #0085526a;
   backdrop-filter: blur(5px);
   z-index: 999;
 }
 
 /* When the menu button is clicked */
 .open {
-  animation: menu-open 150ms ease-in-out 0ms 1 forwards;
+  animation: appear 150ms ease-in-out 0ms 1 forwards;
 }
 
 /* When the cancel-menu button is clicked */
 .close {
-  animation: menu-close 150ms ease-in-out 0ms 1 forwards;
+  animation: disappear 150ms ease-in-out 0ms 1 forwards;
 }
