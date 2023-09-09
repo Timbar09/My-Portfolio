@@ -15,7 +15,15 @@ const projectsArr = [
       'Overall, Awesome Books represents a powerful yet user-friendly solution for book lovers, providing an efficient way to manage and organize a personalized book collection. With its dynamic features, seamless integration with local storage, and intuitive user interface, it sets out to redefine the way users interact with their books online.',
     ],
     image: 'images/projects/Awesome-books-popup.svg',
-    technologies: ['Github', 'JavaScript', 'Terminal', 'css', 'html', 'Luxon'],
+    mockup: 'images/projects/Awesome-books-card.svg',
+    technologies: [
+      'Github',
+      'JavaScript',
+      'Terminal',
+      'CSS3',
+      'HTML5',
+      'Luxon',
+    ],
     source: 'https://github.com/Timbar09/Awesome-books-vol-2',
     live: 'https://timbar09.github.io/Awesome-books-vol-2/',
   },
@@ -38,7 +46,8 @@ const projectsArr = [
       "In summary, this project encompasses a responsive website with multiple pages, including a home page and an about page. It features a mobile menu for smaller screen sizes, dynamic content generation for the 'Featured speakers' section, and a cohesive navigation system that allows users to seamlessly explore the website on both mobile and desktop devices.",
     ],
     image: 'images/projects/ALT-Conference-popup.svg',
-    technologies: ['JavaScript', 'GitHub', 'css', 'Terminal', 'html'],
+    mockup: 'images/projects/ALT-Conference-card.svg',
+    technologies: ['JavaScript', 'GitHub', 'CSS3', 'Terminal', 'HTML5'],
     source: 'https://github.com/Timbar09/Africas-Leading-Tech-Conference',
     live: 'https://timbar09.github.io/Africas-Leading-Tech-Conference/',
   },
@@ -55,6 +64,7 @@ const projectsArr = [
       'Overall, this project showcases the utilization of essential web development technologies and techniques to create a functional and user-friendly to-do list web app.',
     ],
     image: 'images/projects/todo_app_detail.svg',
+    mockup: 'images/projects/todo_app_card.svg',
     technologies: [
       'Github',
       'HTML5',
@@ -81,6 +91,7 @@ const projectsArr = [
       "With this mobile web application, you can turn financial prudence into a reachable goal. Explore the capabilities of comprehensive financial management, organized categorization, and insights driven by data. All these are wrapped in an interface that focuses on user experience while ensuring security and functionality aren't compromised. Start stepping towards the future of budget management today.",
     ],
     image: 'images/projects/budgettrail_popup.svg',
+    mockup: 'images/projects/budgettrail_card.svg',
     technologies: [
       'Ruby on Rails',
       'PostgreSQL',
@@ -102,6 +113,7 @@ const projectsArr = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas ut, maxime eos quos incidunt commodi aut libero explicabo enim laboriosam, similique quidem id ipsa. Harum reprehenderit iste ad officia beatae aperiam vel nisi nobis, dolorem nulla.',
     ],
     image: 'images/projects/space_popup.svg',
+    mockup: 'images/projects/space_card.svg',
     technologies: ['React.js', 'Redux-toolkit', 'Bootstrap', 'REST API'],
     source:
       'https://github.com/Timbar09/React-Redux-Group-Project-Space-Travelers-Hub',
@@ -122,6 +134,7 @@ const projectsArr = [
       'In essence, what emerges is an immersive web application that not only disseminates information but also fosters a thriving community of discourse. This platform offers bloggers an avenue to broadcast their insights, opinions, and stories to an enthusiastic audience. Amidst the world of technology and communication, this application serves as a reminder of the impact of connectivity and the art of digital expression.',
     ],
     image: 'images/projects/blog_popup.svg',
+    mockup: 'images/projects/blog_card.svg',
     technologies: [
       'Ruby on Rails',
       'PostgreSQL',
