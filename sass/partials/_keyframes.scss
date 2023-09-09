@@ -58,6 +58,7 @@
   from {
     visibility: hidden;
     opacity: 0;
+    top: -80px;
   }
 
   1% {
@@ -68,6 +69,7 @@
   to {
     visibility: visible;
     opacity: 1;
+    top: 0;
   }
 }
 

@@ -62,9 +62,7 @@
       background-color: var(--lime);
       border-radius: 10rem;
       opacity: 0;
-      transition:
-        top 150ms 250ms ease-in-out,
-        opacity 150ms 250ms ease-in-out,
+      transition: top 150ms 250ms ease-in-out, opacity 150ms 250ms ease-in-out,
         width 150ms 415ms ease-in-out;
     }
 
@@ -128,6 +126,7 @@
     text-align: end;
     background-color: var(--white);
     border-radius: 0 0 1rem 1rem;
+    transition: top 350ms ease-in-out, visibility 350ms ease-in-out;
 
     &-btn {
       margin-left: auto;
@@ -206,6 +205,15 @@
     }
 
     &-link {
+      &-wrap {
+        &:hover {
+          .header__menu-link {
+            left: 2rem;
+            color: var(--lime);
+          }
+        }
+      }
+
       display: inline-block;
       position: relative;
       font-size: 2rem;
@@ -215,11 +223,6 @@
       padding: 1.25rem;
       font-weight: 600;
       transition: color 150ms ease-in-out, left 150ms ease-in-out;
-
-      &:hover {
-        color: var(--lime);
-        left: 2rem;
-      }
     }
   }
 
@@ -231,8 +234,7 @@
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-    transition:
-      border-color 150ms ease-in-out,
+    transition: border-color 150ms ease-in-out,
       background-color 150ms ease-in-out;
 
     &-container {

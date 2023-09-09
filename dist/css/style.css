@@ -159,6 +159,7 @@ body ::-webkit-scrollbar-thumb:active {
   from {
     visibility: hidden;
     opacity: 0;
+    top: -80px;
   }
   1% {
     visibility: visible;
@@ -167,6 +168,7 @@ body ::-webkit-scrollbar-thumb:active {
   to {
     visibility: visible;
     opacity: 1;
+    top: 0;
   }
 }
 @keyframes menu-close {
@@ -410,6 +412,7 @@ p {
   text-align: end;
   background-color: var(--white);
   border-radius: 0 0 1rem 1rem;
+  transition: top 350ms ease-in-out, visibility 350ms ease-in-out;
 }
 .header__menu-btn {
   margin-left: auto;
@@ -485,9 +488,9 @@ p {
   font-weight: 600;
   transition: color 150ms ease-in-out, left 150ms ease-in-out;
 }
-.header__menu-link:hover {
-  color: var(--lime);
+.header__menu-link-wrap:hover .header__menu-link {
   left: 2rem;
+  color: var(--lime);
 }
 .header__toggle {
   width: 2rem;
@@ -568,21 +571,20 @@ p {
 }
 @media (min-width: 40em) {
   .intro__title {
-    font-size: 2.5rem;
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 0.37px;
   }
 }
 .intro__title span {
   display: block;
-  font-weight: 800;
-  font-size: 2.5rem;
+  font-weight: 500;
+  font-size: 3rem;
   color: var(--lime);
   text-shadow: -1px -1px 0 var(--green), 1px -1px 0 var(--green), -1px 1px 0 var(--green), 1px 1px 0 var(--green);
 }
 @media (min-width: 40em) {
   .intro__title span {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 }
 .intro__description {
