@@ -76,7 +76,7 @@ body ::-webkit-scrollbar-thumb:active {
   right: 0;
   bottom: -140px;
   left: 0;
-  background-color: rgba(0, 133, 82, 0.7411764706);
+  background-color: rgba(0, 133, 82, 0.4156862745);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   z-index: 999;
@@ -84,12 +84,12 @@ body ::-webkit-scrollbar-thumb:active {
 
 /* When the menu button is clicked */
 .open {
-  animation: menu-open 150ms ease-in-out 0ms 1 forwards;
+  animation: appear 150ms ease-in-out 0ms 1 forwards;
 }
 
 /* When the cancel-menu button is clicked */
 .close {
-  animation: menu-close 150ms ease-in-out 0ms 1 forwards;
+  animation: disappear 150ms ease-in-out 0ms 1 forwards;
 }
 
 .darkmode {
@@ -155,11 +155,10 @@ body ::-webkit-scrollbar-thumb:active {
   }
 }
 /* Header menu keyframes */
-@keyframes menu-open {
+@keyframes appear {
   from {
     visibility: hidden;
     opacity: 0;
-    top: -80px;
   }
   1% {
     visibility: visible;
@@ -168,10 +167,9 @@ body ::-webkit-scrollbar-thumb:active {
   to {
     visibility: visible;
     opacity: 1;
-    top: 0;
   }
 }
-@keyframes menu-close {
+@keyframes disappear {
   from {
     visibility: visible;
     opacity: 1;
@@ -412,7 +410,6 @@ p {
   text-align: end;
   background-color: var(--white);
   border-radius: 0 0 1rem 1rem;
-  transition: top 350ms ease-in-out, visibility 350ms ease-in-out;
 }
 .header__menu-btn {
   margin-left: auto;
@@ -752,7 +749,7 @@ p {
 }
 .popup__content {
   padding: 1rem;
-  height: 85vh;
+  height: 80vh;
   overflow-y: scroll;
   background-color: var(--white);
   border: 2px solid var(--grey);
