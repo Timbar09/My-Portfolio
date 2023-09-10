@@ -991,6 +991,25 @@ p {
 .about__socials-link:hover {
   color: var(--lime);
 }
+.about__mobile {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .about__mobile {
+    display: block;
+  }
+}
+.about__mobile-name {
+  font-size: 1.5rem;
+}
+.about__mobile-socials-link {
+  display: inline-block;
+  padding: 0.75rem;
+  font-size: 1.75rem;
+}
+.about__mobile-socials-link:active {
+  color: var(--lime);
+}
 .about__description {
   text-align: left;
   text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white), -1px 1px 0 var(--white), 1px 1px 0 var(--white);
