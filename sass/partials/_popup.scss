@@ -1,16 +1,11 @@
 .popup {
   visibility: hidden;
   position: absolute;
-  padding-top: 2rem;
   text-align: left;
   width: 85%;
   left: 50%;
   translate: -50%;
   z-index: 1010;
-
-  @media (min-width: 40em) {
-    padding-top: 4rem;
-  }
 
   &__cancel-btn {
     text-align: right;
@@ -30,28 +25,16 @@
 
   &__content {
     padding: 1rem;
-    height: 85vh;
+    height: 80vh;
     overflow-y: scroll;
     background-color: var(--white);
     border: 2px solid var(--grey);
     border-radius: 0.5rem;
+    box-shadow: var(--shadow1);
 
     @media (min-width: 40em) {
       padding: 1.5rem;
       height: 80vh;
-    }
-
-    &-text {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 0.75rem;
-
-      @media (min-width: 64em) {
-        grid-template-columns: 3fr 1fr;
-        grid-template-rows: repeat(3, auto);
-        grid-gap: 1.25rem;
-        padding-top: 1.5rem;
-      }
     }
 
     &::-webkit-scrollbar {
@@ -75,6 +58,19 @@
 
     &::-webkit-scrollbar-thumb:active {
       background-color: var(--darkerBlue);
+    }
+
+    &-text {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 0.75rem;
+
+      @media (min-width: 64em) {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 1.25rem;
+        padding-top: 1.5rem;
+      }
     }
   }
 

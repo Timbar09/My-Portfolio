@@ -1,4 +1,4 @@
-import projectsArr from './projects.js';
+import projectsArr from './projectData.js';
 import * as f from './functions/index.js';
 
 // Dark mode functionality

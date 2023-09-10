@@ -8,7 +8,7 @@
   box-shadow: 0 8px 16px rgba(22, 69, 49, 0.1);
 
   &__logo {
-    font-family: 'Pacifico', cursive;
+    font-family: var(--ff-pacifico);
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 28px;
@@ -47,7 +47,7 @@
   &__link {
     display: inline-block;
     position: relative;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25rem;
     transition: color 150ms ease-in-out;
 
@@ -206,6 +206,15 @@
     }
 
     &-link {
+      &-wrap {
+        &:hover {
+          .header__menu-link {
+            left: 2rem;
+            color: var(--lime);
+          }
+        }
+      }
+
       display: inline-block;
       position: relative;
       font-size: 2rem;
@@ -215,11 +224,6 @@
       padding: 1.25rem;
       font-weight: 600;
       transition: color 150ms ease-in-out, left 150ms ease-in-out;
-
-      &:hover {
-        color: var(--lime);
-        left: 2rem;
-      }
     }
   }
 

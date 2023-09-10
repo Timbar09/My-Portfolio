@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Pacifico&display=swap');
 
 html {
   box-sizing: border-box;
@@ -12,6 +12,41 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+:root {
+  // Font family
+  --ff-montserrat: 'Montserrat', 'Inter', sans-serif;
+  --ff-pacifico: 'Pacifico', cursive;
+  // Colors
+  --white: #fff;
+  --lightGrey: #ebf0ee;
+  --grey: #d0d9d4;
+  --midGrey: #8e9691;
+  --darkGrey: #656c67;
+  --lightGreen: #c5e9da;
+  --opaqueGreen: #00855247;
+  --lime: #36b37f;
+  --green: #008552;
+  --pressed: #006c3a;
+  --darkBlue: #344563;
+  --darkerBlue: #172b4d;
+  // Box shadows
+  --shadow1: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+  --shadowLime1: 0 8px 16px rgba(54, 179, 127, 0.25);
+  --shadowLime2: 0 16px 32px rgba(54, 179, 127, 0.3);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  line-height: 1.5rem;
+  font-family: var(--ff-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--darkGrey);
+  background-color: var(--white);
 
   &::-webkit-scrollbar {
     width: 0.75rem;
@@ -37,38 +72,6 @@ html {
   }
 }
 
-:root {
-  // Font family
-  --ff-inter: 'Inter', sans-serif;
-  // Colors
-  --white: #fff;
-  --lightGrey: #ebf0ee;
-  --grey: #d0d9d4;
-  --lightGreen: #c5e9da;
-  --opaqueGreen: #00855247;
-  --lime: #36b37f;
-  --green: #008552;
-  --pressed: #006c3a;
-  --darkBlue: #344563;
-  --darkerBlue: #172b4d;
-  // Box shadows
-  --shadow1: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
-  --shadowLime1: 0 8px 16px rgba(54, 179, 127, 0.25);
-  --shadowLime2: 0 16px 32px rgba(54, 179, 127, 0.3);
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  line-height: 1.5rem;
-  font-family: var(--ff-inter);
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--darkBlue);
-  background-color: var(--white);
-}
-
 .noscroll {
   overflow: hidden;
 }
@@ -80,17 +83,17 @@ body {
   right: 0;
   bottom: -140px;
   left: 0;
-  background-color: #008552bd;
+  background-color: #0085526a;
   backdrop-filter: blur(5px);
   z-index: 999;
 }
 
 /* When the menu button is clicked */
 .open {
-  animation: menu-open 150ms ease-in-out 0ms 1 forwards;
+  animation: appear 150ms ease-in-out 0ms 1 forwards;
 }
 
 /* When the cancel-menu button is clicked */
 .close {
-  animation: menu-close 150ms ease-in-out 0ms 1 forwards;
+  animation: disappear 150ms ease-in-out 0ms 1 forwards;
 }

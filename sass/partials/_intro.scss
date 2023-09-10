@@ -1,8 +1,8 @@
 .intro {
   margin-top: 4.75rem;
+  position: relative;
 
   .container {
-    padding-top: 4rem;
     background-image: url('../../images/header-illsutration-mobile.svg');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -10,7 +10,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    /* stylelint-disable-next-line csstree/validator */
+    gap: min(5vh, 2rem);
 
     @media (min-width: 64em) {
       justify-content: flex-start;
@@ -20,66 +22,124 @@
     }
   }
 
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(5px);
+  }
+
   &__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
     animation: fade-slide-up 2000ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
-      font-weight: 800;
-      font-size: 3rem;
-      line-height: 3.75rem;
+      font-size: 2rem;
       letter-spacing: 0.37px;
     }
 
     span {
-      color: var(--lime);
       display: block;
+      font-weight: 700;
+      font-size: 3rem;
+      color: var(--lime);
+      text-shadow:
+        -1px -1px 0 var(--green),
+        1px -1px 0 var(--green),
+        -1px 1px 0 var(--green),
+        1px 1px 0 var(--green);
+
+      @media (min-width: 40em) {
+        font-size: 4.5rem;
+      }
     }
   }
 
   &__description {
     margin: 0 auto;
     max-width: 51.5625rem;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
     animation: fade-slide-up 3000ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
-      line-height: 2rem;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
     }
   }
 
-  &__social {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  &__tech {
+    border: solid 2px var(--lightGrey);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    width: max-content;
+    border-radius: 0.5rem;
+    animation: fade-slide-up 4000ms ease-in-out 1 forwards;
 
-    li {
+    @media (min-width: 40em) {
+      flex-direction: row;
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      width: max-content;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-item {
       &:first-child {
-        animation: appear 4000ms ease-in-out 1 forwards;
+        color: #e34f26;
       }
 
       &:nth-child(2) {
-        animation: appear 5000ms ease-in-out 1 forwards;
+        color: #2965f1;
       }
 
-      &:last-child {
-        animation: appear 6000ms ease-out 1 forwards;
+      &:nth-child(3) {
+        color: #f0db4f;
       }
-    }
-
-    &-icon {
-      transition: 150ms fill ease-in-out;
-      fill: var(--darkBlue);
     }
 
     &-link {
-      &:hover {
-        .intro__social-icon {
-          fill: var(--lime);
+      --dimension: 4rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 2px var(--lightGrey);
+      width: var(--dimension);
+      height: var(--dimension);
+      border-radius: 0.5rem;
+      background-color: var(--lightGrey);
+      font-size: 2rem;
+
+      @media (min-width: 40em) {
+        --dimension: 6rem;
+
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      span {
+        display: none;
+        font-size: 0.75rem;
+        color: var(--darkGrey);
+
+        @media (min-width: 40em) {
+          display: block;
         }
       }
     }
@@ -93,10 +153,6 @@
     border-radius: 50%;
     transition: 150ms background-color ease-in-out;
     animation: grow 5000ms ease-in-out 1 forwards;
-
-    @media (min-width: 64em) {
-      margin-top: 4.625rem;
-    }
 
     &:hover {
       border: solid 2px var(--lime);

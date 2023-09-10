@@ -54,7 +54,7 @@
 
 /* Header menu keyframes */
 
-@keyframes menu-open {
+@keyframes appear {
   from {
     visibility: hidden;
     opacity: 0;
@@ -71,7 +71,7 @@
   }
 }
 
-@keyframes menu-close {
+@keyframes disappear {
   from {
     visibility: visible;
     opacity: 1;
