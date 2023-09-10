@@ -906,14 +906,14 @@ p {
     padding-bottom: 7.5rem;
   }
 }
-.about__text {
+.about__wrap {
   padding: 0.5625rem 0;
   background: url("../../images/illustration-about-me-mobile.svg"), url("../../images/illustration1-about-me-mobile.svg");
   background-position: left bottom, right top;
   background-repeat: no-repeat;
 }
 @media (min-width: 40em) {
-  .about__text {
+  .about__wrap {
     padding: 0.5625rem 0;
     background: url("../../images/illustration-about-me-2-desktop.svg"), url("../../images/illustration-about-me-1-desktop.svg");
     background-position: left bottom, right top;
@@ -924,6 +924,13 @@ p {
   .about__title {
     padding-top: 4.5rem;
   }
+}
+.about__bio-photo {
+  --dimension: 12.5rem;
+  width: var(--dimension);
+  height: var(--dimension);
+  border-radius: 0.25rem;
+  background-color: var(--lightGrey);
 }
 .about__description {
   max-width: 37.5rem;

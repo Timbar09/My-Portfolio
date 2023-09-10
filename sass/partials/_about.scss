@@ -5,7 +5,7 @@
     padding-bottom: 7.5rem;
   }
 
-  &__text {
+  &__wrap {
     padding: 0.5625rem 0;
     background: url('../../images/illustration-about-me-mobile.svg'),
       url('../../images/illustration1-about-me-mobile.svg');
@@ -24,6 +24,17 @@
   &__title {
     @media (min-width: 40em) {
       padding-top: 4.5rem;
+    }
+  }
+
+  &__bio {
+    &-photo {
+      --dimension: 12.5rem;
+
+      width: var(--dimension);
+      height: var(--dimension);
+      border-radius: 0.25rem;
+      background-color: var(--lightGrey);
     }
   }
 
