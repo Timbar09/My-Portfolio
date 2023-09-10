@@ -677,7 +677,6 @@ p {
 }
 @media (min-width: 40em) {
   .intro__tech-link {
-    --dimension: 6rem;
     flex-direction: column;
     gap: 0.5rem;
   }
@@ -686,11 +685,6 @@ p {
   display: none;
   font-size: 0.75rem;
   color: var(--darkGrey);
-}
-@media (min-width: 40em) {
-  .intro__tech-link span {
-    display: block;
-  }
 }
 .intro__down-btn {
   display: inline-block;
