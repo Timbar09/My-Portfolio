@@ -62,9 +62,7 @@
       background-color: var(--lime);
       border-radius: 10rem;
       opacity: 0;
-      transition:
-        top 150ms 250ms ease-in-out,
-        opacity 150ms 250ms ease-in-out,
+      transition: top 150ms 250ms ease-in-out, opacity 150ms 250ms ease-in-out,
         width 150ms 415ms ease-in-out;
     }
 
@@ -72,7 +70,7 @@
       color: var(--lime);
 
       &::before {
-        top: 2.725rem;
+        top: 2.85rem;
         opacity: 1;
         width: 100%;
       }
@@ -235,8 +233,7 @@
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-    transition:
-      border-color 150ms ease-in-out,
+    transition: border-color 150ms ease-in-out,
       background-color 150ms ease-in-out;
 
     &-container {

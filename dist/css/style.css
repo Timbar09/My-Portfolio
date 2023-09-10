@@ -386,7 +386,7 @@ p {
   color: var(--lime);
 }
 .header__link:hover::before {
-  top: 2.725rem;
+  top: 2.85rem;
   opacity: 1;
   width: 100%;
 }
