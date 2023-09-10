@@ -664,20 +664,18 @@ p {
   color: #f0db4f;
 }
 .intro__tech-link {
-  --dimension: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px var(--lightGrey);
-  width: var(--dimension);
-  height: var(--dimension);
+  padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   background-color: var(--lightGrey);
   font-size: 2rem;
 }
 @media (min-width: 40em) {
   .intro__tech-link {
-    flex-direction: column;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
     gap: 0.5rem;
   }
 }
@@ -685,6 +683,11 @@ p {
   display: none;
   font-size: 0.75rem;
   color: var(--darkGrey);
+}
+@media (min-width: 40em) {
+  .intro__tech-link span {
+    display: block;
+  }
 }
 .intro__down-btn {
   display: inline-block;
@@ -961,15 +964,14 @@ p {
   --dimension: 12.5rem;
   width: var(--dimension);
   height: var(--dimension);
-  border-radius: 0.25rem;
+  border-radius: 0.35rem;
   background-color: var(--lightGrey);
   background-image: url("../../images/self.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
   perspective: 1000px;
-  transition: rotate 1000ms ease-in-out;
+  transition: rotate 600ms ease-in-out;
 }
 .about__details {
   visibility: hidden;
@@ -981,9 +983,10 @@ p {
   gap: 1rem;
   width: 100%;
   height: 100%;
+  border-radius: 0.25rem;
   rotate: y 180deg;
   background-color: var(--lightGrey);
-  transition: opacity 50ms 500ms ease-in-out, visibility 50ms 500ms ease-in-out;
+  transition: opacity 50ms 300ms ease-in-out, visibility 50ms 300ms ease-in-out;
 }
 @media (hover: none) and (pointer: coarse) {
   .about__details {
