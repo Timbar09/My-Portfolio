@@ -28,6 +28,18 @@
   }
 
   &__bio {
+    border: solid 2px var(--lightGrey);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: max-content;
+
+    &:hover {
+      .about__bio-photo {
+        rotate: y 180deg;
+      }
+    }
+
     &-photo {
       --dimension: 12.5rem;
 
@@ -39,6 +51,8 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      perspective: 1000px;
+      transition: rotate 1000ms ease-in-out;
     }
   }
 
