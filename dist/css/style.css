@@ -1034,54 +1034,40 @@ p {
   text-align: left;
   text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white), -1px 1px 0 var(--white), 1px 1px 0 var(--white);
 }
-.about__grid {
+.about__skills {
   padding-top: 2.5rem;
 }
 .about__card {
-  --bg: rgba(235, 240, 238, 0.5);
-  --bg-hover: rgba(40, 45, 43, 0.6);
-  background-color: var(--bg);
-  transition: 200ms box-shadow ease-in-out, 200ms background-color ease-in-out, 200ms background-size ease-in-out;
+  padding: 1rem;
+  border: solid 1px var(--lightGrey);
+  border-radius: 0.25rem;
 }
-.about__card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  z-index: -1;
-  transition: background-size 800ms 100ms ease-in-out;
+.about__card-header {
+  display: flex;
+  gap: 1rem;
 }
-.about__card:first-child::before {
-  background-image: url("../../images/languages-bg.jpg");
-}
-.about__card:nth-child(2)::before {
-  background-image: url("../../images/framework-bg.jpg");
-}
-.about__card:last-child::before {
-  background-image: url("../../images/skills-bg.jpg");
-}
-.about__card:hover, .about__card:focus-within {
-  background-color: var(--bg-hover);
-  background-size: 110%;
-  box-shadow: var(--shadow1);
-}
-.about__card:hover::before {
-  background-size: 110%;
-}
-.about__card img {
-  margin: 1.75rem 0;
+.about__card-icon {
+  padding: 1rem;
+  border: solid 1px var(--lightGrey);
+  border-radius: 0.25rem;
+  font-size: 2.5rem;
+  color: var(--darkerBlue);
+  background-color: var(--lightGrey);
 }
 .about__card-title {
-  margin-bottom: 1.5rem;
-  transition: color 200ms ease-in-out;
+  position: relative;
+  padding: 1rem 0;
+  font-size: 1.25rem;
 }
-.about__card:hover .about__card-title {
-  color: var(--white);
-}
-.about__card-btns {
-  --btn-bg: var(--white);
+.about__card-title::before {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  height: 0.15rem;
+  width: 3rem;
+  background-color: var(--lime);
+  border-radius: 3rem;
 }
 
 .footer {

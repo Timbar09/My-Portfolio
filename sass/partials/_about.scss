@@ -150,67 +150,108 @@
       -1px 1px 0 var(--white), 1px 1px 0 var(--white);
   }
 
-  &__grid {
+  &__skills {
     padding-top: 2.5rem;
   }
 
   &__card {
-    --bg: rgba(235, 240, 238, 0.5);
-    --bg-hover: rgba(40, 45, 43, 0.6);
+    padding: 1rem;
+    border: solid 1px var(--lightGrey);
+    border-radius: 0.25rem;
 
-    background-color: var(--bg);
-    transition: 200ms box-shadow ease-in-out, 200ms background-color ease-in-out,
-      200ms background-size ease-in-out;
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: center;
-      z-index: -1;
-      transition: background-size 800ms 100ms ease-in-out;
+    &-header {
+      display: flex;
+      gap: 1rem;
     }
 
-    &:first-child::before {
-      background-image: url('../../images/languages-bg.jpg');
-    }
-
-    &:nth-child(2)::before {
-      background-image: url('../../images/framework-bg.jpg');
-    }
-
-    &:last-child::before {
-      background-image: url('../../images/skills-bg.jpg');
-    }
-
-    &:hover,
-    &:focus-within {
-      background-color: var(--bg-hover);
-      background-size: 110%;
-      box-shadow: var(--shadow1);
-    }
-
-    &:hover::before {
-      background-size: 110%;
-    }
-
-    & img {
-      margin: 1.75rem 0;
+    &-icon {
+      padding: 1rem;
+      border: solid 1px var(--lightGrey);
+      border-radius: 0.25rem;
+      font-size: 2.5rem;
+      color: var(--darkerBlue);
+      background-color: var(--lightGrey);
     }
 
     &-title {
-      margin-bottom: 1.5rem;
-      transition: color 200ms ease-in-out;
-    }
+      position: relative;
+      padding: 1rem 0;
+      font-size: 1.25rem;
 
-    &:hover .about__card-title {
-      color: var(--white);
-    }
-
-    &-btns {
-      --btn-bg: var(--white);
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 1rem;
+        right: 0;
+        height: 0.15rem;
+        width: 3rem;
+        background-color: var(--lime);
+        border-radius: 3rem;
+      }
     }
   }
+
+  // &__grid {
+  //   padding-top: 2.5rem;
+  // }
+
+  // &__card {
+  //   --bg: rgba(235, 240, 238, 0.5);
+  //   --bg-hover: rgba(40, 45, 43, 0.6);
+
+  //   background-color: var(--bg);
+  //   transition: 200ms box-shadow ease-in-out, 200ms background-color ease-in-out,
+  //     200ms background-size ease-in-out;
+
+  //   &::before {
+  //     content: '';
+  //     position: absolute;
+  //     inset: 0;
+  //     background-repeat: no-repeat;
+  //     background-size: 100%;
+  //     background-position: center;
+  //     z-index: -1;
+  //     transition: background-size 800ms 100ms ease-in-out;
+  //   }
+
+  //   &:first-child::before {
+  //     background-image: url('../../images/languages-bg.jpg');
+  //   }
+
+  //   &:nth-child(2)::before {
+  //     background-image: url('../../images/framework-bg.jpg');
+  //   }
+
+  //   &:last-child::before {
+  //     background-image: url('../../images/skills-bg.jpg');
+  //   }
+
+  //   &:hover,
+  //   &:focus-within {
+  //     background-color: var(--bg-hover);
+  //     background-size: 110%;
+  //     box-shadow: var(--shadow1);
+  //   }
+
+  //   &:hover::before {
+  //     background-size: 110%;
+  //   }
+
+  //   & img {
+  //     margin: 1.75rem 0;
+  //   }
+
+  //   &-title {
+  //     margin-bottom: 1.5rem;
+  //     transition: color 200ms ease-in-out;
+  //   }
+
+  //   &:hover .about__card-title {
+  //     color: var(--white);
+  //   }
+
+  //   &-btns {
+  //     --btn-bg: var(--white);
+  //   }
+  // }
 }
