@@ -899,6 +899,7 @@ p {
 }
 
 .about {
+  position: relative;
   padding-bottom: 4rem;
 }
 @media (min-width: 40em) {
@@ -907,14 +908,14 @@ p {
   }
 }
 .about__wrap {
-  padding: 0.5625rem 0;
+  position: relative;
+  padding: 5rem 0;
   background: url("../../images/illustration-about-me-mobile.svg"), url("../../images/illustration1-about-me-mobile.svg");
   background-position: left bottom, right top;
   background-repeat: no-repeat;
 }
 @media (min-width: 40em) {
   .about__wrap {
-    padding: 0.5625rem 0;
     background: url("../../images/illustration-about-me-2-desktop.svg"), url("../../images/illustration-about-me-1-desktop.svg");
     background-position: left bottom, right top;
     background-repeat: no-repeat;
@@ -925,8 +926,25 @@ p {
     padding-top: 4.5rem;
   }
 }
-.about__bio {
+.about__flexbox {
   border: solid 2px var(--lightGrey);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+@media (min-width: 40em) {
+  .about__flexbox {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.about__bio {
   display: flex;
   flex-direction: column;
   gap: 1rem;
