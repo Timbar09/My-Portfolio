@@ -1,10 +1,5 @@
 .footer {
-  padding-top: 4.25rem;
   text-align: center;
-
-  @media (min-width: 40em) {
-    padding-top: 6.75rem;
-  }
 
   @media (min-width: 64em) {
     text-align: left;
@@ -15,8 +10,7 @@
     padding-left: 10vw;
     padding-right: 10vw;
     align-items: center;
-    background:
-      url('../../images/cf-1-desktop.svg'),
+    background: url('../../images/cf-1-desktop.svg'),
       url('../../images/cf-bg-2-desktop.svg'),
       url('../../images/cf-bg-3-desktop.svg');
     background-position: left bottom, 20% 80%, right bottom;
@@ -30,6 +24,7 @@
   }
 
   &__title {
+    line-height: 3.25rem;
     margin-bottom: 3.75rem;
     margin-left: auto;
     margin-right: auto;
@@ -96,9 +91,7 @@
       font-weight: inherit;
       color: inherit;
       background-color: transparent;
-      transition:
-        border 150ms ease-in-out,
-        outline 150ms ease-in-out,
+      transition: border 150ms ease-in-out, outline 150ms ease-in-out,
         outline-offset 150ms ease-in-out;
 
       &:focus {
@@ -127,8 +120,7 @@
       border-radius: 0.25rem;
       border: 0;
       cursor: pointer;
-      transition:
-        background-color 150ms ease-in-out,
+      transition: background-color 150ms ease-in-out,
         box-shadow 150ms ease-in-out;
 
       &:hover {

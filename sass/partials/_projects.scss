@@ -1,33 +1,16 @@
 .project {
   padding-top: 4rem;
+  padding-bottom: 4rem;
 
   @media (min-width: 40em) {
-    padding-top: 8.5rem;
+    padding-top: 5rem;
+    padding-bottom: 7.5rem;
   }
 
   &__title {
-    position: relative;
-    margin-bottom: 5.625rem;
-
     @media (min-width: 40em) {
       position: relative;
       margin-bottom: 3.25rem;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: -1.5rem;
-      left: 50%;
-      translate: -50%;
-      height: 0.25rem;
-      width: 3rem;
-      background-color: var(--lime);
-      border-radius: 3rem;
-
-      @media (min-width: 40em) {
-        display: none;
-      }
     }
   }
 

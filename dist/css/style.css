@@ -212,9 +212,29 @@ p {
   text-align: center;
 }
 .section__title {
-  font-weight: 700;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
+  position: relative;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 40em) {
+  .section__title {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    margin-bottom: 3.5rem;
+  }
+}
+.section__title::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  height: 0.25rem;
+  width: 3rem;
+  background-color: var(--lime);
+  border-radius: 3rem;
 }
 .section__grid {
   display: grid;
@@ -688,36 +708,18 @@ p {
 
 .project {
   padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 @media (min-width: 40em) {
   .project {
-    padding-top: 8.5rem;
+    padding-top: 5rem;
+    padding-bottom: 7.5rem;
   }
-}
-.project__title {
-  position: relative;
-  margin-bottom: 5.625rem;
 }
 @media (min-width: 40em) {
   .project__title {
     position: relative;
     margin-bottom: 3.25rem;
-  }
-}
-.project__title::before {
-  content: "";
-  position: absolute;
-  bottom: -1.5rem;
-  left: 50%;
-  translate: -50%;
-  height: 0.25rem;
-  width: 3rem;
-  background-color: var(--lime);
-  border-radius: 3rem;
-}
-@media (min-width: 40em) {
-  .project__title::before {
-    display: none;
   }
 }
 .project__card {
@@ -903,11 +905,11 @@ p {
 }
 
 .about {
-  padding-top: 1.125rem;
+  padding-bottom: 4rem;
 }
 @media (min-width: 40em) {
   .about {
-    padding-top: 5.5rem;
+    padding-bottom: 7.5rem;
   }
 }
 .about__text {
@@ -923,9 +925,6 @@ p {
     background-position: left bottom, right top;
     background-repeat: no-repeat;
   }
-}
-.about__title {
-  padding-top: 2.5625rem;
 }
 @media (min-width: 40em) {
   .about__title {
@@ -988,13 +987,7 @@ p {
 }
 
 .footer {
-  padding-top: 4.25rem;
   text-align: center;
-}
-@media (min-width: 40em) {
-  .footer {
-    padding-top: 6.75rem;
-  }
 }
 @media (min-width: 64em) {
   .footer {
@@ -1018,6 +1011,7 @@ p {
   }
 }
 .footer__title {
+  line-height: 3.25rem;
   margin-bottom: 3.75rem;
   margin-left: auto;
   margin-right: auto;

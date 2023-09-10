@@ -28,9 +28,29 @@ p {
   text-align: center;
 
   &__title {
-    font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 3.25rem;
+    position: relative;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+
+    @media (min-width: 40em) {
+      font-size: 2.5rem;
+      line-height: 3.25rem;
+      margin-bottom: 3.5rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+      height: 0.25rem;
+      width: 3rem;
+      background-color: var(--lime);
+      border-radius: 3rem;
+    }
   }
 
   &__grid {
@@ -54,9 +74,7 @@ p {
     background-color: var(--lime);
     border-radius: 0.25rem;
     box-shadow: var(--shadowLime1);
-    transition:
-      background-color 150ms ease-in-out,
-      box-shadow 150ms ease-in-out,
+    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out,
       translate 150ms ease-in-out;
 
     &:hover {
