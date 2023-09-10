@@ -931,6 +931,10 @@ p {
   height: var(--dimension);
   border-radius: 0.25rem;
   background-color: var(--lightGrey);
+  background-image: url("../../images/self.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .about__description {
   max-width: 37.5rem;
