@@ -4,6 +4,7 @@ h3,
 h4 {
   color: var(--darkerBlue);
   margin: 0;
+  font-weight: 500;
 }
 
 a,
@@ -11,6 +12,12 @@ a::before,
 a::after {
   text-decoration: none;
   color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 p {
@@ -47,9 +54,7 @@ p {
     background-color: var(--lime);
     border-radius: 0.25rem;
     box-shadow: var(--shadowLime1);
-    transition:
-      background-color 150ms ease-in-out,
-      box-shadow 150ms ease-in-out,
+    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out,
       translate 150ms ease-in-out;
 
     &:hover {

@@ -21,6 +21,8 @@ html {
   --white: #fff;
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
+  --midGrey: #8e9691;
+  --darkGrey: #656c67;
   --lightGreen: #c5e9da;
   --opaqueGreen: #00855247;
   --lime: #36b37f;
@@ -42,7 +44,7 @@ body {
   font-family: var(--ff-inter);
   font-size: 1rem;
   font-weight: 400;
-  color: var(--darkBlue);
+  color: var(--darkGrey);
   background-color: var(--white);
 
   &::-webkit-scrollbar,
