@@ -953,7 +953,7 @@ p {
 .about__bio:hover .about__bio-photo {
   rotate: y 180deg;
 }
-.about__bio:hover .about__socials {
+.about__bio:hover .about__details {
   visibility: visible;
   opacity: 1;
 }
@@ -971,19 +971,31 @@ p {
   perspective: 1000px;
   transition: rotate 1000ms ease-in-out;
 }
-.about__socials {
+.about__details {
   visibility: hidden;
   opacity: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1.75rem;
+  gap: 1rem;
   width: 100%;
   height: 100%;
   rotate: y 180deg;
   background-color: var(--lightGrey);
   transition: opacity 50ms 500ms ease-in-out, visibility 50ms 500ms ease-in-out;
+}
+@media (hover: none) and (pointer: coarse) {
+  .about__details {
+    display: none;
+  }
+}
+.about__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.75rem;
 }
 .about__socials-link {
   transition: color 200ms ease-in-out;

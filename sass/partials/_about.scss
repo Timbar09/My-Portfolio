@@ -56,7 +56,7 @@
         rotate: y 180deg;
       }
 
-      .about__socials {
+      .about__details {
         visibility: visible;
         opacity: 1;
       }
@@ -79,20 +79,32 @@
     }
   }
 
-  &__socials {
+  &__details {
     visibility: hidden;
     opacity: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.75rem;
+    gap: 1rem;
     width: 100%;
     height: 100%;
     rotate: y 180deg;
     background-color: var(--lightGrey);
     transition: opacity 50ms 500ms ease-in-out,
       visibility 50ms 500ms ease-in-out;
+
+    @media (hover: none) and (pointer: coarse) {
+      display: none;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.75rem;
 
     &-link {
       transition: color 200ms ease-in-out;
