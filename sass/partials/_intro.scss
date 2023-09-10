@@ -11,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* stylelint-disable-next-line csstree/validator */
     gap: min(5vh, 2rem);
 
     @media (min-width: 64em) {
@@ -29,7 +30,7 @@
 
   &__title {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.2;
     animation: fade-slide-up 2000ms ease-in-out 1 forwards;
 
@@ -40,11 +41,14 @@
 
     span {
       display: block;
-      font-weight: 500;
+      font-weight: 700;
       font-size: 3rem;
       color: var(--lime);
-      text-shadow: -1px -1px 0 var(--green), 1px -1px 0 var(--green),
-        -1px 1px 0 var(--green), 1px 1px 0 var(--green);
+      text-shadow:
+        -1px -1px 0 var(--green),
+        1px -1px 0 var(--green),
+        -1px 1px 0 var(--green),
+        1px 1px 0 var(--green);
 
       @media (min-width: 40em) {
         font-size: 4.5rem;

@@ -8,7 +8,7 @@
   box-shadow: 0 8px 16px rgba(22, 69, 49, 0.1);
 
   &__logo {
-    font-family: 'Pacifico', cursive;
+    font-family: var(--ff-pacifico);
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 28px;
@@ -47,7 +47,7 @@
   &__link {
     display: inline-block;
     position: relative;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25rem;
     transition: color 150ms ease-in-out;
 
@@ -62,7 +62,9 @@
       background-color: var(--lime);
       border-radius: 10rem;
       opacity: 0;
-      transition: top 150ms 250ms ease-in-out, opacity 150ms 250ms ease-in-out,
+      transition:
+        top 150ms 250ms ease-in-out,
+        opacity 150ms 250ms ease-in-out,
         width 150ms 415ms ease-in-out;
     }
 
@@ -233,7 +235,8 @@
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-    transition: border-color 150ms ease-in-out,
+    transition:
+      border-color 150ms ease-in-out,
       background-color 150ms ease-in-out;
 
     &-container {
