@@ -189,6 +189,25 @@
         border-radius: 3rem;
       }
     }
+
+    &-list {
+      padding: 1rem 0 1rem 6.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    &-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      background-color: var(--lightGrey);
+      transition: background-color 200ms ease-in-out;
+
+      &:hover {
+        background-color: var(--lime);
+      }
+    }
   }
 
   // &__grid {
