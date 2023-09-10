@@ -376,7 +376,7 @@ p {
   left: 50%;
   translate: -50%;
   width: 0.25rem;
-  height: 0.25rem;
+  height: 0.15rem;
   background-color: var(--lime);
   border-radius: 10rem;
   opacity: 0;
@@ -386,7 +386,7 @@ p {
   color: var(--lime);
 }
 .header__link:hover::before {
-  top: 2.85rem;
+  top: 2.925rem;
   opacity: 1;
   width: 100%;
 }
@@ -959,6 +959,11 @@ p {
 .about__bio:hover .about__details {
   visibility: visible;
   opacity: 1;
+}
+@media (hover: none) and (pointer: coarse) {
+  .about__bio {
+    pointer-events: none;
+  }
 }
 .about__bio-photo {
   --dimension: 12.5rem;
