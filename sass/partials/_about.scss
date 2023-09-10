@@ -38,6 +38,11 @@
       .about__bio-photo {
         rotate: y 180deg;
       }
+
+      .about__socials {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     &-photo {
@@ -53,6 +58,30 @@
       background-repeat: no-repeat;
       perspective: 1000px;
       transition: rotate 1000ms ease-in-out;
+    }
+  }
+
+  &__socials {
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.75rem;
+    width: 100%;
+    height: 100%;
+    rotate: y 180deg;
+    background-color: var(--lightGrey);
+    transition: opacity 50ms 500ms ease-in-out,
+      visibility 50ms 500ms ease-in-out;
+
+    &-link {
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        color: var(--lime);
+      }
     }
   }
 
