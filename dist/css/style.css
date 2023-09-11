@@ -16,6 +16,7 @@ html {
 :root {
   --ff-montserrat: "Montserrat", "Inter", sans-serif;
   --ff-pacifico: "Pacifico", cursive;
+  --opaqueWhite: #ffffffb3;
   --white: #fff;
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
@@ -28,7 +29,7 @@ html {
   --pressed: #006c3a;
   --darkBlue: #344563;
   --darkerBlue: #172b4d;
-  --shadow1: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+  --shadow1: 0 8px 16px rgba(22, 69, 49, 0.15);
   --shadowLime1: 0 8px 16px rgba(54, 179, 127, 0.25);
   --shadowLime2: 0 16px 32px rgba(54, 179, 127, 0.3);
 }
@@ -96,6 +97,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .darkmode {
+  --opaqueWhite: #060d18b3;
   --white: #060c17;
   --lightGrey: #0e1b31;
   --grey: #172b4d;
@@ -331,8 +333,7 @@ p {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: var(--white);
-  box-shadow: 0 8px 16px rgba(22, 69, 49, 0.1);
+  padding: 1.5rem 1.5rem 0.5rem;
 }
 .header__logo {
   font-family: var(--ff-pacifico);
@@ -354,6 +355,12 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: solid 1px var(--lightGrey);
+  border-radius: 0.5rem;
+  background-color: var(--opaqueWhite);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: var(--shadow1);
 }
 .header__links {
   display: none;
@@ -391,7 +398,7 @@ p {
   color: var(--lime);
 }
 .header__link:hover::before {
-  top: 2.925rem;
+  top: 2.95rem;
   opacity: 1;
   width: 100%;
 }
