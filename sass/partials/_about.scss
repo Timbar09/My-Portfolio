@@ -220,9 +220,10 @@
       padding: 0.25rem 0.5rem;
       border-radius: 0.25rem;
       background-color: var(--lightGrey);
-      transition: background-color 200ms ease-in-out;
+      transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 
       &:hover {
+        color: var(--lightGrey);
         background-color: var(--lime);
       }
     }

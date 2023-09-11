@@ -16,7 +16,7 @@ html {
 :root {
   --ff-montserrat: "Montserrat", "Inter", sans-serif;
   --ff-pacifico: "Pacifico", cursive;
-  --opaqueWhite: #ffffffb3;
+  --opaqueWhite: #ffffffcc;
   --white: #fff;
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
@@ -97,11 +97,11 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .darkmode {
-  --opaqueWhite: #060d18b3;
+  --opaqueWhite: #060d18cc;
   --white: #060c17;
   --lightGrey: #0e1b31;
   --grey: #172b4d;
-  --darkGrey: #8e9691;
+  --darkGrey: #a4aaa6;
   --darkBlue: #d0d9d4;
   --darkerBlue: #ebf0ee;
 }
@@ -1117,9 +1117,10 @@ p {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   background-color: var(--lightGrey);
-  transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
 .about__card-link:hover {
+  color: var(--lightGrey);
   background-color: var(--lime);
 }
 
