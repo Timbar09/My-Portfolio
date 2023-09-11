@@ -1036,11 +1036,20 @@ p {
 }
 .about__skills {
   padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 64em) {
+  .about__skills {
+    flex-direction: row;
+  }
 }
 .about__card {
   padding: 1rem;
   border: solid 1px var(--lightGrey);
   border-radius: 0.25rem;
+  flex: 1;
 }
 .about__card-header {
   display: flex;
