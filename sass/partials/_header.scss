@@ -218,7 +218,9 @@
         }
       }
 
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
       position: relative;
       font-size: 2rem;
       color: var(--darkerBlue);
@@ -227,6 +229,10 @@
       padding: 1.25rem;
       font-weight: 600;
       transition: color 150ms ease-in-out, left 150ms ease-in-out;
+
+      i {
+        font-size: 1.5rem;
+      }
     }
   }
 

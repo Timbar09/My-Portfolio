@@ -514,7 +514,9 @@ p {
   height: 70vh;
 }
 .header__menu-link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
   position: relative;
   font-size: 2rem;
   color: var(--darkerBlue);
@@ -527,6 +529,9 @@ p {
 .header__menu-link-wrap:hover .header__menu-link {
   left: 2rem;
   color: var(--lime);
+}
+.header__menu-link i {
+  font-size: 1.5rem;
 }
 .header__toggle {
   width: 2rem;
