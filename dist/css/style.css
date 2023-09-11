@@ -629,7 +629,7 @@ p {
   }
 }
 .intro__tech {
-  border: solid 2px var(--lightGrey);
+  border: solid 1px var(--lightGrey);
   display: flex;
   flex-direction: column;
   align-items: center;
