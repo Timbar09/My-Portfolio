@@ -75,8 +75,10 @@
       background-color: var(--lime);
       border-radius: 10rem;
       opacity: 0;
-      transition: bottom 150ms 250ms ease-in-out,
-        opacity 150ms 250ms ease-in-out, width 150ms 415ms ease-in-out;
+      transition:
+        bottom 150ms 250ms ease-in-out,
+        opacity 150ms 250ms ease-in-out,
+        width 150ms 415ms ease-in-out;
     }
 
     &:hover {
@@ -231,7 +233,8 @@
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-    transition: border-color 150ms ease-in-out,
+    transition:
+      border-color 150ms ease-in-out,
       background-color 150ms ease-in-out;
 
     &-container {
