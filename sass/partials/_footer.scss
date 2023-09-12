@@ -158,25 +158,8 @@
     }
   }
 
-  &__social {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-    margin-top: 2.875rem;
-
-    @media (min-width: 64em) {
-      margin: 1.5625rem 0;
-    }
-
-    &-icon {
-      transition: fill 150ms ease-in-out;
-    }
-
-    &-link:hover .footer__social-icon {
-      fill: var(--lime);
-    }
+  &__bottom {
+    margin-top: 4rem;
+    border-top: solid 1px var(--lightGrey);
   }
 }

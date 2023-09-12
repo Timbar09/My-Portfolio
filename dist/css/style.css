@@ -1248,23 +1248,7 @@ p {
 .footer__form-button:active {
   background-color: var(--pressed);
 }
-.footer__social {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 2.875rem;
-}
-@media (min-width: 64em) {
-  .footer__social {
-    margin: 1.5625rem 0;
-  }
-}
-.footer__social-icon {
-  transition: fill 150ms ease-in-out;
-}
-.footer__social-link:hover .footer__social-icon {
-  fill: var(--lime);
+.footer__bottom {
+  margin-top: 4rem;
+  border-top: solid 1px var(--lightGrey);
 }/*# sourceMappingURL=style.css.map */
