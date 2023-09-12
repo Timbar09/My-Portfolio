@@ -1163,31 +1163,33 @@
             method="POST"
             class="footer__form"
           >
-            <div class="footer__form-control">
-              <label for="name">Full name</label>
-              <input
-                class="footer__form-input"
-                required
-                id="name"
-                name="user_name"
-                placeholder="Full name"
-                minlength="1"
-                maxlength="30"
-                type="text"
-              />
-            </div>
+            <div class="footer__form-flexbox">
+              <div class="footer__form-control">
+                <label for="name">Full name</label>
+                <input
+                  class="footer__form-input"
+                  required
+                  id="name"
+                  name="user_name"
+                  placeholder="Full name"
+                  minlength="1"
+                  maxlength="30"
+                  type="text"
+                />
+              </div>
 
-            <div class="footer__form-control">
-              <label for="email">Email</label>
-              <input
-                id="email"
-                class="footer__form-input"
-                name="user_email"
-                required
-                placeholder="Email address"
-                type="email"
-              />
-              <small class="footer__form-error-msg"></small>
+              <div class="footer__form-control">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  class="footer__form-input"
+                  name="user_email"
+                  required
+                  placeholder="Email address"
+                  type="email"
+                />
+                <small class="footer__form-error-msg"></small>
+              </div>
             </div>
 
             <div class="footer__form-control">

@@ -38,12 +38,6 @@
     }
   }
 
-  // &__socials {
-  //   @media (min-width: 64em) {
-  //     padding-top: 0;
-  //   }
-  // }
-
   &__title {
     margin: 0 auto;
     max-width: 37.5rem;
@@ -74,7 +68,18 @@
       flex: 1 11%;
     }
 
+    &-flexbox {
+      @media (min-width: 40em) {
+        display: flex;
+        gap: 1.5rem;
+      }
+    }
+
     &-control {
+      @media (min-width: 40em) {
+        flex: 1;
+      }
+
       label {
         display: block;
         font-weight: 500;
@@ -90,6 +95,7 @@
 
       textarea {
         resize: none;
+        height: 6.25rem;
       }
 
       &.valid input {
@@ -103,13 +109,13 @@
 
     &-input {
       width: 100%;
-      padding: 1rem;
+      padding: 0.75rem 1rem;
       border: solid 2px var(--grey);
       border-radius: 0.25rem;
       font-family: inherit;
       font-weight: inherit;
       color: inherit;
-      background-color: transparent;
+      background-color: var(--opaqueWhite);
       transition: border 150ms ease-in-out, outline 150ms ease-in-out,
         outline-offset 150ms ease-in-out;
 

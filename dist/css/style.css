@@ -1175,6 +1175,17 @@ p {
     flex: 1 11%;
   }
 }
+@media (min-width: 40em) {
+  .footer__form-flexbox {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 40em) {
+  .footer__form-control {
+    flex: 1;
+  }
+}
 .footer__form-control label {
   display: block;
   font-weight: 500;
@@ -1188,6 +1199,7 @@ p {
 }
 .footer__form-control textarea {
   resize: none;
+  height: 6.25rem;
 }
 .footer__form-control.valid input {
   border: 2px solid var(--valid);
@@ -1197,13 +1209,13 @@ p {
 }
 .footer__form-input {
   width: 100%;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   border: solid 2px var(--grey);
   border-radius: 0.25rem;
   font-family: inherit;
   font-weight: inherit;
   color: inherit;
-  background-color: transparent;
+  background-color: var(--opaqueWhite);
   transition: border 150ms ease-in-out, outline 150ms ease-in-out, outline-offset 150ms ease-in-out;
 }
 .footer__form-input:focus {
