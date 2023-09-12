@@ -17,6 +17,7 @@ html {
   --ff-montserrat: "Montserrat", "Inter", sans-serif;
   --ff-pacifico: "Pacifico", cursive;
   --opaqueWhite: #fffc;
+  --opaqueDark: hsla(219, 59%, 6%, 0.025);
   --white: #fff;
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
@@ -98,6 +99,7 @@ body::-webkit-scrollbar-thumb:active {
 
 .darkmode {
   --opaqueWhite: #060d18cc;
+  --opaqueDark: hsla(0, 0%, 100%, 0.025);
   --white: #060c17;
   --lightGrey: #0e1b31;
   --grey: #172b4d;
@@ -1078,7 +1080,6 @@ p {
   }
 }
 .about__card {
-  padding: 1rem;
   border: solid 1px var(--lightGrey);
   border-radius: 0.25rem;
   flex: 1;
@@ -1086,8 +1087,9 @@ p {
 .about__card-header {
   display: flex;
   gap: 1rem;
-  padding-bottom: 0.5rem;
+  padding: 1rem;
   border-bottom: solid 1px var(--lightGrey);
+  background-color: var(--opaqueDark);
 }
 .about__card-icon {
   padding: 0.75rem;
@@ -1124,6 +1126,7 @@ p {
   border-radius: 3rem;
 }
 .about__card-list {
+  padding: 1rem;
   margin-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -1133,7 +1136,7 @@ p {
   display: inline-block;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  background-color: var(--lightGrey);
+  background-color: var(--opaqueDark);
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
 .about__card-link:hover {
