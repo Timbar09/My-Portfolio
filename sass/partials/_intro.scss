@@ -8,7 +8,8 @@
     height: 100vh;
     background-image: url('../../images/header-illsutration-mobile.svg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,12 +20,6 @@
     @media (min-width: 64em) {
       background-image: url('../../images/Header-llustration-desktop.svg');
     }
-  }
-
-  &__overlay {
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(5px);
   }
 
   &__title {

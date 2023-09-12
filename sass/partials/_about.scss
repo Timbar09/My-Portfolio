@@ -106,22 +106,6 @@
     }
   }
 
-  &__socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.75rem;
-
-    &-link {
-      transition: color 200ms ease-in-out;
-
-      &:hover {
-        color: var(--lime);
-      }
-    }
-  }
-
   &__mobile {
     display: none;
 

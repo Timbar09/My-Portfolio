@@ -27,6 +27,12 @@ p {
 .section {
   text-align: center;
 
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(5px);
+  }
+
   &__title {
     position: relative;
     font-size: 2rem;
@@ -139,11 +145,68 @@ p {
   margin: auto;
 
   &-pall {
-    padding: 1.5rem;
+    padding: 0.5rem;
+
+    @media (min-width: 40em) {
+      padding: 1rem;
+    }
+
+    @media (min-width: 64em) {
+      padding: 1.5rem;
+    }
   }
 
   &-px {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    @media (min-width: 40em) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media (min-width: 64em) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+}
+
+.social {
+  &-wrap {
+    margin: 0;
+    list-style: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  &-sm {
+    display: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: solid 1px var(--lightGrey);
+    margin: 0;
+    gap: 0.75rem;
+
+    @media (min-width: 64em) {
+      display: flex;
+    }
+  }
+
+  &-link {
+    display: grid;
+
+    &:hover {
+      color: var(--lime);
+    }
+
+    &:active {
+      color: var(--pressed);
+    }
   }
 }
