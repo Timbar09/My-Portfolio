@@ -16,7 +16,7 @@ html {
 :root {
   --ff-montserrat: "Montserrat", "Inter", sans-serif;
   --ff-pacifico: "Pacifico", cursive;
-  --opaqueWhite: #ffffffcc;
+  --opaqueWhite: #fffc;
   --white: #fff;
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
@@ -578,6 +578,7 @@ p {
   position: relative;
 }
 .intro .container {
+  /* stylelint-disable-next-line csstree/validator */
   padding-top: min(10vh, 4rem);
   height: 100vh;
   background-image: url("../../images/header-illsutration-mobile.svg");
@@ -960,38 +961,6 @@ p {
     gap: 2rem;
   }
 }
-.about__bio {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: -moz-max-content;
-  width: max-content;
-}
-.about__bio:hover .about__bio-photo {
-  rotate: y 180deg;
-}
-.about__bio:hover .about__details {
-  visibility: visible;
-  opacity: 1;
-}
-@media (hover: none) and (pointer: coarse) {
-  .about__bio {
-    pointer-events: none;
-  }
-}
-.about__bio-photo {
-  --dimension: 12.5rem;
-  width: var(--dimension);
-  height: var(--dimension);
-  border-radius: 0.35rem;
-  background-color: var(--lightGrey);
-  background-image: url("../../images/self.JPG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  perspective: 1000px;
-  transition: rotate 600ms ease-in-out;
-}
 .about__details {
   visibility: hidden;
   opacity: 0;
@@ -1011,6 +980,38 @@ p {
   .about__details {
     display: none;
   }
+}
+.about__bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media (hover: none) and (pointer: coarse) {
+  .about__bio {
+    pointer-events: none;
+  }
+}
+.about__bio-photo {
+  --dimension: 12.5rem;
+  width: var(--dimension);
+  height: var(--dimension);
+  border-radius: 0.35rem;
+  background-color: var(--lightGrey);
+  background-image: url("../../images/self.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  perspective: 1000px;
+  transition: rotate 600ms ease-in-out;
+}
+.about__bio:hover .about__bio-photo {
+  rotate: y 180deg;
+}
+.about__bio:hover .about__details {
+  visibility: visible;
+  opacity: 1;
 }
 .about__socials {
   display: flex;
