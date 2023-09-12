@@ -19,7 +19,7 @@
   </head>
   <body class="body">
     <header class="header">
-      <nav class="header__nav container container-pall">
+      <nav class="header__nav container container-px">
         <a href="/" class="header__logo"> Miles<span> Mosweu</span>.</a>
 
         <ul class="header__links">
@@ -1110,109 +1110,107 @@
 
     <footer id="contact" class="footer">
       <div class="container container-px">
-        <div class="footer__wrap">
-          <div class="section__overlay"></div>
+        <div class="section__overlay"></div>
 
-          <div class="footer__flexbox">
-            <div class="footer__header">
-              <h2 class="footer__title">
-                I'm enthusiastic about exploring new projects - don't hesitate
-                to initiate a conversation!
-              </h2>
+        <div class="footer__flexbox">
+          <div class="footer__header">
+            <h2 class="footer__title">
+              I'm enthusiastic about exploring new projects - don't hesitate to
+              initiate a conversation!
+            </h2>
 
-              <ul class="footer__socials social-wrap">
-                <li>
-                  <a
-                    class="social-link"
-                    href="https://twitter.com/Milez09"
-                    title="Twitter"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <i class="fa-brands fa-twitter"></i>
-                  </a>
-                </li>
+            <ul class="footer__socials social-wrap">
+              <li>
+                <a
+                  class="social-link"
+                  href="https://twitter.com/Milez09"
+                  title="Twitter"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
 
-                <li>
-                  <a
-                    class="social-link"
-                    href="https://www.linkedin.com/in/miles-mosweu09"
-                    title="Linkedin"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <i class="fa-brands fa-linkedin"></i>
-                  </a>
-                </li>
+              <li>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/miles-mosweu09"
+                  title="Linkedin"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
 
-                <li>
-                  <a
-                    class="social-link"
-                    href="https://github.com/Timbar09"
-                    title="Github"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </li>
-              </ul>
+              <li>
+                <a
+                  class="social-link"
+                  href="https://github.com/Timbar09"
+                  title="Github"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form
+            action="https://formspree.io/f/xgeqpgnr"
+            method="POST"
+            class="footer__form"
+          >
+            <div class="footer__form-control">
+              <label for="name">Full name</label>
+              <input
+                class="footer__form-input"
+                required
+                id="name"
+                name="user_name"
+                placeholder="Full name"
+                minlength="1"
+                maxlength="30"
+                type="text"
+              />
             </div>
 
-            <form
-              action="https://formspree.io/f/xgeqpgnr"
-              method="POST"
-              class="footer__form"
-            >
-              <div class="footer__form-control">
-                <label for="name">Full name</label>
-                <input
-                  class="footer__form-input"
-                  required
-                  id="name"
-                  name="user_name"
-                  placeholder="Full name"
-                  minlength="1"
-                  maxlength="30"
-                  type="text"
-                />
-              </div>
+            <div class="footer__form-control">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                class="footer__form-input"
+                name="user_email"
+                required
+                placeholder="Email address"
+                type="email"
+              />
+              <small class="footer__form-error-msg"></small>
+            </div>
 
-              <div class="footer__form-control">
-                <label for="email">Email</label>
-                <input
-                  id="email"
-                  class="footer__form-input"
-                  name="user_email"
-                  required
-                  placeholder="Email address"
-                  type="email"
-                />
-                <small class="footer__form-error-msg"></small>
-              </div>
+            <div class="footer__form-control">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                class="footer__form-input"
+                name="user_message"
+                placeholder="Enter text here"
+                minlength="1"
+                maxlength="500"
+                required
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
 
-              <div class="footer__form-control">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  class="footer__form-input"
-                  name="user_message"
-                  placeholder="Enter text here"
-                  minlength="1"
-                  maxlength="500"
-                  required
-                  cols="30"
-                  rows="10"
-                ></textarea>
-              </div>
-
-              <div class="footer__form-control">
-                <button class="footer__form-button" type="submit">
-                  Get in touch
-                </button>
-              </div>
-            </form>
-          </div>
+            <div class="footer__form-control">
+              <button class="footer__form-button" type="submit">
+                Get in touch
+              </button>
+            </div>
+          </form>
         </div>
 
         <ul class="footer__social">

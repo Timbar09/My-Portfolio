@@ -5,7 +5,7 @@
     text-align: left;
   }
 
-  &__wrap {
+  > .container {
     position: relative;
     background: url('../../images/cf-1-desktop.svg'),
       url('../../images/cf-bg-2-desktop.svg'),
@@ -18,17 +18,31 @@
     position: relative;
     margin: 0 auto;
     max-width: 70rem;
-    align-items: center;
+    align-items: flex-start;
 
     @media (min-width: 64em) {
       display: flex;
-      gap: 2rem;
+      gap: 3rem;
     }
   }
 
   &__header {
     flex: 0.75;
+
+    @media (min-width: 64em) {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 1.75rem;
+    }
   }
+
+  // &__socials {
+  //   @media (min-width: 64em) {
+  //     padding-top: 0;
+  //   }
+  // }
 
   &__title {
     margin: 0 auto;
