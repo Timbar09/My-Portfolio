@@ -218,6 +218,12 @@ p {
 .section {
   text-align: center;
 }
+.section__overlay {
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
 .section__title {
   position: relative;
   font-size: 2rem;
@@ -578,7 +584,8 @@ p {
   height: 100vh;
   background-image: url("../../images/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -590,12 +597,6 @@ p {
   .intro .container {
     background-image: url("../../images/Header-llustration-desktop.svg");
   }
-}
-.intro__overlay {
-  position: absolute;
-  inset: 0;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
 }
 .intro__title {
   font-size: 1.5rem;
@@ -1114,21 +1115,26 @@ p {
     text-align: left;
   }
 }
-.footer__flexbox {
-  padding-bottom: 14.0625rem;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  align-items: center;
+.footer__wrap {
+  position: relative;
   background: url("../../images/cf-1-desktop.svg"), url("../../images/cf-bg-2-desktop.svg"), url("../../images/cf-bg-3-desktop.svg");
   background-position: left bottom, 20% 80%, right bottom;
   background-repeat: no-repeat;
-  border-bottom: solid 1px var(--grey);
+}
+.footer__flexbox {
+  position: relative;
+  margin: 0 auto;
+  max-width: 70rem;
+  align-items: center;
 }
 @media (min-width: 64em) {
   .footer__flexbox {
     display: flex;
     gap: 2rem;
   }
+}
+.footer__header {
+  flex: 0.75;
 }
 .footer__title {
   margin: 0 auto;
@@ -1139,9 +1145,7 @@ p {
   .footer__title {
     font-size: 1.875rem;
     max-width: none;
-    height: -moz-max-content;
-    height: max-content;
-    flex: 1;
+    text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white), -1px 1px 0 var(--white), 1px 1px 0 var(--white);
   }
 }
 .footer__form {

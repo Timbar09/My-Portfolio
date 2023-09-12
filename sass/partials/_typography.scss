@@ -27,6 +27,12 @@ p {
 .section {
   text-align: center;
 
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(5px);
+  }
+
   &__title {
     position: relative;
     font-size: 2rem;

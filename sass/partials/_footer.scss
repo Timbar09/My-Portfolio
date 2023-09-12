@@ -5,22 +5,29 @@
     text-align: left;
   }
 
-  &__flexbox {
-    padding-bottom: 14.0625rem;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    align-items: center;
+  &__wrap {
+    position: relative;
     background: url('../../images/cf-1-desktop.svg'),
       url('../../images/cf-bg-2-desktop.svg'),
       url('../../images/cf-bg-3-desktop.svg');
     background-position: left bottom, 20% 80%, right bottom;
     background-repeat: no-repeat;
-    border-bottom: solid 1px var(--grey);
+  }
+
+  &__flexbox {
+    position: relative;
+    margin: 0 auto;
+    max-width: 70rem;
+    align-items: center;
 
     @media (min-width: 64em) {
       display: flex;
       gap: 2rem;
     }
+  }
+
+  &__header {
+    flex: 0.75;
   }
 
   &__title {
@@ -31,8 +38,9 @@
     @media (min-width: 64em) {
       font-size: 1.875rem;
       max-width: none;
-      height: max-content;
-      flex: 1;
+      // height: max-content;
+      text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+        -1px 1px 0 var(--white), 1px 1px 0 var(--white);
     }
   }
 
