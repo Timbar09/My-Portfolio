@@ -112,13 +112,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0.5rem 0.75rem;
+      padding: 0.25rem 0.5rem;
       border-radius: 0.5rem;
       background-color: var(--lightGrey);
       font-size: 2rem;
 
       @media (min-width: 40em) {
-        padding: 0.5rem 1rem;
         font-size: 1.5rem;
         gap: 0.5rem;
       }
