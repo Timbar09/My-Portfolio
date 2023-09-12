@@ -48,7 +48,9 @@ const popupCancelBtn = document.querySelector('.popup__cancel-btn_icon');
 projectButtons.forEach((button) => {
   button.addEventListener('click', () => {
     f.fillInPopupText(projectsArr, button);
-    f.activatePopup();
+    setTimeout(() => {
+      f.activatePopup();
+    }, 175);
   });
 });
 
