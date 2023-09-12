@@ -327,6 +327,40 @@ p {
   padding-right: 1.5rem;
 }
 
+.social-wrap {
+  margin: 0;
+  list-style: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+.social-sm {
+  display: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: solid 1px var(--lightGrey);
+  margin: 0;
+  gap: 0.75rem;
+}
+@media (min-width: 64em) {
+  .social-sm {
+    display: flex;
+  }
+}
+.social-link {
+  display: grid;
+}
+.social-link:hover {
+  color: var(--lime);
+}
+.social-link:active {
+  color: var(--pressed);
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -487,25 +521,7 @@ p {
   background-color: var(--opaqueGreen);
 }
 .header__menu-social {
-  list-style: none;
-  padding: 1rem;
-  border-radius: 5rem;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-.header__menu-social-link {
-  display: grid;
-}
-.header__menu-social-link:hover {
-  color: var(--lime);
-}
-.header__menu-social-link:active {
-  color: var(--pressed);
-}
-.header__menu-social i {
-  font-size: 1.5rem;
+  justify-content: start;
 }
 .header__menu-content {
   padding: 0.875rem 0 0;
@@ -536,7 +552,7 @@ p {
 .header__toggle {
   width: 2rem;
   height: 2rem;
-  border: solid 2px var(--lightGrey);
+  border: solid 1px var(--lightGrey);
   border-radius: 0.5rem;
   color: inherit;
   background-color: transparent;
@@ -547,27 +563,6 @@ p {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-}
-.header__toggle-social {
-  list-style: none;
-  padding: 0.35rem;
-  border: solid 2px var(--lightGrey);
-  border-radius: 0.5rem;
-  margin: 0;
-  display: none;
-  align-items: center;
-  gap: 0.75rem;
-}
-.header__toggle-social-link {
-  display: grid;
-}
-.header__toggle-social-link:hover {
-  color: var(--lime);
-}
-@media (min-width: 64em) {
-  .header__toggle-social {
-    display: flex;
-  }
 }
 .header__toggle:hover {
   border-color: var(--lime);
@@ -1012,19 +1007,6 @@ p {
 .about__bio:hover .about__details {
   visibility: visible;
   opacity: 1;
-}
-.about__socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1.75rem;
-}
-.about__socials-link {
-  transition: color 200ms ease-in-out;
-}
-.about__socials-link:hover {
-  color: var(--lime);
 }
 .about__mobile {
   display: none;

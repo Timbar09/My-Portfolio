@@ -74,9 +74,7 @@ p {
     background-color: var(--lime);
     border-radius: 0.25rem;
     box-shadow: var(--shadowLime1);
-    transition:
-      background-color 150ms ease-in-out,
-      box-shadow 150ms ease-in-out,
+    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out,
       translate 150ms ease-in-out;
 
     &:hover {
@@ -145,5 +143,44 @@ p {
   &-px {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+}
+
+.social {
+  &-wrap {
+    margin: 0;
+    list-style: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  &-sm {
+    display: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: solid 1px var(--lightGrey);
+    margin: 0;
+    gap: 0.75rem;
+
+    @media (min-width: 64em) {
+      display: flex;
+    }
+  }
+
+  &-link {
+    display: grid;
+
+    &:hover {
+      color: var(--lime);
+    }
+
+    &:active {
+      color: var(--pressed);
+    }
   }
 }
