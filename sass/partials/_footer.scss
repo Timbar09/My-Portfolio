@@ -1,10 +1,5 @@
 .footer {
-  padding-top: 4.25rem;
   text-align: center;
-
-  @media (min-width: 40em) {
-    padding-top: 6.75rem;
-  }
 
   @media (min-width: 64em) {
     text-align: left;
@@ -30,6 +25,7 @@
   }
 
   &__title {
+    line-height: 3.25rem;
     margin-bottom: 3.75rem;
     margin-left: auto;
     margin-right: auto;

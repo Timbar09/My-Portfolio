@@ -1,12 +1,14 @@
 .intro {
-  margin-top: 4.75rem;
+  // margin-top: 4.75rem;
   position: relative;
 
   .container {
+    /* stylelint-disable-next-line csstree/validator */
+    padding-top: min(10vh, 4rem);
+    height: 100vh;
     background-image: url('../../images/header-illsutration-mobile.svg');
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,9 +17,6 @@
     gap: min(5vh, 2rem);
 
     @media (min-width: 64em) {
-      justify-content: flex-start;
-      gap: 1.75rem;
-      padding-top: 10rem;
       background-image: url('../../images/Header-llustration-desktop.svg');
     }
   }
@@ -70,7 +69,7 @@
   }
 
   &__tech {
-    border: solid 2px var(--lightGrey);
+    border: solid 1px var(--lightGrey);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +86,7 @@
     }
 
     &-title {
-      font-size: 1.5rem;
+      font-size: 1rem;
       line-height: 2rem;
       width: max-content;
     }
@@ -114,22 +113,16 @@
     }
 
     &-link {
-      --dimension: 4rem;
-
       display: flex;
       justify-content: center;
       align-items: center;
-      border: solid 2px var(--lightGrey);
-      width: var(--dimension);
-      height: var(--dimension);
+      padding: 0.25rem 0.5rem;
       border-radius: 0.5rem;
       background-color: var(--lightGrey);
       font-size: 2rem;
 
       @media (min-width: 40em) {
-        --dimension: 6rem;
-
-        flex-direction: column;
+        font-size: 1.5rem;
         gap: 0.5rem;
       }
 

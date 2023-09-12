@@ -19,6 +19,7 @@ html {
   --ff-montserrat: 'Montserrat', 'Inter', sans-serif;
   --ff-pacifico: 'Pacifico', cursive;
   // Colors
+  --opaqueWhite: #fffc;
   --white: #fff;
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
@@ -32,7 +33,7 @@ html {
   --darkBlue: #344563;
   --darkerBlue: #172b4d;
   // Box shadows
-  --shadow1: 0 6px 20px 3px rgba(0, 0, 0, 0.15);
+  --shadow1: 0 8px 16px rgba(22, 69, 49, 0.15);
   --shadowLime1: 0 8px 16px rgba(54, 179, 127, 0.25);
   --shadowLime2: 0 16px 32px rgba(54, 179, 127, 0.3);
 }
@@ -43,10 +44,14 @@ body {
   position: relative;
   line-height: 1.5rem;
   font-family: var(--ff-montserrat);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   color: var(--darkGrey);
   background-color: var(--white);
+
+  @media (min-width: 64em) {
+    font-size: 1rem;
+  }
 
   &::-webkit-scrollbar {
     width: 0.75rem;
