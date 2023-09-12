@@ -1251,6 +1251,7 @@ p {
 .footer__bottom {
   margin-top: 4rem;
   border-top: solid 1px var(--lightGrey);
+  font-size: 0.875rem;
 }
 .footer__bottom .container {
   display: flex;
