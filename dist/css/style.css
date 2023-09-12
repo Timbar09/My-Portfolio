@@ -1251,4 +1251,28 @@ p {
 .footer__bottom {
   margin-top: 4rem;
   border-top: solid 1px var(--lightGrey);
+}
+.footer__bottom .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 40em) {
+  .footer__bottom .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.footer__sitemap-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer__sitemap-link {
+  font-weight: 500;
+  transition: color 150ms ease-in-out;
+}
+.footer__sitemap-link:hover {
+  color: var(--darkBlue);
 }/*# sourceMappingURL=style.css.map */

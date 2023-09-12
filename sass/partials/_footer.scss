@@ -161,5 +161,34 @@
   &__bottom {
     margin-top: 4rem;
     border-top: solid 1px var(--lightGrey);
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (min-width: 40em) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__sitemap {
+    &-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    &-link {
+      font-weight: 500;
+      transition: color 150ms ease-in-out;
+
+      &:hover {
+        color: var(--darkBlue);
+      }
+    }
   }
 }
