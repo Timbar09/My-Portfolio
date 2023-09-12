@@ -143,12 +143,30 @@ p {
   margin: auto;
 
   &-pall {
-    padding: 1.5rem;
+    padding: 0.5rem;
+
+    @media (min-width: 40em) {
+      padding: 1rem;
+    }
+
+    @media (min-width: 64em) {
+      padding: 1.5rem;
+    }
   }
 
   &-px {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    @media (min-width: 40em) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media (min-width: 64em) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 }
 
