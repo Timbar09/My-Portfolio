@@ -17,7 +17,7 @@ const renderProjects = () => {
           
           <ul class="project__card-tech section__card-btns">
             ${project.technologies
-              .slice(0, 4)
+              .slice(0, 3)
               .map(
                 (tech) =>
                   `<li class="project__tech-item section__card-btn">${tech}</li>`
