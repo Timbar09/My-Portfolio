@@ -40,6 +40,10 @@ menuOptions.forEach((option) => {
   });
 });
 
+// Render projects
+
+f.renderProjects();
+
 // Project details popup window
 
 const projectButtons = document.querySelectorAll('.project__cta');

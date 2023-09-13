@@ -1,3 +1,4 @@
+import renderProjects from './renderProjects.js';
 import { openMenu, closeMenu } from './menu.js';
 import { enableDarkMode, disableDarkMode } from './darkmode.js';
 import { storeUserInfo, retrieveUserInfo } from './storage.js';
@@ -23,4 +24,5 @@ export {
   retrieveUserInfo,
   enableDarkMode,
   disableDarkMode,
+  renderProjects,
 };

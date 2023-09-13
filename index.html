@@ -248,8 +248,8 @@
         <div class="container container-px">
           <h2 class="project__title section__title">My Recent Works</h2>
 
-          <div class="section__grid">
-            <div class="project__card section__card">
+          <ul class="section__grid project__list">
+            <!-- <div class="project__card section__card">
               <div class="project__card-text">
                 <h3 class="project__card-title section__card-title">
                   Awesome Books
@@ -494,56 +494,56 @@
                   >See Project</a
                 >
               </div>
+            </div> -->
+          </ul>
+
+          <div id="popup" class="popup">
+            <div class="popup__cancel-btn">
+              <img
+                class="popup__cancel-btn_icon"
+                src="images/icons/Icon-Cancel.svg"
+                alt="Cansel icon"
+              />
             </div>
 
-            <div id="popup" class="popup">
-              <div class="popup__cancel-btn">
-                <img
-                  class="popup__cancel-btn_icon"
-                  src="images/icons/Icon-Cancel.svg"
-                  alt="Cansel icon"
-                />
+            <div class="popup__content">
+              <div class="popup__image">
+                <img src="" alt="Popup project image" />
               </div>
 
-              <div class="popup__content">
-                <div class="popup__image">
-                  <img src="" alt="Popup project image" />
-                </div>
+              <div class="popup__content-text">
+                <h3 class="popup__title"></h3>
 
-                <div class="popup__content-text">
-                  <h3 class="popup__title"></h3>
+                <ul class="popup__languages section__card-btns"></ul>
 
-                  <ul class="popup__languages section__card-btns"></ul>
+                <div class="popup__description"></div>
 
-                  <div class="popup__description"></div>
+                <div class="popup__ctas">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    class="popup__cta-live popup__cta section__cta"
+                  >
+                    <span>See live </span
+                    ><img
+                      src="images/icons/Icon-live.png"
+                      alt="Live site icon"
+                    />
+                  </a>
 
-                  <div class="popup__ctas">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener"
-                      class="popup__cta-live popup__cta section__cta"
-                    >
-                      <span>See live </span
-                      ><img
-                        src="images/icons/Icon-live.png"
-                        alt="Live site icon"
-                      />
-                    </a>
-
-                    <a
-                      href="https://github.com/Timbar09"
-                      target="_blank"
-                      rel="noopener"
-                      class="popup__cta-source popup__cta section__cta"
-                    >
-                      <span>See source </span
-                      ><img
-                        src="images/icons/Icon-GitHub.png"
-                        alt="Source code icon"
-                      />
-                    </a>
-                  </div>
+                  <a
+                    href="https://github.com/Timbar09"
+                    target="_blank"
+                    rel="noopener"
+                    class="popup__cta-source popup__cta section__cta"
+                  >
+                    <span>See source </span
+                    ><img
+                      src="images/icons/Icon-GitHub.png"
+                      alt="Source code icon"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
