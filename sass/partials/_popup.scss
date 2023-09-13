@@ -1,6 +1,7 @@
 .popup {
   visibility: hidden;
   position: absolute;
+  margin-top: 4em;
   text-align: left;
   width: 85%;
   left: 50%;
@@ -86,11 +87,12 @@
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 2.75rem;
 
     @media (min-width: 64em) {
+      font-size: 2rem;
       grid-column: 1/2;
       grid-row: 1/2;
     }
@@ -133,9 +135,5 @@
 
   &__cta {
     width: max-content;
-    height: max-content;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
   }
 }
