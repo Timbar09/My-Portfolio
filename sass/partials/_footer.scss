@@ -8,8 +8,7 @@
 
   > .container {
     position: relative;
-    background:
-      url('../../images/cf-1-desktop.svg'),
+    background: url('../../images/cf-1-desktop.svg'),
       url('../../images/cf-bg-2-desktop.svg'),
       url('../../images/cf-bg-3-desktop.svg');
     background-position: left bottom, 20% 80%, right bottom;
@@ -49,11 +48,8 @@
       font-size: 1.875rem;
       max-width: none;
       // height: max-content;
-      text-shadow:
-        -1px -1px 0 var(--white),
-        1px -1px 0 var(--white),
-        -1px 1px 0 var(--white),
-        1px 1px 0 var(--white);
+      text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+        -1px 1px 0 var(--white), 1px 1px 0 var(--white);
     }
   }
 
@@ -121,9 +117,7 @@
       font-weight: inherit;
       color: inherit;
       background-color: var(--opaqueWhite);
-      transition:
-        border 150ms ease-in-out,
-        outline 150ms ease-in-out,
+      transition: border 150ms ease-in-out, outline 150ms ease-in-out,
         outline-offset 150ms ease-in-out;
 
       &:focus {
@@ -142,27 +136,8 @@
     &-button {
       --pressed: #008552;
 
-      margin-top: 1.5rem;
-      padding: 0.75rem;
-      font-family: inherit;
-      font-size: 1.0625rem;
-      font-weight: 500;
-      color: var(--white);
-      background-color: var(--lime);
-      border-radius: 0.25rem;
-      border: 0;
-      cursor: pointer;
-      transition:
-        background-color 150ms ease-in-out,
-        box-shadow 150ms ease-in-out;
-
-      &:hover {
-        box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
-      }
-
-      &:active {
-        background-color: var(--pressed);
-      }
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
     }
   }
 

@@ -74,24 +74,40 @@ p {
   }
 
   &__cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.5rem 0.75rem;
-    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
     color: var(--white);
-    background-color: var(--lime);
     border-radius: 0.25rem;
+    border: 0;
+    background-color: var(--lime);
     box-shadow: var(--shadowLime1);
     transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out,
-      translate 150ms ease-in-out;
+      scale 150ms ease-in-out;
+
+    i {
+      position: relative;
+      left: 0;
+      transition: left 350ms ease-in-out;
+    }
 
     &:hover {
       box-shadow: var(--shadowLime2);
-      translate: 0 -2px;
+
+      i {
+        left: 0.25rem;
+      }
     }
 
     &:active {
       background-color: var(--pressed);
       box-shadow: var(--shadowLime1);
-      translate: 0 0;
+      scale: 0.95;
     }
   }
 
