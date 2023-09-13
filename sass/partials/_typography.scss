@@ -64,12 +64,8 @@ p {
     grid-template-columns: 1fr;
     grid-gap: 1.5rem;
 
-    @media (min-width: 40em) {
-      grid-template-columns: 1fr 1fr;
-    }
-
     @media (min-width: 64em) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -78,7 +74,7 @@ p {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 1rem;
     font-family: inherit;
     font-size: inherit;
     font-weight: 500;
@@ -124,7 +120,7 @@ p {
     overflow: hidden;
 
     &-title {
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.5rem;
       line-height: 2rem;
     }

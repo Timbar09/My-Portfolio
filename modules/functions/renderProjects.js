@@ -7,15 +7,15 @@ const renderProjects = () => {
     .map((project) => {
       return `
       <li class="project__card">
-        <div class="project__image">
-          <img src="${project.image}" alt="${
-        project.title
-      }" style="width: 100px; height:100px;" />
+        <div class="project__card-image">
+          <img src="${project.image}" alt="${project.title}" />
         </div>
-        <div class="project__content">
-          <h3 class="project__title">${project.title}</h3>
+        <div class="project__card-content">
+          <h3 class="project__card-title section__card-title">${
+            project.name
+          }</h3>
           
-          <ul class="project__tech section__card-btns">
+          <ul class="project__card-tech section__card-btns">
             ${project.technologies
               .slice(0, 4)
               .map(
@@ -25,10 +25,10 @@ const renderProjects = () => {
               .join('')}
           </ul>
 
-          <div class="project__cta-wrap">
+          <div class="project__card-cta-wrap">
             <button id="${project.ctaId}" class="project__cta section__cta">
               <span>View Project</span>
-              <i class="fas fa-arrow-right"></i>
+              <i class="fa-solid fa-arrow-right-long"></i>
             </button>
           </div>
         </div>

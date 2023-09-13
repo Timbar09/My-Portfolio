@@ -14,65 +14,50 @@
     }
   }
 
-  &__card {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 29.625rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    top: 0;
-    transition: 200ms box-shadow ease-in-out, translate 200ms ease-in-out;
+  &__list {
+    max-width: 40em;
+    margin: 0 auto;
 
-    &:first-child {
-      background-image: url('../../images/projects/Awesome-book-card.svg');
-    }
-
-    &:nth-child(2) {
-      background-image: url('../../images/projects/ALT-conference-card.svg');
-    }
-
-    &:nth-child(3) {
-      background-image: url('../../images/projects/todo_app_card.svg');
-    }
-
-    &:nth-child(4) {
-      background-image: url('../../images/projects/budgettrail_card.svg');
-    }
-
-    &:nth-child(5) {
-      background-image: url('../../images/projects/space_card.svg');
-    }
-
-    &:nth-child(6) {
-      background-image: url('../../images/projects/blog_card.svg');
-    }
-
-    &:hover,
-    &:focus-within {
-      box-shadow: var(--shadow1);
-      translate: 0 -2px;
-    }
-
-    &-text {
-      padding: 0.6875rem;
-      background-color: var(--white);
-      border-radius: 0.5rem 0.5rem 0 0;
-    }
-
-    &-title {
-      margin-bottom: 1rem;
-    }
-
-    &-btns {
-      --btn-bg: var(--lightGrey);
+    @media (min-width: 64em) {
+      max-width: 61.25rem;
     }
   }
 
-  &__cta {
-    margin-top: 1.875rem;
-    margin-bottom: 0.8125rem;
+  &__card {
+    --btn-bg: var(--lightGrey);
+
+    border: solid 2px var(--lightGrey);
+    border-radius: 0.5rem;
+    background-color: var(--opaqueDark);
+
+    &:hover,
+    &:focus-within {
+      border: solid 2px var(--opaqueGreen);
+    }
+
+    &-image {
+      padding: 0.25rem;
+      height: 12rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.25rem;
+      }
+    }
+
+    &-content {
+      border-top: solid 2px var(--lightGrey);
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &-cta-wrap {
+      display: grid;
+      place-items: center;
+    }
   }
 }
