@@ -362,7 +362,7 @@ p {
   list-style: none;
   padding: 1rem;
   font-size: 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -594,7 +594,7 @@ p {
   width: 2rem;
   height: 2rem;
   border: solid 1px var(--lightGrey);
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   color: inherit;
   background-color: transparent;
   cursor: pointer;
@@ -716,7 +716,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   background-color: var(--lightGrey);
   font-size: 2rem;
 }
@@ -1029,7 +1029,7 @@ p {
   --dimension: 12.5rem;
   width: var(--dimension);
   height: var(--dimension);
-  border-radius: 0.35rem;
+  border-radius: 0.25rem;
   background-color: var(--lightGrey);
   background-image: url("../../images/self.JPG");
   background-size: cover;
@@ -1081,7 +1081,7 @@ p {
 }
 .about__card {
   border: solid 1px var(--lightGrey);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   flex: 1;
 }
 .about__card-header {
@@ -1137,11 +1137,10 @@ p {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   background-color: var(--opaqueDark);
-  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 }
 .about__card-link:hover {
-  color: var(--lightGrey);
-  background-color: var(--lime);
+  background-color: var(--opaqueGreen);
 }
 
 .footer {

@@ -81,7 +81,7 @@
 
       width: var(--dimension);
       height: var(--dimension);
-      border-radius: 0.35rem;
+      border-radius: 0.25rem;
       background-color: var(--lightGrey);
       background-image: url('../../images/self.JPG');
       background-size: cover;
@@ -146,7 +146,7 @@
 
   &__card {
     border: solid 1px var(--lightGrey);
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     flex: 1;
 
     &-header {
@@ -206,11 +206,10 @@
       padding: 0.25rem 0.5rem;
       border-radius: 0.25rem;
       background-color: var(--opaqueDark);
-      transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+      transition: background-color 200ms ease-in-out;
 
       &:hover {
-        color: var(--lightGrey);
-        background-color: var(--lime);
+        background-color: var(--opaqueGreen);
       }
     }
   }

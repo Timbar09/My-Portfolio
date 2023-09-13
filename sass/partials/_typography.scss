@@ -80,9 +80,7 @@ p {
     background-color: var(--lime);
     border-radius: 0.25rem;
     box-shadow: var(--shadowLime1);
-    transition:
-      background-color 150ms ease-in-out,
-      box-shadow 150ms ease-in-out,
+    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out,
       translate 150ms ease-in-out;
 
     &:hover {
@@ -178,7 +176,7 @@ p {
     list-style: none;
     padding: 1rem;
     font-size: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
