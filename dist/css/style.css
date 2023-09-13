@@ -18,7 +18,7 @@ html {
   --ff-pacifico: "Pacifico", cursive;
   --opaqueWhite: #fffc;
   --opaqueDark: hsla(219, 59%, 6%, 0.025);
-  --white: #fff;
+  --white: #fdfdfd;
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
   --midGrey: #8e9691;
@@ -274,11 +274,12 @@ p {
   padding: 0.5rem 0.75rem;
   font-family: inherit;
   font-size: inherit;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--white);
   border-radius: 0.25rem;
   border: 0;
   background-color: var(--lime);
+  cursor: pointer;
   box-shadow: var(--shadowLime1);
   transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, scale 150ms ease-in-out;
 }
@@ -496,7 +497,7 @@ p {
   flex-direction: column;
   padding: 0.5rem;
   border: 0;
-  border-radius: 0.15rem;
+  border-radius: 0.25rem;
   background-color: transparent;
   cursor: pointer;
 }
@@ -545,7 +546,7 @@ p {
   flex-direction: column;
   padding: 0.5rem;
   border: 0;
-  border-radius: 0.15rem;
+  border-radius: 0.25rem;
   background-color: transparent;
   cursor: pointer;
 }
@@ -1043,7 +1044,7 @@ p {
   --dimension: 12.5rem;
   width: var(--dimension);
   height: var(--dimension);
-  border-radius: 0.25rem;
+  border-radius: 0.35rem;
   background-color: var(--lightGrey);
   background-image: url("../../images/self.JPG");
   background-size: cover;
@@ -1158,7 +1159,6 @@ p {
 }
 
 .footer {
-  padding: 4rem 0 0;
   text-align: center;
 }
 @media (min-width: 64em) {
@@ -1174,6 +1174,7 @@ p {
 }
 .footer__flexbox {
   position: relative;
+  padding: 2.5rem 0;
   margin: 0 auto;
   max-width: 70rem;
   align-items: flex-start;
@@ -1182,6 +1183,7 @@ p {
   .footer__flexbox {
     display: flex;
     gap: 3rem;
+    padding: 5rem 0;
   }
 }
 .footer__header {
@@ -1278,12 +1280,10 @@ p {
   height: 1.5rem;
 }
 .footer__form-button {
-  --pressed: #008552;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
 }
 .footer__bottom {
-  margin-top: 4rem;
   border-top: solid 1px var(--lightGrey);
   font-size: 0.875rem;
 }

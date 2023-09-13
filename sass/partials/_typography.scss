@@ -81,11 +81,12 @@ p {
     padding: 0.5rem 0.75rem;
     font-family: inherit;
     font-size: inherit;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--white);
     border-radius: 0.25rem;
     border: 0;
     background-color: var(--lime);
+    cursor: pointer;
     box-shadow: var(--shadowLime1);
     transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out,
       scale 150ms ease-in-out;
