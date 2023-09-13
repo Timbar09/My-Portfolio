@@ -1,31 +1,30 @@
 const projectsArr = [
   {
     ctaId: '1',
-    name: 'Awesome books',
+    name: 'ConsoleHub',
     description: [
-      'Awesome Books is a feature-rich single-page web application designed to provide an interactive and user-friendly platform for managing a list of books. <br /> With its dynamic functionality, users can effortlessly add and remove books from the list, creating a personalized library experience.',
+      'ConsoleHub makes it easy for users to reserve their preferred gaming console at a time slot by simplifying the process of scheduling gaming sessions. The platform has an extensive library of gaming consoles, ensuring a wide variety of choices for users with varied gaming preferences.',
 
-      'The core of Awesome Books revolves around the effective utilization of classes and helper functions. By employing object-oriented programming principles, the application leverages classes to encapsulate book-related data and behaviors. Each book is represented by an instance of a class, allowing for easy manipulation and organization of book information.',
+      "The application's front end is developed using React, a popular JavaScript library for building user interfaces. This choice provides a responsive and user-friendly interface that enhances the overall user experience. On the back end, ConsoleHub relies on Ruby on Rails, serving as the foundation for its API. Rails efficiently handles data management, ensuring robust performance and data security.",
 
-      "The application seamlessly integrates with the browser's local storage, providing persistent data storage for the book collection. This means that users can add and remove books without worrying about losing their progress or having to recreate their library each time they visit the website. The data is securely stored within the browser, ensuring a seamless and uninterrupted experience across sessions.",
+      'For user authentication, ConsoleHub relies on Devise, a trusted and widely used authentication solution in the Ruby on Rails ecosystem. This ensures that user accounts are secure and easily manageable. To provide an appealing and customizable design, the platform utilizes Tailwind CSS. This allows for visually appealing and responsive layouts, enhancing the user interface aesthetics.',
 
-      'Through a clean and intuitive user interface, Awesome Books offers a smooth and engaging browsing experience. Users can quickly add new books to the list, specifying details such as the title and author. The application also allows for effortless removal of books, providing a streamlined way to manage the library based on individual preferences and reading habits.',
-      'Whether users are avid readers, book enthusiasts, or simply looking for an organized way to keep track of their favorite titles, Awesome Books caters to their needs. With its user-centric design and efficient implementation, the application aims to enhance the book management experience, making it more enjoyable and convenient.',
-
-      'Overall, Awesome Books represents a powerful yet user-friendly solution for book lovers, providing an efficient way to manage and organize a personalized book collection. With its dynamic features, seamless integration with local storage, and intuitive user interface, it sets out to redefine the way users interact with their books online.',
+      'In summary, ConsoleHub is a well-crafted web application that streamlines the booking of gaming consoles. It leverages React and Ruby on Rails for its front-end and back-end respectively, with Devise for authentication and Tailwind CSS for stylish design. The combination of these technologies ensures a seamless and enjoyable user experience for users.',
     ],
-    image: 'images/projects/Awesome-books-popup.svg',
-    mockup: 'images/projects/Awesome-books-card.svg',
+    image: 'images/projects/consolehub_popup.svg',
+    mockup: 'images/projects/consolehub_card.svg',
     technologies: [
-      'JavaScript',
-      'CSS3',
-      'HTML5',
-      'Luxon',
-      'Github',
-      'Terminal',
+      'Ruby on Rails',
+      'React',
+      'Tailwind CSS',
+      'Redux',
+      'PostgreSQL',
+      'Devise',
+      'Rspec-rails',
     ],
-    source: 'https://github.com/Timbar09/Awesome-books-vol-2',
-    live: 'https://timbar09.github.io/Awesome-books-vol-2/',
+    source:
+      'https://github.com/stephenkati/gaming_console_reservation_front_end',
+    live: 'https://console-hub.netlify.app/',
   },
   {
     ctaId: '2',
@@ -61,7 +60,15 @@ const projectsArr = [
     ctaId: '3',
     name: "Space Traveler's Hub",
     description: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas ut, maxime eos quos incidunt commodi aut libero explicabo enim laboriosam, similique quidem id ipsa. Harum reprehenderit iste ad officia beatae aperiam vel nisi nobis, dolorem nulla.',
+      'This web application showcases a comprehensive array of commercial and scientific space travel services. Its core functionality relies on fetching real-time data from the SpaceX API, providing users with up-to-date information on space exploration opportunities.',
+
+      'Users are not just passive observers; they can actively engage with the application by booking rockets for their space journeys and participating in selected space missions. This interactivity adds an immersive dimension to the user experience, allowing individuals to become part of the exciting world of space travel.',
+
+      'The web application is built using a combination of advanced technologies. React.js forms the foundation, offering a dynamic and responsive user interface that ensures a smooth and enjoyable browsing experience. Redux-toolkit enhances state management, making the application more efficient and user-friendly.',
+
+      'To enhance the visual appeal and user experience, Bootstrap is employed for crafting stylish and responsive layouts. Additionally, the application leverages REST APIs to seamlessly connect and retrieve data, ensuring that users have access to the most accurate and relevant information.',
+
+      'In summary, this web application is a gateway to the universe of commercial and scientific space travel. Its utilization of React.js, Redux-toolkit, Bootstrap, and Rest APIs ensures a sophisticated and engaging platform where users can explore, book, and embark on space adventures.',
     ],
     image: 'images/projects/space_popup.svg',
     mockup: 'images/projects/space_card.svg',
@@ -99,7 +106,7 @@ const projectsArr = [
       'Terminal',
     ],
     source: 'https://github.com/Timbar09/Blogister',
-    live: '#',
+    live: 'https://github.com/Timbar09/Blogister',
   },
   {
     ctaId: '5',
@@ -142,6 +149,34 @@ const projectsArr = [
     technologies: ['React', 'CSS3', 'Git', 'Github', 'HTML5', 'Terminal'],
     source: 'https://github.com/Timbar09/Todo-list-vol-2',
     live: 'https://timbar09.github.io/Todo-list-vol-2/dist/',
+  },
+  {
+    ctaId: '7',
+    name: 'Awesome books',
+    description: [
+      'Awesome Books is a feature-rich single-page web application designed to provide an interactive and user-friendly platform for managing a list of books. <br /> With its dynamic functionality, users can effortlessly add and remove books from the list, creating a personalized library experience.',
+
+      'The core of Awesome Books revolves around the effective utilization of classes and helper functions. By employing object-oriented programming principles, the application leverages classes to encapsulate book-related data and behaviors. Each book is represented by an instance of a class, allowing for easy manipulation and organization of book information.',
+
+      "The application seamlessly integrates with the browser's local storage, providing persistent data storage for the book collection. This means that users can add and remove books without worrying about losing their progress or having to recreate their library each time they visit the website. The data is securely stored within the browser, ensuring a seamless and uninterrupted experience across sessions.",
+
+      'Through a clean and intuitive user interface, Awesome Books offers a smooth and engaging browsing experience. Users can quickly add new books to the list, specifying details such as the title and author. The application also allows for effortless removal of books, providing a streamlined way to manage the library based on individual preferences and reading habits.',
+      'Whether users are avid readers, book enthusiasts, or simply looking for an organized way to keep track of their favorite titles, Awesome Books caters to their needs. With its user-centric design and efficient implementation, the application aims to enhance the book management experience, making it more enjoyable and convenient.',
+
+      'Overall, Awesome Books represents a powerful yet user-friendly solution for book lovers, providing an efficient way to manage and organize a personalized book collection. With its dynamic features, seamless integration with local storage, and intuitive user interface, it sets out to redefine the way users interact with their books online.',
+    ],
+    image: 'images/projects/Awesome-books-popup.svg',
+    mockup: 'images/projects/Awesome-books-card.svg',
+    technologies: [
+      'JavaScript',
+      'CSS3',
+      'HTML5',
+      'Luxon',
+      'Github',
+      'Terminal',
+    ],
+    source: 'https://github.com/Timbar09/Awesome-books-vol-2',
+    live: 'https://timbar09.github.io/Awesome-books-vol-2/',
   },
 ];
 

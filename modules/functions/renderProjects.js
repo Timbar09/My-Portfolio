@@ -8,7 +8,7 @@ const renderProjects = () => {
       return `
       <li class="project__card">
         <div class="project__card-image">
-          <img src="${project.image}" alt="${project.title}" />
+          <img src="${project.image}" alt="${project.name}" />
         </div>
         <div class="project__card-content">
           <h3 class="project__card-title section__card-title">${
