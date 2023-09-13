@@ -29,55 +29,6 @@ const projectsArr = [
   },
   {
     ctaId: '2',
-    name: "Africa's Leading Tech Confrence 2023",
-    description: [
-      'This project is a responsive website consisting of multiple pages, including a home page and an about page. The website is designed and developed to provide an optimal viewing experience on both mobile and desktop devices, ensuring seamless navigation and functionality.',
-
-      'The home page serves as the central hub of the website, featuring a menu with a link to the about page. Users can easily navigate to the about page to access additional information about the project or organization.',
-
-      'In the header section of the website, the logo is strategically placed and links back to the home page, allowing users to quickly return to the main page regardless of their location within the website.',
-
-      'For mobile devices, a mobile menu is implemented. When users click or tap the hamburger button in the header, the mobile menu overlays the page, providing easy access to different sections and pages. The mobile menu is designed to be visually consistent with the overall website design, incorporating appropriate colors, typography, and spacing. To close the mobile menu, a close (X) button is provided, allowing users to seamlessly return to the main content.',
-
-      "A dynamic page feature is implemented, specifically in the 'Featured speakers' section. The speaker data is stored in a JavaScript variable and utilized during the page load to dynamically generate the HTML content for this section. This dynamic approach allows for easy updating and modification of the featured speakers without directly modifying the HTML code.",
-
-      'The responsive design of the website ensures that it adapts to different screen sizes and devices. Whether accessed on a mobile device with a narrow viewport or a desktop computer, the website layout and content are optimized for the respective screen size, providing users with a visually appealing and user-friendly experience.',
-
-      "In summary, this project encompasses a responsive website with multiple pages, including a home page and an about page. It features a mobile menu for smaller screen sizes, dynamic content generation for the 'Featured speakers' section, and a cohesive navigation system that allows users to seamlessly explore the website on both mobile and desktop devices.",
-    ],
-    image: 'images/projects/ALT-Conference-popup.svg',
-    mockup: 'images/projects/ALT-Conference-card.svg',
-    technologies: ['JavaScript', 'GitHub', 'CSS3', 'Terminal', 'HTML5'],
-    source: 'https://github.com/Timbar09/Africas-Leading-Tech-Conference',
-    live: 'https://timbar09.github.io/Africas-Leading-Tech-Conference/',
-  },
-  {
-    ctaId: '3',
-    name: 'Todo App',
-    description: [
-      'This project is a to-do list web app that allows users to manage their tasks effectively. It provides a user-friendly interface to display a list of tasks and enables users to add new tasks and remove existing ones.',
-      '',
-
-      'The project was developed using Webpack, JavaScript, CSS, and HTML. Webpack is used as the module bundler to manage dependencies and optimize the build process. JavaScript is used to implement the interactive functionality of the to-do list, such as adding and removing tasks dynamically. CSS is used for styling the user interface and providing a visually appealing design. HTML is used for the structure and layout of the web app.',
-      '',
-
-      'Overall, this project showcases the utilization of essential web development technologies and techniques to create a functional and user-friendly to-do list web app.',
-    ],
-    image: 'images/projects/todo_app_detail.svg',
-    mockup: 'images/projects/todo_app_card.svg',
-    technologies: [
-      'Github',
-      'HTML5',
-      'Terminal',
-      'CSS3',
-      'JavaScript',
-      'Webpack',
-    ],
-    source: 'https://github.com/Timbar09/Todo-list-vol-2',
-    live: 'https://timbar09.github.io/Todo-list-vol-2/dist/',
-  },
-  {
-    ctaId: '4',
     name: 'BudgetTrail',
     description: [
       'This handy mobile web app is carefully designed for users to track and optimize their finances. The app allows users to take control of their budget and manage their income and expenses in a comprehensive way.',
@@ -107,7 +58,7 @@ const projectsArr = [
     live: 'https://budgettrail.onrender.com/',
   },
   {
-    ctaId: '5',
+    ctaId: '3',
     name: "Space Traveler's Hub",
     description: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas ut, maxime eos quos incidunt commodi aut libero explicabo enim laboriosam, similique quidem id ipsa. Harum reprehenderit iste ad officia beatae aperiam vel nisi nobis, dolorem nulla.',
@@ -120,7 +71,7 @@ const projectsArr = [
     live: 'https://spacetravelershub-react.onrender.com/',
   },
   {
-    ctaId: '6',
+    ctaId: '4',
     name: 'Blogister',
     description: [
       "This seamlessly operational web application serves as an interactive canvas, presenting a collection of posts that allows users to engage actively. Within this app, users can actively participate in conversations  by appending comments and expressing appreciation through likes. Designed to cater to bloggers' goals, this platform provides a way to share thoughts, concepts, and personal experiences with an interested audience.",
@@ -149,6 +100,55 @@ const projectsArr = [
     ],
     source: 'https://github.com/Timbar09/Blogister',
     live: '#',
+  },
+  {
+    ctaId: '5',
+    name: "Africa's Leading Tech Confrence 2023",
+    description: [
+      'This project is a responsive website consisting of multiple pages, including a home page and an about page. The website is designed and developed to provide an optimal viewing experience on both mobile and desktop devices, ensuring seamless navigation and functionality.',
+
+      'The home page serves as the central hub of the website, featuring a menu with a link to the about page. Users can easily navigate to the about page to access additional information about the project or organization.',
+
+      'In the header section of the website, the logo is strategically placed and links back to the home page, allowing users to quickly return to the main page regardless of their location within the website.',
+
+      'For mobile devices, a mobile menu is implemented. When users click or tap the hamburger button in the header, the mobile menu overlays the page, providing easy access to different sections and pages. The mobile menu is designed to be visually consistent with the overall website design, incorporating appropriate colors, typography, and spacing. To close the mobile menu, a close (X) button is provided, allowing users to seamlessly return to the main content.',
+
+      "A dynamic page feature is implemented, specifically in the 'Featured speakers' section. The speaker data is stored in a JavaScript variable and utilized during the page load to dynamically generate the HTML content for this section. This dynamic approach allows for easy updating and modification of the featured speakers without directly modifying the HTML code.",
+
+      'The responsive design of the website ensures that it adapts to different screen sizes and devices. Whether accessed on a mobile device with a narrow viewport or a desktop computer, the website layout and content are optimized for the respective screen size, providing users with a visually appealing and user-friendly experience.',
+
+      "In summary, this project encompasses a responsive website with multiple pages, including a home page and an about page. It features a mobile menu for smaller screen sizes, dynamic content generation for the 'Featured speakers' section, and a cohesive navigation system that allows users to seamlessly explore the website on both mobile and desktop devices.",
+    ],
+    image: 'images/projects/ALT-Conference-popup.svg',
+    mockup: 'images/projects/ALT-Conference-card.svg',
+    technologies: ['JavaScript', 'GitHub', 'CSS3', 'Terminal', 'HTML5'],
+    source: 'https://github.com/Timbar09/Africas-Leading-Tech-Conference',
+    live: 'https://timbar09.github.io/Africas-Leading-Tech-Conference/',
+  },
+  {
+    ctaId: '6',
+    name: 'Todo App',
+    description: [
+      'This project is a to-do list web app that allows users to manage their tasks effectively. It provides a user-friendly interface to display a list of tasks and enables users to add new tasks and remove existing ones.',
+      '',
+
+      'The project was developed using Webpack, JavaScript, CSS, and HTML. Webpack is used as the module bundler to manage dependencies and optimize the build process. JavaScript is used to implement the interactive functionality of the to-do list, such as adding and removing tasks dynamically. CSS is used for styling the user interface and providing a visually appealing design. HTML is used for the structure and layout of the web app.',
+      '',
+
+      'Overall, this project showcases the utilization of essential web development technologies and techniques to create a functional and user-friendly to-do list web app.',
+    ],
+    image: 'images/projects/todo_app_detail.svg',
+    mockup: 'images/projects/todo_app_card.svg',
+    technologies: [
+      'Github',
+      'HTML5',
+      'Terminal',
+      'CSS3',
+      'JavaScript',
+      'Webpack',
+    ],
+    source: 'https://github.com/Timbar09/Todo-list-vol-2',
+    live: 'https://timbar09.github.io/Todo-list-vol-2/dist/',
   },
 ];
 

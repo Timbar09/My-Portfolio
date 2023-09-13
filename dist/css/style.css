@@ -218,7 +218,7 @@ p {
 }
 .section__title {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 2.5rem;
   padding-bottom: 1rem;
   margin-bottom: 2.5rem;
@@ -236,10 +236,15 @@ p {
   top: 100%;
   left: 50%;
   translate: -50%;
-  height: 0.25rem;
+  height: 0.15rem;
   width: 3rem;
   background-color: var(--lime);
   border-radius: 3rem;
+}
+@media (min-width: 40em) {
+  .section__title::before {
+    height: 0.25rem;
+  }
 }
 .section__grid {
   display: grid;
