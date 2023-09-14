@@ -27,7 +27,8 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.2;
-    animation: fade-slide-up 2000ms ease-in-out 1 forwards;
+    opacity: 0;
+    animation: fade-slide-up 1500ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       font-size: 2rem;
@@ -39,11 +40,8 @@
       font-weight: 700;
       font-size: 3rem;
       color: var(--lime);
-      text-shadow:
-        -1px -1px 0 var(--green),
-        1px -1px 0 var(--green),
-        -1px 1px 0 var(--green),
-        1px 1px 0 var(--green);
+      text-shadow: -1px -1px 0 var(--green), 1px -1px 0 var(--green),
+        -1px 1px 0 var(--green), 1px 1px 0 var(--green);
 
       @media (min-width: 40em) {
         font-size: 4.5rem;
@@ -57,7 +55,8 @@
     max-width: 51.5625rem;
     font-size: 1.15rem;
     line-height: 1.5rem;
-    animation: fade-slide-up 3000ms ease-in-out 1 forwards;
+    opacity: 0;
+    animation: fade-slide-up 1500ms 1000ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       font-size: 1.25rem;
@@ -76,7 +75,8 @@
     margin: 0 auto;
     width: max-content;
     border-radius: 0.5rem;
-    animation: fade-slide-up 3000ms ease-in-out 1 forwards;
+    opacity: 0;
+    animation: fade-slide-up 1500ms 1500ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       flex-direction: row;

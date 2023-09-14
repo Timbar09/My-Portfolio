@@ -685,7 +685,8 @@ p {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
-  animation: fade-slide-up 2000ms ease-in-out 1 forwards;
+  opacity: 0;
+  animation: fade-slide-up 1500ms ease-in-out 1 forwards;
 }
 @media (min-width: 40em) {
   .intro__title {
@@ -711,7 +712,8 @@ p {
   max-width: 51.5625rem;
   font-size: 1.15rem;
   line-height: 1.5rem;
-  animation: fade-slide-up 3000ms ease-in-out 1 forwards;
+  opacity: 0;
+  animation: fade-slide-up 1500ms 1000ms ease-in-out 1 forwards;
 }
 @media (min-width: 40em) {
   .intro__description {
@@ -731,7 +733,8 @@ p {
   width: -moz-max-content;
   width: max-content;
   border-radius: 0.5rem;
-  animation: fade-slide-up 3000ms ease-in-out 1 forwards;
+  opacity: 0;
+  animation: fade-slide-up 1500ms 1500ms ease-in-out 1 forwards;
 }
 @media (min-width: 40em) {
   .intro__tech {
