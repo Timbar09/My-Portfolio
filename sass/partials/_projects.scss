@@ -32,7 +32,7 @@
     opacity: 0;
     transition: border 150ms ease-in-out, background-color 150ms ease-in-out;
 
-    &--active {
+    &.animate {
       &:first-child {
         animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
       }

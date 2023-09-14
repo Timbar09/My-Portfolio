@@ -107,20 +107,6 @@ body::-webkit-scrollbar-thumb:active {
   --darkerBlue: #ebf0ee;
 }
 
-@keyframes grow {
-  from {
-    opacity: 0;
-    scale: 0;
-  }
-  85% {
-    opacity: 0;
-    scale: 0;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
 @keyframes appear {
   from {
     visibility: hidden;
@@ -153,9 +139,6 @@ body::-webkit-scrollbar-thumb:active {
   from {
     translate: 0 1rem;
     opacity: 0;
-  }
-  85% {
-    opacity: 1;
   }
   to {
     opacity: 1;
@@ -850,16 +833,16 @@ p {
   opacity: 0;
   transition: border 150ms ease-in-out, background-color 150ms ease-in-out;
 }
-.project__card--active:first-child {
+.project__card.animate:first-child {
   animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
 }
-.project__card--active:nth-child(2) {
+.project__card.animate:nth-child(2) {
   animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
 }
-.project__card--active:nth-child(3) {
+.project__card.animate:nth-child(3) {
   animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
 }
-.project__card--active:nth-child(4) {
+.project__card.animate:nth-child(4) {
   animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
 }
 .project__card-title {
@@ -1084,6 +1067,10 @@ p {
   gap: 1.5rem;
   max-width: 60rem;
   margin: 0 auto;
+  opacity: 0;
+}
+.about__flexbox.animate {
+  animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
 }
 @media (min-width: 40em) {
   .about__flexbox {
@@ -1182,6 +1169,10 @@ p {
   border: solid 1px var(--lightGrey);
   border-radius: 0.5rem;
   flex: 1;
+  opacity: 0;
+}
+.about__card.animate {
+  animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
 }
 .about__card-header {
   display: flex;

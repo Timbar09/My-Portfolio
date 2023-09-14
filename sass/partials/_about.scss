@@ -9,15 +9,13 @@
   &__wrap {
     position: relative;
     padding: 5rem 0;
-    background:
-      url('../../images/illustration-about-me-mobile.svg'),
+    background: url('../../images/illustration-about-me-mobile.svg'),
       url('../../images/illustration1-about-me-mobile.svg');
     background-position: left bottom, right top;
     background-repeat: no-repeat;
 
     @media (min-width: 40em) {
-      background:
-        url('../../images/illustration-about-me-2-desktop.svg'),
+      background: url('../../images/illustration-about-me-2-desktop.svg'),
         url('../../images/illustration-about-me-1-desktop.svg');
       background-position: left bottom, right top;
       background-repeat: no-repeat;
@@ -39,6 +37,11 @@
     gap: 1.5rem;
     max-width: 60rem;
     margin: 0 auto;
+    opacity: 0;
+
+    &.animate {
+      animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
+    }
 
     @media (min-width: 40em) {
       flex-direction: row;
@@ -60,8 +63,7 @@
     border-radius: 0.25rem;
     rotate: y 180deg;
     background-color: var(--lightGrey);
-    transition:
-      opacity 50ms 300ms ease-in-out,
+    transition: opacity 50ms 300ms ease-in-out,
       visibility 50ms 300ms ease-in-out;
 
     @media (hover: none) and (pointer: coarse) {
@@ -132,11 +134,8 @@
 
   &__description {
     text-align: left;
-    text-shadow:
-      -1px -1px 0 var(--white),
-      1px -1px 0 var(--white),
-      -1px 1px 0 var(--white),
-      1px 1px 0 var(--white);
+    text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+      -1px 1px 0 var(--white), 1px 1px 0 var(--white);
   }
 
   &__skills {
@@ -154,6 +153,11 @@
     border: solid 1px var(--lightGrey);
     border-radius: 0.5rem;
     flex: 1;
+    opacity: 0;
+
+    &.animate {
+      animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
+    }
 
     &-header {
       display: flex;
