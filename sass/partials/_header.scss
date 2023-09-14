@@ -75,8 +75,10 @@
       background-color: var(--lime);
       border-radius: 10rem;
       opacity: 0;
-      transition: bottom 150ms 250ms ease-in-out,
-        opacity 150ms 250ms ease-in-out, width 150ms 415ms ease-in-out;
+      transition:
+        bottom 150ms 250ms ease-in-out,
+        opacity 150ms 250ms ease-in-out,
+        width 150ms 415ms ease-in-out;
     }
 
     &:hover {
@@ -119,20 +121,22 @@
     }
 
     &.hamburger__open {
-      span {
-        transition: top 100ms ease-in-out, rotate 100ms 100ms ease-in-out,
+      .stroke {
+        transition:
+          top 100ms ease-in-out,
+          rotate 100ms 100ms ease-in-out,
           opacity 100ms 50ms ease-in-out;
 
-        &:first-child {
+        &.top {
           rotate: 45deg;
           top: 7px;
         }
 
-        &:nth-child(2) {
+        &.middle {
           opacity: 0;
         }
 
-        &:last-child {
+        &.bottom {
           rotate: -45deg;
           top: -6px;
         }
@@ -140,21 +144,23 @@
     }
 
     &.hamburger__close {
-      span {
-        transition: top 100ms 100ms ease-in-out, rotate 100ms ease-in-out,
+      .stroke {
+        transition:
+          top 100ms 100ms ease-in-out,
+          rotate 100ms ease-in-out,
           opacity 100ms 50ms ease-in-out;
 
-        &:first-child {
-          rotate: 0;
+        &.top {
+          rotate: 0deg;
           top: 0;
         }
 
-        &:nth-child(2) {
+        &.middle {
           opacity: 1;
         }
 
-        &:last-child {
-          rotate: 0;
+        &.bottom {
+          rotate: 0deg;
           top: 0;
         }
       }
@@ -228,7 +234,8 @@
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-    transition: border-color 150ms ease-in-out,
+    transition:
+      border-color 150ms ease-in-out,
       background-color 150ms ease-in-out;
 
     &-container {

@@ -557,32 +557,32 @@ p {
 .header__hamburger span:not(:last-child) {
   margin-bottom: 0.25rem;
 }
-.header__hamburger.hamburger__open span {
+.header__hamburger.hamburger__open .stroke {
   transition: top 100ms ease-in-out, rotate 100ms 100ms ease-in-out, opacity 100ms 50ms ease-in-out;
 }
-.header__hamburger.hamburger__open span:first-child {
+.header__hamburger.hamburger__open .stroke.top {
   rotate: 45deg;
   top: 7px;
 }
-.header__hamburger.hamburger__open span:nth-child(2) {
+.header__hamburger.hamburger__open .stroke.middle {
   opacity: 0;
 }
-.header__hamburger.hamburger__open span:last-child {
+.header__hamburger.hamburger__open .stroke.bottom {
   rotate: -45deg;
   top: -6px;
 }
-.header__hamburger.hamburger__close span {
+.header__hamburger.hamburger__close .stroke {
   transition: top 100ms 100ms ease-in-out, rotate 100ms ease-in-out, opacity 100ms 50ms ease-in-out;
 }
-.header__hamburger.hamburger__close span:first-child {
-  rotate: 0;
+.header__hamburger.hamburger__close .stroke.top {
+  rotate: 0deg;
   top: 0;
 }
-.header__hamburger.hamburger__close span:nth-child(2) {
+.header__hamburger.hamburger__close .stroke.middle {
   opacity: 1;
 }
-.header__hamburger.hamburger__close span:last-child {
-  rotate: 0;
+.header__hamburger.hamburger__close .stroke.bottom {
+  rotate: 0deg;
   top: 0;
 }
 .header__hamburger:hover span {
@@ -873,10 +873,16 @@ p {
   position: absolute;
   margin-top: 4em;
   text-align: left;
-  width: 85%;
+  width: 95%;
+  max-width: 60em;
   left: 50%;
   translate: -50%;
   z-index: 1010;
+}
+@media (min-width: 40em) {
+  .popup {
+    width: 80%;
+  }
 }
 .popup.open {
   animation: popup-appear 250ms ease-in-out 0ms 1 forwards;
@@ -990,6 +996,7 @@ p {
 }
 .popup__ctas {
   display: flex;
+  align-items: center;
   gap: 0.75rem;
 }
 @media (min-width: 64em) {

@@ -3,10 +3,15 @@
   position: absolute;
   margin-top: 4em;
   text-align: left;
-  width: 85%;
+  width: 95%;
+  max-width: 60em;
   left: 50%;
   translate: -50%;
   z-index: 1010;
+
+  @media (min-width: 40em) {
+    width: 80%;
+  }
 
   &.open {
     animation: popup-appear 250ms ease-in-out 0ms 1 forwards;
@@ -133,6 +138,7 @@
 
   &__ctas {
     display: flex;
+    align-items: center;
     gap: 0.75rem;
 
     @media (min-width: 64em) {

@@ -4,25 +4,23 @@ const renderProjects = () => {
   const projects = data.slice(0, 4);
   const projectContainer = document.querySelector('.project__list');
   const projectsHTML = projects
-    .map((project) => {
-      return `
+    .map((project) => `
       <li class="project__card">
         <div class="project__card-image">
           <img src="${project.image}" alt="${project.name}" />
         </div>
         <div class="project__card-content">
           <h3 class="project__card-title section__card-title">${
-            project.name
-          }</h3>
+  project.name
+}</h3>
           
           <ul class="project__card-tech section__card-btns">
             ${project.technologies
-              .slice(0, 3)
-              .map(
-                (tech) =>
-                  `<li class="project__tech-item section__card-btn">${tech}</li>`
-              )
-              .join('')}
+    .slice(0, 3)
+    .map(
+      (tech) => `<li class="project__tech-item section__card-btn">${tech}</li>`,
+    )
+    .join('')}
           </ul>
 
           <div class="project__card-cta-wrap">
@@ -33,8 +31,7 @@ const renderProjects = () => {
           </div>
         </div>
       </li>
-    `;
-    })
+    `)
     .join('');
   projectContainer.innerHTML = projectsHTML;
 };
