@@ -89,12 +89,12 @@ body::-webkit-scrollbar-thumb:active {
 
 /* When the menu button is clicked */
 .open {
-  animation: appear 150ms ease-in-out 0ms 1 forwards;
+  animation: appear-visible 150ms ease-in-out 0ms 1 forwards;
 }
 
 /* When the cancel-menu button is clicked */
 .close {
-  animation: disappear 150ms ease-in-out 0ms 1 forwards;
+  animation: disappear-hidden 150ms ease-in-out 0ms 1 forwards;
 }
 
 .darkmode {
@@ -108,6 +108,21 @@ body::-webkit-scrollbar-thumb:active {
   --darkerBlue: #ebf0ee;
 }
 
+@keyframes rotate-fade {
+  from {
+    perspective: 1000px;
+    opacity: 0;
+    rotate: y -90deg;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    perspective: 1000px;
+    opacity: 1;
+    rotate: y 0deg;
+  }
+}
 @keyframes grow {
   from {
     opacity: 0;
@@ -153,7 +168,7 @@ body::-webkit-scrollbar-thumb:active {
   }
 }
 /* Header menu keyframes */
-@keyframes appear {
+@keyframes appear-visible {
   from {
     visibility: hidden;
     opacity: 0;
@@ -167,7 +182,7 @@ body::-webkit-scrollbar-thumb:active {
     opacity: 1;
   }
 }
-@keyframes disappear {
+@keyframes disappear-hidden {
   from {
     visibility: visible;
     opacity: 1;
@@ -688,7 +703,7 @@ p {
   width: -moz-max-content;
   width: max-content;
   border-radius: 0.5rem;
-  animation: fade-slide-up 4000ms ease-in-out 1 forwards;
+  animation: fade-slide-up 3000ms ease-in-out 1 forwards;
 }
 @media (min-width: 40em) {
   .intro__tech {
@@ -747,8 +762,10 @@ p {
   line-height: 0;
   border: solid 2px var(--lightGreen);
   border-radius: 50%;
+  opacity: 0;
+  rotate: y -90deg;
   transition: 150ms background-color ease-in-out;
-  animation: grow 5000ms ease-in-out 1 forwards;
+  animation: rotate-fade 1500ms 2000ms ease-in-out 1 forwards;
 }
 .intro__down-btn:hover {
   border: solid 2px var(--lime);

@@ -96,10 +96,10 @@ body {
 
 /* When the menu button is clicked */
 .open {
-  animation: appear 150ms ease-in-out 0ms 1 forwards;
+  animation: appear-visible 150ms ease-in-out 0ms 1 forwards;
 }
 
 /* When the cancel-menu button is clicked */
 .close {
-  animation: disappear 150ms ease-in-out 0ms 1 forwards;
+  animation: disappear-hidden 150ms ease-in-out 0ms 1 forwards;
 }

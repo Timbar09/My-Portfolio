@@ -1,3 +1,22 @@
+// Rotate fade
+@keyframes rotate-fade {
+  from {
+    perspective: 1000px;
+    opacity: 0;
+    rotate: y -90deg;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    perspective: 1000px;
+    opacity: 1;
+    rotate: y 0deg;
+  }
+}
+
 @keyframes grow {
   from {
     opacity: 0;
@@ -54,7 +73,7 @@
 
 /* Header menu keyframes */
 
-@keyframes appear {
+@keyframes appear-visible {
   from {
     visibility: hidden;
     opacity: 0;
@@ -71,7 +90,7 @@
   }
 }
 
-@keyframes disappear {
+@keyframes disappear-hidden {
   from {
     visibility: visible;
     opacity: 1;

@@ -71,7 +71,7 @@
     margin: 0 auto;
     width: max-content;
     border-radius: 0.5rem;
-    animation: fade-slide-up 4000ms ease-in-out 1 forwards;
+    animation: fade-slide-up 3000ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       flex-direction: row;
@@ -136,8 +136,10 @@
     line-height: 0;
     border: solid 2px var(--lightGreen);
     border-radius: 50%;
+    opacity: 0;
+    rotate: y -90deg;
     transition: 150ms background-color ease-in-out;
-    animation: grow 5000ms ease-in-out 1 forwards;
+    animation: rotate-fade 1500ms 2000ms ease-in-out 1 forwards;
 
     &:hover {
       border: solid 2px var(--lime);
