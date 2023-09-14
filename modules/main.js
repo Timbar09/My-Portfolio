@@ -2,7 +2,6 @@ import projectsArr from './projectData.js';
 import * as f from './functions/index.js';
 
 // Dark mode functionality
-
 const dakModeToggle = document.querySelector('.header__toggle');
 let darkMode = localStorage.getItem('darkMode');
 
@@ -21,9 +20,9 @@ dakModeToggle.addEventListener('click', () => {
 });
 
 // Mobile menu functionality
-
 const menuOptions = document.querySelectorAll('.header__menu-link');
 const MenuToggleBtn = document.querySelector('.header__hamburger');
+const overlay = document.querySelector('.overlay');
 
 MenuToggleBtn.addEventListener('click', () => {
   if (MenuToggleBtn.classList.contains('hamburger__close')) {
@@ -39,12 +38,18 @@ menuOptions.forEach((option) => {
   });
 });
 
-// Render projects
+overlay.addEventListener('click', () => {
+  f.closeMenu();
+  f.deactivatePopup();
+});
 
+// Render projects
 f.renderProjects();
 
-// Project details popup window
+// Intersection observer
+f.observe();
 
+// Project details popup window
 const projectButtons = document.querySelectorAll('.project__cta');
 const popupCancelBtn = document.querySelector('.popup__cancel-btn_icon');
 
@@ -63,7 +68,6 @@ popupCancelBtn.addEventListener('click', () => {
 });
 
 // Contact form validation
-
 const contactForm = document.querySelector('.footer__form');
 
 contactForm.addEventListener('submit', (e) => {
@@ -76,7 +80,6 @@ contactForm.addEventListener('submit', (e) => {
 });
 
 // Store and retrieve user information
-
 f.retrieveUserInfo();
 
 contactForm.addEventListener('change', f.storeUserInfo);
