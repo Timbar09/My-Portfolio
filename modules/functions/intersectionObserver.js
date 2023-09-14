@@ -1,24 +1,24 @@
-const sections = document.querySelectorAll('.section');
+const projectCards = document.querySelectorAll('.project__card');
 
 const options = {
   root: null,
-  threshold: 0.2,
+  threshold: 0.25,
   rootMargin: '0px',
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry.target);
-      entry.target.classList.add('section--active');
+      entry.target.classList.add('project__card--active');
       observer.unobserve(entry.target);
     }
   });
 }, options);
 
 const observe = () => {
-  sections.forEach((section) => {
-    observer.observe(section);
+  // Observe project cards
+  projectCards.forEach((card) => {
+    observer.observe(card);
   });
 };
 

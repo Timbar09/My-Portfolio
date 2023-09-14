@@ -1,11 +1,11 @@
 .intro {
-  // margin-top: 4.75rem;
   position: relative;
 
   .container {
     /* stylelint-disable-next-line csstree/validator */
     padding-top: min(10vh, 4rem);
     height: 100vh;
+    min-height: 31.5625rem;
     background-image: url('../../images/header-illsutration-mobile.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,8 +39,11 @@
       font-weight: 700;
       font-size: 3rem;
       color: var(--lime);
-      text-shadow: -1px -1px 0 var(--green), 1px -1px 0 var(--green),
-        -1px 1px 0 var(--green), 1px 1px 0 var(--green);
+      text-shadow:
+        -1px -1px 0 var(--green),
+        1px -1px 0 var(--green),
+        -1px 1px 0 var(--green),
+        1px 1px 0 var(--green);
 
       @media (min-width: 40em) {
         font-size: 4.5rem;
