@@ -23,15 +23,14 @@ dakModeToggle.addEventListener('click', () => {
 // Mobile menu functionality
 
 const menuOptions = document.querySelectorAll('.header__menu-link');
-const openMenuBtn = document.querySelector('.header__hamburger');
-const closeMenuBtn = document.querySelector('.header__menu-btn');
+const MenuToggleBtn = document.querySelector('.header__hamburger');
 
-openMenuBtn.addEventListener('click', () => {
-  f.openMenu();
-});
-
-closeMenuBtn.addEventListener('click', () => {
-  f.closeMenu();
+MenuToggleBtn.addEventListener('click', () => {
+  if (MenuToggleBtn.classList.contains('hamburger__close')) {
+    f.openMenu();
+  } else {
+    f.closeMenu();
+  }
 });
 
 menuOptions.forEach((option) => {

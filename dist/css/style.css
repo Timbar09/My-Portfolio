@@ -4,7 +4,6 @@ html {
   font-size: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: 4.5rem;
-  scrollbar-gutter: stable;
 }
 
 *,
@@ -546,6 +545,8 @@ p {
   }
 }
 .header__hamburger span {
+  position: relative;
+  top: 0;
   display: inline-block;
   width: 1.5rem;
   height: 0.15rem;
@@ -556,21 +557,44 @@ p {
 .header__hamburger span:not(:last-child) {
   margin-bottom: 0.25rem;
 }
+.header__hamburger.hamburger__open span {
+  transition: top 100ms ease-in-out, rotate 100ms 100ms ease-in-out, opacity 100ms 50ms ease-in-out;
+}
+.header__hamburger.hamburger__open span:first-child {
+  rotate: 45deg;
+  top: 7px;
+}
+.header__hamburger.hamburger__open span:nth-child(2) {
+  opacity: 0;
+}
+.header__hamburger.hamburger__open span:last-child {
+  rotate: -45deg;
+  top: -6px;
+}
+.header__hamburger.hamburger__close span {
+  transition: top 100ms 100ms ease-in-out, rotate 100ms ease-in-out, opacity 100ms 50ms ease-in-out;
+}
+.header__hamburger.hamburger__close span:first-child {
+  rotate: 0;
+  top: 0;
+}
+.header__hamburger.hamburger__close span:nth-child(2) {
+  opacity: 1;
+}
+.header__hamburger.hamburger__close span:last-child {
+  rotate: 0;
+  top: 0;
+}
 .header__hamburger:hover span {
   background-color: var(--lime);
 }
 .header__hamburger:active {
   background-color: var(--opaqueGreen);
 }
-@media (min-width: 64em) {
-  .header__hamburger {
-    display: none;
-  }
-}
 .header__menu {
   visibility: hidden;
   position: absolute;
-  top: -1px;
+  top: 110%;
   left: -1px;
   right: -1px;
   z-index: 1;
@@ -578,42 +602,6 @@ p {
   border-radius: 0.5rem;
   border: solid 1px var(--lightGrey);
   background-color: var(--white);
-}
-.header__menu-btn {
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  border: 0;
-  border-radius: 0.25rem;
-  background-color: transparent;
-  cursor: pointer;
-}
-.header__menu-btn .stroke {
-  display: inline-block;
-  position: relative;
-  width: 1.5rem;
-  height: 0.15rem;
-  background-color: var(--darkerBlue);
-  border-radius: 5rem;
-  transition: background-color 150ms ease-in-out;
-}
-.header__menu-btn .stroke:not(:last-child) {
-  margin-bottom: 0.75rem;
-}
-.header__menu-btn .stroke:first-child {
-  rotate: 45deg;
-  top: 0.45rem;
-}
-.header__menu-btn .stroke:last-child {
-  rotate: -45deg;
-  bottom: 0.45rem;
-}
-.header__menu-btn:hover span {
-  background-color: var(--lime);
-}
-.header__menu-btn:active {
-  background-color: var(--opaqueGreen);
 }
 .header__menu-social {
   justify-content: start;

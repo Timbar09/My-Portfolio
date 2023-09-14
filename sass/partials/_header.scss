@@ -104,6 +104,8 @@
     }
 
     span {
+      position: relative;
+      top: 0;
       display: inline-block;
       width: 1.5rem;
       height: 0.15rem;
@@ -116,6 +118,48 @@
       }
     }
 
+    &.hamburger__open {
+      span {
+        transition: top 100ms ease-in-out, rotate 100ms 100ms ease-in-out,
+          opacity 100ms 50ms ease-in-out;
+
+        &:first-child {
+          rotate: 45deg;
+          top: 7px;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          rotate: -45deg;
+          top: -6px;
+        }
+      }
+    }
+
+    &.hamburger__close {
+      span {
+        transition: top 100ms 100ms ease-in-out, rotate 100ms ease-in-out,
+          opacity 100ms 50ms ease-in-out;
+
+        &:first-child {
+          rotate: 0;
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          opacity: 1;
+        }
+
+        &:last-child {
+          rotate: 0;
+          top: 0;
+        }
+      }
+    }
+
     &:hover span {
       background-color: var(--lime);
     }
@@ -123,16 +167,12 @@
     &:active {
       background-color: var(--opaqueGreen);
     }
-
-    @media (min-width: 64em) {
-      display: none;
-    }
   }
 
   &__menu {
     visibility: hidden;
     position: absolute;
-    top: -1px;
+    top: 110%;
     left: -1px;
     right: -1px;
     z-index: 1;
@@ -140,49 +180,6 @@
     border-radius: 0.5rem;
     border: solid 1px var(--lightGrey);
     background-color: var(--white);
-
-    &-btn {
-      margin-left: auto;
-      display: flex;
-      flex-direction: column;
-      padding: 0.5rem;
-      border: 0;
-      border-radius: 0.25rem;
-      background-color: transparent;
-      cursor: pointer;
-
-      .stroke {
-        display: inline-block;
-        position: relative;
-        width: 1.5rem;
-        height: 0.15rem;
-        background-color: var(--darkerBlue);
-        border-radius: 5rem;
-        transition: background-color 150ms ease-in-out;
-
-        &:not(:last-child) {
-          margin-bottom: 0.75rem;
-        }
-
-        &:first-child {
-          rotate: 45deg;
-          top: 0.45rem;
-        }
-
-        &:last-child {
-          rotate: -45deg;
-          bottom: 0.45rem;
-        }
-      }
-
-      &:hover span {
-        background-color: var(--lime);
-      }
-
-      &:active {
-        background-color: var(--opaqueGreen);
-      }
-    }
 
     &-social {
       justify-content: start;
