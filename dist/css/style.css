@@ -196,6 +196,40 @@ body::-webkit-scrollbar-thumb:active {
     opacity: 0;
   }
 }
+@keyframes popup-appear {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    scale: 0.5;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes popup-disappear {
+  from {
+    visibility: visible;
+    opacity: 1;
+    scale: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+    scale: 0.5;
+  }
+}
 h1,
 h2,
 h3,
@@ -855,6 +889,12 @@ p {
   left: 50%;
   translate: -50%;
   z-index: 1010;
+}
+.popup.open {
+  animation: popup-appear 250ms ease-in-out 0ms 1 forwards;
+}
+.popup.close {
+  animation: popup-disappear 200ms ease-in-out 0ms 1 forwards;
 }
 .popup__cancel-btn {
   text-align: right;

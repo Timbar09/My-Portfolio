@@ -1,4 +1,4 @@
-// Rotate fade
+// Intro section dropdown button keyframes
 @keyframes rotate-fade {
   from {
     perspective: 1000px;
@@ -104,5 +104,46 @@
   to {
     visibility: hidden;
     opacity: 0;
+  }
+}
+
+// Popup keyframes
+@keyframes popup-appear {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  1% {
+    visibility: visible;
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes popup-disappear {
+  from {
+    visibility: visible;
+    opacity: 1;
+    scale: 1;
+  }
+
+  99% {
+    visibility: visible;
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+    scale: 0.5;
   }
 }
