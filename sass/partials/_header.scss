@@ -75,10 +75,8 @@
       background-color: var(--lime);
       border-radius: 10rem;
       opacity: 0;
-      transition:
-        bottom 150ms 250ms ease-in-out,
-        opacity 150ms 250ms ease-in-out,
-        width 150ms 415ms ease-in-out;
+      transition: bottom 150ms 250ms ease-in-out,
+        opacity 150ms 250ms ease-in-out, width 150ms 415ms ease-in-out;
     }
 
     &:hover {
@@ -122,9 +120,7 @@
 
     &.hamburger__open {
       .stroke {
-        transition:
-          top 100ms ease-in-out,
-          rotate 100ms 100ms ease-in-out,
+        transition: top 100ms ease-in-out, rotate 100ms 100ms ease-in-out,
           opacity 100ms 50ms ease-in-out;
 
         &.top {
@@ -145,9 +141,7 @@
 
     &.hamburger__close {
       .stroke {
-        transition:
-          top 100ms 100ms ease-in-out,
-          rotate 100ms ease-in-out,
+        transition: top 100ms 100ms ease-in-out, rotate 100ms ease-in-out,
           opacity 100ms 50ms ease-in-out;
 
         &.top {
@@ -186,6 +180,14 @@
     border-radius: 0.5rem;
     border: solid 1px var(--lightGrey);
     background-color: var(--white);
+
+    &.menu-open {
+      animation: menu-open 150ms ease-in-out 0ms 1 forwards;
+    }
+
+    &.menu-close {
+      animation: menu-close 150ms ease-in-out 0ms 1 forwards;
+    }
 
     &-social {
       justify-content: start;
@@ -234,8 +236,7 @@
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-    transition:
-      border-color 150ms ease-in-out,
+    transition: border-color 150ms ease-in-out,
       background-color 150ms ease-in-out;
 
     &-container {

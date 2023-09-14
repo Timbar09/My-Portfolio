@@ -5,10 +5,10 @@ const openMenu = () => {
   const overlay = document.querySelector('.overlay');
 
   hamburger.classList.remove('hamburger__close');
-  menu.classList.remove('close');
+  menu.classList.remove('menu-close');
   overlay.classList.remove('close');
   hamburger.classList.add('hamburger__open');
-  menu.classList.add('open');
+  menu.classList.add('menu-open');
   overlay.classList.add('open');
   body.classList.add('noscroll');
 };
@@ -20,11 +20,11 @@ const closeMenu = () => {
   const overlay = document.querySelector('.overlay');
 
   hamburger.classList.remove('hamburger__open');
-  menu.classList.remove('open');
+  menu.classList.remove('menu-open');
   overlay.classList.remove('open');
   body.classList.remove('noscroll');
   hamburger.classList.add('hamburger__close');
-  menu.classList.add('close');
+  menu.classList.add('menu-close');
   overlay.classList.add('close');
 };
 

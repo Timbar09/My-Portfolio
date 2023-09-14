@@ -23,6 +23,7 @@
   }
 
   &__title {
+    position: relative;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.2;
@@ -38,11 +39,8 @@
       font-weight: 700;
       font-size: 3rem;
       color: var(--lime);
-      text-shadow:
-        -1px -1px 0 var(--green),
-        1px -1px 0 var(--green),
-        -1px 1px 0 var(--green),
-        1px 1px 0 var(--green);
+      text-shadow: -1px -1px 0 var(--green), 1px -1px 0 var(--green),
+        -1px 1px 0 var(--green), 1px 1px 0 var(--green);
 
       @media (min-width: 40em) {
         font-size: 4.5rem;
@@ -51,6 +49,7 @@
   }
 
   &__description {
+    position: relative;
     margin: 0 auto;
     max-width: 51.5625rem;
     font-size: 1.15rem;

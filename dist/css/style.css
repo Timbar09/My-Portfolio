@@ -88,12 +88,12 @@ body::-webkit-scrollbar-thumb:active {
 
 /* When the menu button is clicked */
 .open {
-  animation: appear-visible 150ms ease-in-out 0ms 1 forwards;
+  animation: appear 100ms ease-in-out 0ms 1 forwards;
 }
 
 /* When the cancel-menu button is clicked */
 .close {
-  animation: disappear-hidden 150ms ease-in-out 0ms 1 forwards;
+  animation: disappear 100ms ease-in-out 0ms 1 forwards;
 }
 
 .darkmode {
@@ -107,21 +107,6 @@ body::-webkit-scrollbar-thumb:active {
   --darkerBlue: #ebf0ee;
 }
 
-@keyframes rotate-fade {
-  from {
-    perspective: 1000px;
-    opacity: 0;
-    rotate: y -90deg;
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    perspective: 1000px;
-    opacity: 1;
-    rotate: y 0deg;
-  }
-}
 @keyframes grow {
   from {
     opacity: 0;
@@ -138,15 +123,30 @@ body::-webkit-scrollbar-thumb:active {
 }
 @keyframes appear {
   from {
+    visibility: hidden;
     opacity: 0;
   }
-  65% {
+  1% {
+    visibility: visible;
     opacity: 0;
-    translate: 0 -1rem;
   }
   to {
+    visibility: visible;
     opacity: 1;
-    translate: 0 0;
+  }
+}
+@keyframes disappear {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
   }
 }
 @keyframes fade-slide-up {
@@ -166,11 +166,26 @@ body::-webkit-scrollbar-thumb:active {
     translate: 0 0;
   }
 }
-/* Header menu keyframes */
-@keyframes appear-visible {
+@keyframes rotate-fade {
+  from {
+    perspective: 1000px;
+    opacity: 0;
+    rotate: y -90deg;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    perspective: 1000px;
+    opacity: 1;
+    rotate: y 0deg;
+  }
+}
+@keyframes menu-open {
   from {
     visibility: hidden;
     opacity: 0;
+    top: 80%;
   }
   1% {
     visibility: visible;
@@ -179,12 +194,14 @@ body::-webkit-scrollbar-thumb:active {
   to {
     visibility: visible;
     opacity: 1;
+    top: 110%;
   }
 }
-@keyframes disappear-hidden {
+@keyframes menu-close {
   from {
     visibility: visible;
     opacity: 1;
+    top: 110%;
   }
   99% {
     visibility: visible;
@@ -193,6 +210,7 @@ body::-webkit-scrollbar-thumb:active {
   to {
     visibility: hidden;
     opacity: 0;
+    top: 80%;
   }
 }
 @keyframes popup-appear {
@@ -257,6 +275,10 @@ p {
 
 .section {
   text-align: center;
+}
+.section--active .spin {
+  color: var(--lime);
+  animation: appear 1000ms ease-in-out forwards;
 }
 .section__overlay {
   position: absolute;
@@ -603,6 +625,12 @@ p {
   border: solid 1px var(--lightGrey);
   background-color: var(--white);
 }
+.header__menu.menu-open {
+  animation: menu-open 150ms ease-in-out 0ms 1 forwards;
+}
+.header__menu.menu-close {
+  animation: menu-close 150ms ease-in-out 0ms 1 forwards;
+}
 .header__menu-social {
   justify-content: start;
 }
@@ -677,6 +705,7 @@ p {
   }
 }
 .intro__title {
+  position: relative;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -701,6 +730,7 @@ p {
   }
 }
 .intro__description {
+  position: relative;
   margin: 0 auto;
   max-width: 51.5625rem;
   font-size: 1.15rem;
