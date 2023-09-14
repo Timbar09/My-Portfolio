@@ -86,6 +86,15 @@
       font-size: 1rem;
       line-height: 2rem;
       width: max-content;
+
+      &-source {
+        transition: color 100ms ease-in-out;
+
+        &:hover {
+          color: var(--lime);
+          text-decoration: underline;
+        }
+      }
     }
 
     &-list {

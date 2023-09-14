@@ -747,6 +747,13 @@ p {
   width: -moz-max-content;
   width: max-content;
 }
+.intro__tech-title-source {
+  transition: color 100ms ease-in-out;
+}
+.intro__tech-title-source:hover {
+  color: var(--lime);
+  text-decoration: underline;
+}
 .intro__tech-list {
   display: flex;
   justify-content: center;
