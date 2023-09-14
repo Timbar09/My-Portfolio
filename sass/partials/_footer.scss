@@ -7,8 +7,7 @@
 
   > .container {
     position: relative;
-    background:
-      url('../../images/cf-1-desktop.svg'),
+    background: url('../../images/cf-1-desktop.svg'),
       url('../../images/cf-bg-2-desktop.svg'),
       url('../../images/cf-bg-3-desktop.svg');
     background-position: left bottom, 20% 80%, right bottom;
@@ -20,10 +19,15 @@
     padding: 2.5rem 0;
     margin: 0 auto;
     max-width: 70rem;
-    align-items: flex-start;
+    opacity: 0;
+
+    &.animate {
+      animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
+    }
 
     @media (min-width: 64em) {
       display: flex;
+      align-items: flex-start;
       gap: 3rem;
       padding: 5rem 0;
     }
@@ -50,11 +54,8 @@
       font-size: 1.875rem;
       max-width: none;
       // height: max-content;
-      text-shadow:
-        -1px -1px 0 var(--white),
-        1px -1px 0 var(--white),
-        -1px 1px 0 var(--white),
-        1px 1px 0 var(--white);
+      text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+        -1px 1px 0 var(--white), 1px 1px 0 var(--white);
     }
   }
 
@@ -122,9 +123,7 @@
       font-weight: inherit;
       color: inherit;
       background-color: var(--opaqueWhite);
-      transition:
-        border 150ms ease-in-out,
-        outline 150ms ease-in-out,
+      transition: border 150ms ease-in-out, outline 150ms ease-in-out,
         outline-offset 150ms ease-in-out;
 
       &:focus {

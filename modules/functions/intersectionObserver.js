@@ -1,6 +1,7 @@
 const projectCards = document.querySelectorAll('.project__card');
 const aboutDescrition = document.querySelector('.about__flexbox');
 const aboutCards = document.querySelectorAll('.about__card');
+const footerContent = document.querySelector('.footer__flexbox');
 
 const options = {
   root: null,
@@ -26,6 +27,8 @@ const observe = () => {
   aboutCards.forEach((card) => {
     observer.observe(card);
   });
+
+  observer.observe(footerContent);
 };
 
 export default observe;
