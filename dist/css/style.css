@@ -21,7 +21,7 @@ html {
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
   --midGrey: #8e9691;
-  --darkGrey: #656c67;
+  --darkGrey: #5c625e;
   --lightGreen: #c5e9da;
   --opaqueGreen: #00855247;
   --lime: #36b37f;
@@ -102,7 +102,7 @@ body::-webkit-scrollbar-thumb:active {
   --white: #060c17;
   --lightGrey: #0e1b31;
   --grey: #172b4d;
-  --darkGrey: #a4aaa6;
+  --darkGrey: #b2b8b4;
   --darkBlue: #d0d9d4;
   --darkerBlue: #ebf0ee;
 }
@@ -881,7 +881,7 @@ p {
   background-color: var(--opaqueDark);
 }
 .project__card:hover .project__card-title, .project__card:focus-within .project__card-title {
-  color: var(--darkBlue);
+  color: var(--darkerBlue);
 }
 .project__card:hover .project__card-image img, .project__card:focus-within .project__card-image img {
   border: solid 1px var(--lightGrey);
