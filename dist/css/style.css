@@ -1326,6 +1326,15 @@ p {
     flex: 1;
   }
 }
+.footer__form-control.submit {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 64em) {
+  .footer__form-control.submit {
+    justify-content: flex-start;
+  }
+}
 .footer__form-control label {
   display: block;
   font-weight: 500;

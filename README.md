@@ -138,13 +138,9 @@ If you like this project, ⭐️ the project and let me know what you like in pa
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-<!-- Add a link goes to authors -->
-
-I would like to thank [everyone](#readme-top) who collaborated with me on this project.
+I would like to thank [everyone](#authors) who collaborated with me on this project.
 
 I would like to thank all my Microverse teams and the whole Microverse community for their help and contributions towards this project.
-
-I would also like [Figma]() for the template and [Freepik]() for the project cards background images and mock-ups.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
