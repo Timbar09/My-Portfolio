@@ -1,0 +1,37 @@
+@keyframes menu-open {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    top: 80%;
+  }
+
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+    top: 110%;
+  }
+}
+
+@keyframes menu-close {
+  from {
+    visibility: visible;
+    opacity: 1;
+    top: 110%;
+  }
+
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+    top: 80%;
+  }
+}

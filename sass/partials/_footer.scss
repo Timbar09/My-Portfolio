@@ -1,5 +1,4 @@
 .footer {
-  padding: 4rem 0 0;
   text-align: center;
 
   @media (min-width: 64em) {
@@ -18,13 +17,20 @@
 
   &__flexbox {
     position: relative;
+    padding: 2.5rem 0;
     margin: 0 auto;
     max-width: 70rem;
-    align-items: flex-start;
+    opacity: 0;
+
+    &.animate {
+      animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
+    }
 
     @media (min-width: 64em) {
       display: flex;
+      align-items: flex-start;
       gap: 3rem;
+      padding: 5rem 0;
     }
   }
 
@@ -85,6 +91,15 @@
         flex: 1;
       }
 
+      &.submit {
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: 64em) {
+          justify-content: flex-start;
+        }
+      }
+
       label {
         display: block;
         font-weight: 500;
@@ -140,34 +155,12 @@
     }
 
     &-button {
-      --pressed: #008552;
-
-      margin-top: 1.5rem;
-      padding: 0.75rem;
-      font-family: inherit;
-      font-size: 1.0625rem;
-      font-weight: 500;
-      color: var(--white);
-      background-color: var(--lime);
-      border-radius: 0.25rem;
-      border: 0;
-      cursor: pointer;
-      transition:
-        background-color 150ms ease-in-out,
-        box-shadow 150ms ease-in-out;
-
-      &:hover {
-        box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
-      }
-
-      &:active {
-        background-color: var(--pressed);
-      }
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
     }
   }
 
   &__bottom {
-    margin-top: 4rem;
     border-top: solid 1px var(--lightGrey);
     font-size: 0.875rem;
 

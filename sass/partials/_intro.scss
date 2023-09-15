@@ -1,11 +1,11 @@
 .intro {
-  // margin-top: 4.75rem;
   position: relative;
 
   .container {
     /* stylelint-disable-next-line csstree/validator */
     padding-top: min(10vh, 4rem);
     height: 100vh;
+    min-height: 31.5625rem;
     background-image: url('../../images/header-illsutration-mobile.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,10 +23,12 @@
   }
 
   &__title {
+    position: relative;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.2;
-    animation: fade-slide-up 2000ms ease-in-out 1 forwards;
+    opacity: 0;
+    animation: fade-slide-up 1500ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       font-size: 2rem;
@@ -51,11 +53,13 @@
   }
 
   &__description {
+    position: relative;
     margin: 0 auto;
     max-width: 51.5625rem;
     font-size: 1.15rem;
     line-height: 1.5rem;
-    animation: fade-slide-up 3000ms ease-in-out 1 forwards;
+    opacity: 0;
+    animation: fade-slide-up 1500ms 1000ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       font-size: 1.25rem;
@@ -74,7 +78,8 @@
     margin: 0 auto;
     width: max-content;
     border-radius: 0.5rem;
-    animation: fade-slide-up 4000ms ease-in-out 1 forwards;
+    opacity: 0;
+    animation: fade-slide-up 1500ms 1500ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       flex-direction: row;
@@ -84,6 +89,15 @@
       font-size: 1rem;
       line-height: 2rem;
       width: max-content;
+
+      &-source {
+        transition: color 100ms ease-in-out;
+
+        &:hover {
+          color: var(--lime);
+          text-decoration: underline;
+        }
+      }
     }
 
     &-list {
@@ -112,7 +126,7 @@
       justify-content: center;
       align-items: center;
       padding: 0.25rem 0.5rem;
-      border-radius: 0.5rem;
+      border-radius: 0.25rem;
       background-color: var(--lightGrey);
       font-size: 2rem;
 
@@ -139,8 +153,10 @@
     line-height: 0;
     border: solid 2px var(--lightGreen);
     border-radius: 50%;
+    opacity: 0;
+    rotate: y -90deg;
     transition: 150ms background-color ease-in-out;
-    animation: grow 5000ms ease-in-out 1 forwards;
+    animation: rotate-fade 1500ms 2000ms ease-in-out 1 forwards;
 
     &:hover {
       border: solid 2px var(--lime);

@@ -39,6 +39,11 @@
     gap: 1.5rem;
     max-width: 60rem;
     margin: 0 auto;
+    opacity: 0;
+
+    &.animate {
+      animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
+    }
 
     @media (min-width: 40em) {
       flex-direction: row;
@@ -151,16 +156,22 @@
   }
 
   &__card {
-    padding: 1rem;
     border: solid 1px var(--lightGrey);
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     flex: 1;
+    opacity: 0;
+
+    &.animate {
+      animation: fade-slide-up 1000ms ease-in-out 0ms 1 forwards;
+    }
 
     &-header {
       display: flex;
       gap: 1rem;
-      padding-bottom: 0.5rem;
+      // padding-bottom: 0.5rem;
+      padding: 1rem;
       border-bottom: solid 1px var(--lightGrey);
+      background-color: var(--opaqueDark);
     }
 
     &-icon {
@@ -199,6 +210,7 @@
     }
 
     &-list {
+      padding: 1rem;
       margin-top: 0.5rem;
       display: flex;
       flex-wrap: wrap;
@@ -209,12 +221,11 @@
       display: inline-block;
       padding: 0.25rem 0.5rem;
       border-radius: 0.25rem;
-      background-color: var(--lightGrey);
-      transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+      background-color: var(--opaqueDark);
+      transition: background-color 200ms ease-in-out;
 
       &:hover {
-        color: var(--lightGrey);
-        background-color: var(--lime);
+        background-color: var(--opaqueGreen);
       }
     }
   }

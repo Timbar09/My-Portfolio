@@ -91,22 +91,16 @@
         </div>
 
         <button
-          class="header__hamburger menu-button"
+          class="header__hamburger hamburger__close"
           type="button"
           aria-label="Menu button"
         >
-          <span></span><span></span><span></span>
+          <span class="stroke top"></span>
+          <span class="stroke middle"></span>
+          <span class="stroke bottom"></span>
         </button>
 
         <div class="header__menu container-pall">
-          <button
-            class="header__menu-btn"
-            type="button"
-            aria-label="Close menu"
-          >
-            <span class="stroke"></span><span class="stroke"></span>
-          </button>
-
           <ul class="header__menu-content">
             <li>
               <ul class="social-wrap header__menu-social">
@@ -185,7 +179,7 @@
           <div class="section__overlay"></div>
 
           <h1 class="intro__title">
-            Hey there 👋, I'm Miles, a<span>Software developer</span>
+            Hey there 👋, I'm Miles, a <span>Software Developer</span>
           </h1>
 
           <p class="intro__description">
@@ -195,7 +189,14 @@
           </p>
 
           <div class="intro__tech" style="position: relative">
-            <h3 class="intro__tech-title">Built with:</h3>
+            <h3 class="intro__tech-title">
+              <a
+                href="https://github.com/Timbar09/My-Portfolio"
+                class="intro__tech-title-source"
+                title="View source code"
+                >Built with</a
+              >:
+            </h3>
             <ul class="intro__tech-list">
               <li class="intro__tech-item">
                 <a
@@ -248,302 +249,54 @@
         <div class="container container-px">
           <h2 class="project__title section__title">My Recent Works</h2>
 
-          <div class="section__grid">
-            <div class="project__card section__card">
-              <div class="project__card-text">
-                <h3 class="project__card-title section__card-title">
-                  Awesome Books
-                </h3>
-                <ul class="project__card-btns section__card-btns">
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >Luxon
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >css
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >JavScript
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >html
-                    </a>
-                  </li>
-                </ul>
+          <ul class="section__grid project__list">
+            <li class="project__card spin"></li>
+            <li class="project__card spin"></li>
+            <li class="project__card spin"></li>
+            <li class="project__card spin"></li>
+          </ul>
 
-                <a id="1" class="project__cta section__cta" href="#popup"
-                  >See Project</a
-                >
-              </div>
+          <div id="popup" class="popup">
+            <div class="popup__cancel-btn">
+              <img
+                class="popup__cancel-btn_icon"
+                src="images/icons/Icon-Cancel.svg"
+                alt="Cansel icon"
+              />
             </div>
 
-            <div class="project__card section__card">
-              <div class="project__card-text">
-                <h3 class="project__card-title section__card-title">
-                  ALT Confrence 2023
-                </h3>
-                <ul class="project__card-btns section__card-btns">
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >GitHub
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >css
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >JavScript
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >html
-                    </a>
-                  </li>
-                </ul>
-                <a id="2" class="project__cta section__cta" href="#popup"
-                  >See Project</a
-                >
-              </div>
-            </div>
-
-            <div class="project__card section__card">
-              <div class="project__card-text">
-                <h3 class="project__card-title section__card-title">
-                  Todo App
-                </h3>
-                <ul class="project__card-btns section__card-btns">
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >Webpack
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >css
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >JavScript
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >html
-                    </a>
-                  </li>
-                </ul>
-                <a id="3" class="project__cta section__cta" href="#popup"
-                  >See Project</a
-                >
-              </div>
-            </div>
-
-            <div class="project__card section__card">
-              <div class="project__card-text">
-                <h3 class="project__card-title section__card-title">
-                  BudgetTrail
-                </h3>
-                <ul class="project__card-btns section__card-btns">
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >Ruby on rails
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >PostgreSQL
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >Sass
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >Devise
-                    </a>
-                  </li>
-                </ul>
-                <a id="4" class="project__cta section__cta" href="#popup"
-                  >See Project</a
-                >
-              </div>
-            </div>
-
-            <div class="project__card section__card">
-              <div class="project__card-text">
-                <h3 class="project__card-title section__card-title">
-                  Space Traveler's Hub
-                </h3>
-                <ul class="project__card-btns section__card-btns">
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >React.js
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >Redux-toolkit
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >Bootstrap
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >REST API
-                    </a>
-                  </li>
-                </ul>
-                <a id="5" class="project__cta section__cta" href="#popup"
-                  >See Project</a
-                >
-              </div>
-            </div>
-
-            <div class="project__card section__card">
-              <div class="project__card-text">
-                <h3 class="project__card-title section__card-title">
-                  Blogister
-                </h3>
-                <ul class="project__card-btns section__card-btns">
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >Ruby on rails
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >PostgreSQL
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >Devise
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      class="project__card-btn section__card-btn"
-                      >SASS
-                    </a>
-                  </li>
-                </ul>
-                <a id="6" class="project__cta section__cta" href="#popup"
-                  >See Project</a
-                >
-              </div>
-            </div>
-
-            <div id="popup" class="popup">
-              <div class="popup__cancel-btn">
-                <img
-                  class="popup__cancel-btn_icon"
-                  src="images/icons/Icon-Cancel.svg"
-                  alt="Cansel icon"
-                />
+            <div class="popup__content">
+              <div class="popup__image">
+                <img src="" alt="Popup project image" />
               </div>
 
-              <div class="popup__content">
-                <div class="popup__image">
-                  <img src="" alt="Popup project image" />
-                </div>
+              <div class="popup__content-text">
+                <h3 class="popup__title"></h3>
 
-                <div class="popup__content-text">
-                  <h3 class="popup__title"></h3>
+                <ul class="popup__languages section__card-btns"></ul>
 
-                  <ul class="popup__languages section__card-btns"></ul>
+                <div class="popup__description"></div>
 
-                  <div class="popup__description"></div>
+                <div class="popup__ctas">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    class="popup__cta-live popup__cta section__cta"
+                  >
+                    <span>See live </span
+                    ><i class="fa-solid fa-external-link"></i>
+                  </a>
 
-                  <div class="popup__ctas">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener"
-                      class="popup__cta-live popup__cta section__cta"
-                    >
-                      <span>See live </span
-                      ><img
-                        src="images/icons/Icon-live.png"
-                        alt="Live site icon"
-                      />
-                    </a>
-
-                    <a
-                      href="https://github.com/Timbar09"
-                      target="_blank"
-                      rel="noopener"
-                      class="popup__cta-source popup__cta section__cta"
-                    >
-                      <span>See source </span
-                      ><img
-                        src="images/icons/Icon-GitHub.png"
-                        alt="Source code icon"
-                      />
-                    </a>
-                  </div>
+                  <a
+                    href="https://github.com/Timbar09"
+                    target="_blank"
+                    rel="noopener"
+                    class="popup__cta-source popup__cta section__cta"
+                  >
+                    <span>See source </span>
+                    <i class="fa-brands fa-github"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -647,8 +400,10 @@
                   href="https://docs.google.com/document/d/1rOU5wqF-9cZJrHmSSsP3YFXvpCAB7M-cY_R3njqn6Vs/edit?usp=sharing"
                   target="_blank"
                   rel="noopener"
-                  >Get My Resume</a
                 >
+                  <span> View Resume </span>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
               </div>
 
               <div class="about__description">
@@ -1091,7 +846,7 @@
 
                   <li>
                     <a
-                      href="https://lunacy.app/"
+                      href="https://icons8.com/lunacy"
                       class="about__card-link"
                       aria-label="Lunacy"
                       rel="noopener"
@@ -1208,9 +963,10 @@
               ></textarea>
             </div>
 
-            <div class="footer__form-control">
-              <button class="footer__form-button" type="submit">
-                Get in touch
+            <div class="footer__form-control submit">
+              <button class="footer__form-button section__cta" type="submit">
+                <span>Send</span>
+                <i class="fa-solid fa-paper-plane"></i>
               </button>
             </div>
           </form>
@@ -1237,7 +993,7 @@
           </div>
 
           <p class="footer__copy">
-            &copy; 2021 Miles Mosweu. All rights reserved.
+            &copy; 2023 Miles Mosweu. All rights reserved.
           </p>
         </div>
       </div>

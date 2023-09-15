@@ -5,7 +5,6 @@ html {
   font-size: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: 4.5rem;
-  scrollbar-gutter: stable;
 }
 
 *,
@@ -20,11 +19,12 @@ html {
   --ff-pacifico: 'Pacifico', cursive;
   // Colors
   --opaqueWhite: #fffc;
-  --white: #fff;
+  --opaqueDark: hsla(219, 59%, 6%, 0.025);
+  --white: #fdfdfd;
   --lightGrey: #ebf0ee;
   --grey: #d0d9d4;
   --midGrey: #8e9691;
-  --darkGrey: #656c67;
+  --darkGrey: #5c625e;
   --lightGreen: #c5e9da;
   --opaqueGreen: #00855247;
   --lime: #36b37f;
@@ -95,10 +95,10 @@ body {
 
 /* When the menu button is clicked */
 .open {
-  animation: appear 150ms ease-in-out 0ms 1 forwards;
+  animation: appear 100ms ease-in-out 0ms 1 forwards;
 }
 
 /* When the cancel-menu button is clicked */
 .close {
-  animation: disappear 150ms ease-in-out 0ms 1 forwards;
+  animation: disappear 100ms ease-in-out 0ms 1 forwards;
 }

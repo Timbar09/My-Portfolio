@@ -35,7 +35,7 @@ p {
 
   &__title {
     position: relative;
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 2.5rem;
     padding-bottom: 1rem;
     margin-bottom: 2.5rem;
@@ -52,10 +52,14 @@ p {
       top: 100%;
       left: 50%;
       translate: -50%;
-      height: 0.25rem;
+      height: 0.15rem;
       width: 3rem;
       background-color: var(--lime);
       border-radius: 3rem;
+
+      @media (min-width: 40em) {
+        height: 0.25rem;
+      }
     }
   }
 
@@ -64,36 +68,49 @@ p {
     grid-template-columns: 1fr;
     grid-gap: 1.5rem;
 
-    @media (min-width: 40em) {
-      grid-template-columns: 1fr 1fr;
-    }
-
     @media (min-width: 64em) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
   &__cta {
-    padding: 0.5rem 0.75rem;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
     color: var(--white);
-    background-color: var(--lime);
     border-radius: 0.25rem;
+    border: 0;
+    background-color: var(--lime);
+    cursor: pointer;
     box-shadow: var(--shadowLime1);
     transition:
       background-color 150ms ease-in-out,
       box-shadow 150ms ease-in-out,
-      translate 150ms ease-in-out;
+      scale 150ms ease-in-out;
+
+    i {
+      position: relative;
+      left: 0;
+      transition: left 350ms ease-in-out;
+    }
 
     &:hover {
       box-shadow: var(--shadowLime2);
-      translate: 0 -2px;
+
+      i {
+        left: 0.25rem;
+      }
     }
 
     &:active {
       background-color: var(--pressed);
       box-shadow: var(--shadowLime1);
-      translate: 0 0;
+      scale: 0.95;
     }
   }
 
@@ -109,7 +126,7 @@ p {
     overflow: hidden;
 
     &-title {
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.5rem;
       line-height: 2rem;
     }
@@ -178,7 +195,7 @@ p {
     list-style: none;
     padding: 1rem;
     font-size: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
