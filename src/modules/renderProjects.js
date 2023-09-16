@@ -1,4 +1,4 @@
-import data from './projectData.js';
+import data from '../data/projects.js';
 
 const renderProjects = () => {
   const projects = data.slice(0, 4);

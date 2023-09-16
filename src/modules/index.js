@@ -1,4 +1,4 @@
-import projectsArr from './projectData.js';
+import projectsArr from '../data/projects.js';
 import renderProjects from './renderProjects.js';
 import observe from './intersectionObserver.js';
 import { openMenu, closeMenu } from './menu.js';

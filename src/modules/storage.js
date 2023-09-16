@@ -6,12 +6,14 @@ const storeUserInfo = () => {
   const userEmail = document.querySelector('#email').value;
   const userMessage = document.querySelector('#message').value;
 
-  theUser.name = userName;
-  theUser.email = userEmail;
-  theUser.message = userMessage;
+  if (userName && userEmail && userMessage) {
+    theUser.name = userName;
+    theUser.email = userEmail;
+    theUser.message = userMessage;
 
-  // Saving to local storage
-  localStorage.setItem('theUser', JSON.stringify(theUser));
+    // Saving to local storage
+    localStorage.setItem('theUser', JSON.stringify(theUser));
+  }
 };
 
 const retrieveUserInfo = () => {
@@ -19,9 +21,21 @@ const retrieveUserInfo = () => {
   const userInfo = JSON.parse(localStorage.getItem('theUser'));
 
   if (userInfo) {
-    document.querySelector('#name').value = userInfo.name;
-    document.querySelector('#email').value = userInfo.email;
-    document.querySelector('#message').value = userInfo.message;
+    const name = document.querySelector('#name');
+    const email = document.querySelector('#email');
+    const message = document.querySelector('#message');
+
+    if (name) {
+      name.value = userInfo.name;
+    }
+
+    if (email) {
+      email.value = userInfo.email;
+    }
+
+    if (message) {
+      message.value = userInfo.message;
+    }
   }
 };
 

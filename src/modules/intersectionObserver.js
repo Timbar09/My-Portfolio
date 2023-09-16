@@ -11,24 +11,28 @@ const options = {
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-      observer.unobserve(entry.target);
+    if (entry.target && entry.target instanceof Element) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
     }
   });
 }, options);
 
 const observe = () => {
-  projectCards.forEach((card) => {
-    observer.observe(card);
-  });
+  if (projectCards && aboutCards && footerContent && aboutDescrition) {
+    projectCards.forEach((card) => {
+      observer.observe(card);
+    });
 
-  observer.observe(aboutDescrition);
-  aboutCards.forEach((card) => {
-    observer.observe(card);
-  });
+    observer.observe(aboutDescrition);
+    aboutCards.forEach((card) => {
+      observer.observe(card);
+    });
 
-  observer.observe(footerContent);
+    observer.observe(footerContent);
+  }
 };
 
 export default observe;
