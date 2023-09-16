@@ -1,5 +1,5 @@
-// import projectsArr from './modules/projectData.js';
 import * as f from './modules/index.js';
+import './styles/main.scss';
 
 // Dark mode functionality
 const dakModeToggle = document.querySelector('.header__toggle');
