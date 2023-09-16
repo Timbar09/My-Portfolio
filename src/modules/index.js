@@ -1,3 +1,4 @@
+import projectsArr from './projectData.js';
 import renderProjects from './renderProjects.js';
 import observe from './intersectionObserver.js';
 import { openMenu, closeMenu } from './menu.js';
@@ -12,6 +13,7 @@ import {
 } from './popup.js';
 
 export {
+  projectsArr,
   openMenu,
   closeMenu,
   activatePopup,

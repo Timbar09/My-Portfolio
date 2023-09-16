@@ -1,5 +1,5 @@
-import projectsArr from './projectData.js';
-import * as f from './functions/index.js';
+// import projectsArr from './modules/projectData.js';
+import * as f from './modules/index.js';
 
 // Dark mode functionality
 const dakModeToggle = document.querySelector('.header__toggle');
@@ -55,7 +55,7 @@ const popupCancelBtn = document.querySelector('.popup__cancel-btn_icon');
 
 projectButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    f.fillInPopupText(projectsArr, button);
+    f.fillInPopupText(f.projectsArr, button);
     setTimeout(() => {
       f.activatePopup();
     }, 175);
