@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
     "lint": "npx stylelint \"**/*.{css,scss}\" && npx eslint .",
     "fix": "npx stylelint \"**/*.{css,scss}\" --fix && npx eslint . --fix"
   },
@@ -27,6 +28,8 @@
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.21.0"
+    "stylelint-scss": "^3.21.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
