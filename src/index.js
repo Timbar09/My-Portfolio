@@ -1,4 +1,20 @@
-import * as f from './modules/index.js';
+import projectsArr from './data/projects.js';
+import renderProjects from './modules/renderProjects.js';
+import observe from './modules/intersectionObserver.js';
+import { openMenu, closeMenu } from './modules/menu.js';
+import { enableDarkMode, disableDarkMode } from './modules/darkmode.js';
+import { storeUserInfo, retrieveUserInfo } from './modules/storage.js';
+import {
+  isEmailLowerCase,
+  showCaseError,
+  showCaseSuccess,
+} from './modules/form.js';
+import {
+  activatePopup,
+  deactivatePopup,
+  fillInPopupText,
+  clearPopupText,
+} from './modules/popup.js';
 import './styles/main.scss';
 
 // Dark mode functionality
@@ -6,7 +22,7 @@ const dakModeToggle = document.querySelector('.header__toggle');
 let darkMode = localStorage.getItem('darkMode');
 
 if (darkMode === 'enabled') {
-  f.enableDarkMode();
+  enableDarkMode();
 }
 
 if (dakModeToggle) {
@@ -14,9 +30,9 @@ if (dakModeToggle) {
     darkMode = localStorage.getItem('darkMode');
 
     if (darkMode !== 'enabled') {
-      f.enableDarkMode();
+      enableDarkMode();
     } else {
-      f.disableDarkMode();
+      disableDarkMode();
     }
   });
 }
@@ -29,9 +45,9 @@ const overlay = document.querySelector('.overlay');
 if (MenuToggleBtn) {
   MenuToggleBtn.addEventListener('click', () => {
     if (MenuToggleBtn.classList.contains('hamburger__close')) {
-      f.openMenu();
+      openMenu();
     } else {
-      f.closeMenu();
+      closeMenu();
     }
   });
 }
@@ -39,23 +55,24 @@ if (MenuToggleBtn) {
 if (menuOptions) {
   menuOptions.forEach((option) => {
     option.addEventListener('click', () => {
-      f.closeMenu();
+      closeMenu();
     });
   });
 }
 
 if (overlay) {
   overlay.addEventListener('click', () => {
-    f.closeMenu();
-    f.deactivatePopup();
+    closeMenu();
+    clearPopupText();
+    deactivatePopup();
   });
 }
 
 // Render projects
-f.renderProjects();
+renderProjects();
 
 // Intersection observer
-f.observe();
+observe();
 
 // Project details popup window
 const projectButtons = document.querySelectorAll('.project__cta');
@@ -64,9 +81,9 @@ const popupCancelBtn = document.querySelector('.popup__cancel-btn_icon');
 if (projectButtons) {
   projectButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      f.fillInPopupText(f.projectsArr, button);
+      fillInPopupText(projectsArr, button);
       setTimeout(() => {
-        f.activatePopup();
+        activatePopup();
       }, 175);
     });
   });
@@ -74,8 +91,8 @@ if (projectButtons) {
 
 if (popupCancelBtn) {
   popupCancelBtn.addEventListener('click', () => {
-    f.clearPopupText();
-    f.deactivatePopup();
+    clearPopupText();
+    deactivatePopup();
   });
 }
 
@@ -84,18 +101,18 @@ const contactForm = document.querySelector('.footer__form');
 
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
-    if (f.isEmailLowerCase()) {
-      f.showCaseSuccess();
+    if (isEmailLowerCase()) {
+      showCaseSuccess();
     } else {
-      f.showCaseError();
+      showCaseError();
       e.preventDefault();
     }
   });
 }
 
 // Store and retrieve user information
-f.retrieveUserInfo();
+retrieveUserInfo();
 
 if (contactForm) {
-  contactForm.addEventListener('submit', f.storeUserInfo);
+  contactForm.addEventListener('submit', storeUserInfo);
 }
