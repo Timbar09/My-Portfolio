@@ -26,15 +26,18 @@
 
     &_icon {
       position: relative;
-      bottom: -50%;
-      padding: 0.35rem 0.45rem;
+      bottom: -17px;
+      left: 12px;
+      padding: 0.35rem 0.475rem;
       font-size: 1.25rem;
       border-radius: 5rem;
+      border: solid 2px var(--grey);
       cursor: pointer;
       background-color: var(--white);
-      transition: background-color 150ms ease-in-out;
+      transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 
       &:hover {
+        color: var(--lightGrey);
         background-color: rgb(247, 57, 57);
       }
     }
