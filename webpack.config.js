@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -50,6 +51,14 @@ module.exports = {
       template: 'src/template.html',
       title: 'Software Developer | Miles Mosweu',
       filename: 'index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'src/favicon.ico',
+          to: 'favicon.ico',
+        },
+      ],
     }),
   ],
 };
