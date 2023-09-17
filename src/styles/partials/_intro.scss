@@ -27,8 +27,6 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.2;
-    opacity: 0;
-    animation: fade-slide-up 1500ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       font-size: 2rem;
@@ -58,8 +56,6 @@
     max-width: 51.5625rem;
     font-size: 1.15rem;
     line-height: 1.5rem;
-    opacity: 0;
-    animation: fade-slide-up 1500ms 1000ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       font-size: 1.25rem;
@@ -78,8 +74,6 @@
     margin: 0 auto;
     width: max-content;
     border-radius: 0.5rem;
-    opacity: 0;
-    animation: fade-slide-up 1500ms 1500ms ease-in-out 1 forwards;
 
     @media (min-width: 40em) {
       flex-direction: row;
@@ -151,15 +145,13 @@
   }
 
   &__down-btn {
+    position: relative;
     display: inline-block;
     padding: 0.75rem;
     line-height: 0;
     border: solid 2px var(--lightGreen);
     border-radius: 50%;
-    opacity: 0;
-    rotate: y -90deg;
     transition: 150ms background-color ease-in-out;
-    animation: rotate-fade 1500ms 2000ms ease-in-out 1 forwards;
 
     &:hover {
       border: solid 2px var(--lime);
