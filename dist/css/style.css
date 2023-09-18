@@ -736,7 +736,10 @@ p {
   }
 }
 .intro__tech-title {
+  margin: 0;
   font-size: 1rem;
+  font-weight: 500;
+  color: var(--darkerBlue);
   line-height: 2rem;
   width: -moz-max-content;
   width: max-content;
@@ -789,6 +792,7 @@ p {
   }
 }
 .intro__down-btn {
+  position: relative;
   display: inline-block;
   padding: 0.75rem;
   line-height: 0;
