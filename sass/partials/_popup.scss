@@ -42,7 +42,9 @@
       cursor: pointer;
       color: inherit;
       background-color: var(--white);
-      transition: background-color 150ms ease-in-out, color 150ms ease-in-out,
+      transition:
+        background-color 150ms ease-in-out,
+        color 150ms ease-in-out,
         border 150ms ease-in-out;
 
       &:hover {

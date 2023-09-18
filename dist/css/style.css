@@ -688,8 +688,13 @@ p {
 }
 @media (min-width: 40em) {
   .intro__title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     letter-spacing: 0.37px;
+  }
+}
+@media (min-width: 64em) {
+  .intro__title {
+    font-size: 2rem;
   }
 }
 .intro__title span {
@@ -700,6 +705,11 @@ p {
   text-shadow: -1px -1px 0 var(--green), 1px -1px 0 var(--green), -1px 1px 0 var(--green), 1px 1px 0 var(--green);
 }
 @media (min-width: 40em) {
+  .intro__title span {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 64em) {
   .intro__title span {
     font-size: 4.5rem;
   }
