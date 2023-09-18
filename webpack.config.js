@@ -13,7 +13,6 @@ module.exports = {
     clean: true,
     assetModuleFilename: 'images/[name][ext]',
   },
-  devtool: 'source-map',
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),

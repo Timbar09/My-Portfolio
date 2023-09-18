@@ -1,11 +1,8 @@
 // import project images
-import consolehubImg from '../../images/projects/consolehub_popup.svg';
-import budgettrailImg from '../../images/projects/budgettrail_popup.svg';
-import spaceTravelersImg from '../../images/projects/space_popup.svg';
-import blogisterImg from '../../images/projects/blog_popup.svg';
-import altConferenceImg from '../../images/projects/ALT-Conference-popup.svg';
-import todoAppImg from '../../images/projects/todo_app_detail.svg';
-import awesomeBooksImg from '../../images/projects/Awesome-books-popup.svg';
+import consolehubImg from '../../images/projects/consolehub.png';
+import budgettrailImg from '../../images/projects/budgettrail.png';
+import spaceTravelersImg from '../../images/projects/spacetravelershub.png';
+import blogisterImg from '../../images/projects/blogister.png';
 
 const projectsArr = [
   {
@@ -131,7 +128,7 @@ const projectsArr = [
 
       "In summary, this project encompasses a responsive website with multiple pages, including a home page and an about page. It features a mobile menu for smaller screen sizes, dynamic content generation for the 'Featured speakers' section, and a cohesive navigation system that allows users to seamlessly explore the website on both mobile and desktop devices.",
     ],
-    image: altConferenceImg,
+    image: '../../images/projects/conference.png',
     technologies: ['JavaScript', 'CSS3', 'HTML5', 'GitHub', 'Terminal'],
     source: 'https://github.com/Timbar09/Africas-Leading-Tech-Conference',
     live: 'https://timbar09.github.io/Africas-Leading-Tech-Conference/',
@@ -148,7 +145,7 @@ const projectsArr = [
 
       'Overall, this project showcases the utilization of essential web development technologies and techniques to create a functional and user-friendly to-do list web app.',
     ],
-    image: todoAppImg,
+    image: '../../images/projects/todo.png',
     technologies: ['React', 'CSS3', 'Git', 'Github', 'HTML5', 'Terminal'],
     source: 'https://github.com/Timbar09/Todo-list-vol-2',
     live: 'https://timbar09.github.io/Todo-list-vol-2/dist/',
@@ -168,7 +165,7 @@ const projectsArr = [
 
       'Overall, Awesome Books represents a powerful yet user-friendly solution for book lovers, providing an efficient way to manage and organize a personalized book collection. With its dynamic features, seamless integration with local storage, and intuitive user interface, it sets out to redefine the way users interact with their books online.',
     ],
-    image: awesomeBooksImg,
+    image: '../../images/projects/awesomebooks.png',
     technologies: [
       'JavaScript',
       'CSS3',
