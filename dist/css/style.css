@@ -685,8 +685,6 @@ p {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
-  opacity: 0;
-  animation: fade-slide-up 1500ms ease-in-out 1 forwards;
 }
 @media (min-width: 40em) {
   .intro__title {
@@ -712,8 +710,6 @@ p {
   max-width: 51.5625rem;
   font-size: 1.15rem;
   line-height: 1.5rem;
-  opacity: 0;
-  animation: fade-slide-up 1500ms 1000ms ease-in-out 1 forwards;
 }
 @media (min-width: 40em) {
   .intro__description {
@@ -733,8 +729,6 @@ p {
   width: -moz-max-content;
   width: max-content;
   border-radius: 0.5rem;
-  opacity: 0;
-  animation: fade-slide-up 1500ms 1500ms ease-in-out 1 forwards;
 }
 @media (min-width: 40em) {
   .intro__tech {
@@ -800,10 +794,7 @@ p {
   line-height: 0;
   border: solid 2px var(--lightGreen);
   border-radius: 50%;
-  opacity: 0;
-  rotate: y -90deg;
   transition: 150ms background-color ease-in-out;
-  animation: rotate-fade 1500ms 2000ms ease-in-out 1 forwards;
 }
 .intro__down-btn:hover {
   border: solid 2px var(--lime);
