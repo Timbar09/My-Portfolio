@@ -40,6 +40,7 @@ menuOptions.forEach((option) => {
 
 overlay.addEventListener('click', () => {
   f.closeMenu();
+  f.clearPopupText();
   f.deactivatePopup();
 });
 

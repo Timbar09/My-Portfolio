@@ -916,16 +916,30 @@ p {
   animation: popup-disappear 200ms ease-in-out 0ms 1 forwards;
 }
 .popup__cancel-btn {
+  --demension: 2rem;
   text-align: right;
 }
 .popup__cancel-btn_icon {
+  margin-left: auto;
+  position: relative;
+  font-size: 1.05rem;
+  bottom: -1rem;
+  right: -0.75rem;
+  display: grid;
+  place-items: center;
+  width: var(--demension);
+  height: var(--demension);
+  border: solid 2px var(--grey);
   padding: 0.25rem;
-  border-radius: 0.35rem;
+  border-radius: 5rem;
   cursor: pointer;
+  color: inherit;
   background-color: var(--white);
-  transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border 150ms ease-in-out;
 }
 .popup__cancel-btn_icon:hover {
+  border: solid 2px var(--white);
+  color: var(--white);
   background-color: rgb(247, 57, 57);
 }
 .popup__content {
