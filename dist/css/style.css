@@ -1005,6 +1005,7 @@ p {
 }
 .popup__image img {
   width: 100%;
+  height: auto;
   border-radius: 0.3rem;
 }
 .popup__title {
@@ -1146,7 +1147,7 @@ p {
   height: var(--dimension);
   border-radius: 0.35rem;
   background-color: var(--lightGrey);
-  background-image: url("../../images/self.JPG");
+  background-image: url("../../images/self.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

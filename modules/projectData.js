@@ -1,3 +1,11 @@
+const image = (title) => {
+  if (window.innerWidth < 640) {
+    return `images/projects/${title}-sm.webp`;
+  }
+
+  return `images/projects/${title}.webp`;
+};
+
 const projectsArr = [
   {
     ctaId: '1',
@@ -11,7 +19,7 @@ const projectsArr = [
 
       'In summary, ConsoleHub is a well-crafted web application that streamlines the booking of gaming consoles. It leverages React and Ruby on Rails for its front-end and back-end respectively, with Devise for authentication and Tailwind CSS for stylish design. The combination of these technologies ensures a seamless and enjoyable user experience for users.',
     ],
-    image: 'images/projects/consolehub.png',
+    image: image('consolehub'),
     technologies: [
       'Ruby on Rails',
       'React',
@@ -39,7 +47,7 @@ const projectsArr = [
 
       "With this mobile web application, you can turn financial prudence into a reachable goal. Explore the capabilities of comprehensive financial management, organized categorization, and insights driven by data. All these are wrapped in an interface that focuses on user experience while ensuring security and functionality aren't compromised. Start stepping towards the future of budget management today.",
     ],
-    image: 'images/projects/budgettrail.png',
+    image: image('budgettrail'),
     technologies: [
       'Ruby on Rails',
       'PostgreSQL',
@@ -68,7 +76,7 @@ const projectsArr = [
 
       'In summary, this web application is a gateway to the universe of commercial and scientific space travel. Its utilization of React.js, Redux-toolkit, Bootstrap, and Rest APIs ensures a sophisticated and engaging platform where users can explore, book, and embark on space adventures.',
     ],
-    image: 'images/projects/spacetravelershub.png',
+    image: image('spacetravelershub'),
     technologies: ['React', 'Redux', 'Bootstrap', 'REST API'],
     source:
       'https://github.com/Timbar09/React-Redux-Group-Project-Space-Travelers-Hub',
@@ -88,7 +96,7 @@ const projectsArr = [
 
       'In essence, what emerges is an immersive web application that not only disseminates information but also fosters a thriving community of discourse. This platform offers bloggers an avenue to broadcast their insights, opinions, and stories to an enthusiastic audience. Amidst the world of technology and communication, this application serves as a reminder of the impact of connectivity and the art of digital expression.',
     ],
-    image: 'images/projects/blogister.png',
+    image: image('blogister'),
     technologies: [
       'Ruby on Rails',
       'PostgreSQL',
